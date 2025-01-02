@@ -4,7 +4,9 @@
 
 This section is dedicated to setting up Fika for hosting. There are different ways to allow players to join your server. Please read the different sections below to determine which method you will be using.
 
-> \[!IMPORTANT] Please note that there is some technical knowledge required to achieve this. If you absolutely have no experience, you will have a hard time. Our Discord provides support in such cases.
+{% hint style="warning" %}
+Please note that there is some technical knowledge required to achieve this. If you absolutely have no experience, you will have a hard time. Our Discord provides support in such cases.
+{% endhint %}
 
 Before continuing, make sure:
 
