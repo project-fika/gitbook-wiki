@@ -1,0 +1,15 @@
+# Table of contents
+
+* [Home](README.md)
+* [General information](01.-General-information.md)
+* [Installing Fika](02.-installing-fika/README.md)
+  * [Host a Fika server](02.-installing-fika/03.-hosting-a-fika-server.md)
+  * [Join a Fika server](02.-installing-fika/04.-joining-a-fika-server.md)
+* [Playing Fika](05.-Playing-Fika.md)
+* [Fika configuration](06.-fika-configuration/README.md)
+  * [Server](06.-fika-configuration/server.md)
+  * [Client](06.-fika-configuration/client.md)
+* [Troubleshooting](07.-Troubleshooting.md)
+* [Advanced features](08.-Advanced-features.md)
+* [Modding Fika](09.-Modding-Fika.md)
+* [Credits](Credits.md)
