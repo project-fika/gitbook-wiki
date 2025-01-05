@@ -2,7 +2,9 @@
 
 A Virtual Private Network (VPN) enables you to join the same network via a public centralized server. You can either set up your own VPN or use a VPN service such as RAdmin, ZeroTier, etc. This method is recommended only as a last resort if you are unable to use any other hosting options.
 
-> \[!CAUTION] Free VPNs services are known to cause performance or connectivity problems, so use at your own risk. The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.
+{% hint style="warning" %}
+Free VPNs services are known to cause performance or connectivity problems, so use at your own risk. The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.
+{% endhint %}
 
 ### Installing the VPN client
 
@@ -41,7 +43,9 @@ Started websocket at ws://<your_vpn_ip>:6969
 Server is running, do not close while playing SPT, Happy playing!!
 ```
 
-> \[!WARNING] If you see errors (red text) then that means your configuration is invalid or you are unable to host using the configured IP address/port. You may need to create a channel/room first. We recommend visiting the "Troubleshooting" section of the Wiki or join our Discord for assistance.
+{% hint style="warning" %}
+If you see errors (red text) then that means your configuration is invalid or you are unable to host using the configured IP address/port. You may need to create a channel/room first. We recommend visiting the "Troubleshooting" section of the Wiki or join our Discord for assistance.
+{% endhint %}
 
 * Launch `SPT.Launcher.exe`.
 * Start the game.

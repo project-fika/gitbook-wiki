@@ -30,7 +30,9 @@ Started websocket at ws://<your_lan_ip>:6969
 Server is running, do not close while playing SPT, Happy playing!!
 ```
 
-> \[!WARNING] If you see errors (red text) then that means your configuration is invalid or you are unable to host using the configured IP address/port.
+{% hint style="warning" %}
+If you see errors (red text) then that means your configuration is invalid or you are unable to host using the configured IP address/port.
+{% endhint %}
 
 * Launch `SPT.Launcher.exe`.
 * Start the game.
