@@ -54,7 +54,7 @@ If you see errors (red text) then that means your configuration is invalid or yo
 * Find the Force IP and Force Bind IP in the "Fika.Core" section of the configuration manager.
 * Set both Force IP and Force Bind IP to your LAN IP. <- THIS IS A VERY IMPORTANT STEP, DO NOT SKIP IT.
 
-![](https://github.com/user-attachments/assets/37ebd47c-ec4a-441f-9939-9d5483eec4a9)
+<figure><img src="../../.gitbook/assets/forceip.png" alt=""><figcaption></figcaption></figure>
 
 At this point, your server should be accessible to your friends, and you can start playing.
 
