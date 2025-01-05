@@ -1,3 +1,7 @@
 # Advanced features
 
-This section is recommended for advanced users only.
+{% hint style="warning" %}
+This section is for advanced users only. We will not provide support unless you know what you're doing.
+{% endhint %}
+
+This section contains advanced features for Fika.

@@ -54,6 +54,6 @@ If you see errors (red text) then that means your configuration is invalid or yo
 
 Your friends will need to [install Fika](https://github.com/project-fika/Fika-Documentation/wiki/02.-Installing-Fika) as well and follow the steps to [join a Fika server](https://github.com/project-fika/Fika-Documentation/wiki/04.-Joining-a-Fika-server) first.
 
-[Click here](https://github.com/project-fika/Fika-Documentation/wiki/05.-Playing-Fika) to learn how to host a raid.
+[Click here](../Playing-Fika.md#hosting-a-raid) to learn how to host a raid.
 
-[Click here](https://github.com/project-fika/Fika-Documentation/wiki/06.-Fika-configuration) to learn more about additional Fika configurations.
+[Click here](../fika-configuration/) to learn more about additional Fika configurations.

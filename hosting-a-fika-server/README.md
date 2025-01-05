@@ -1,16 +1,16 @@
-# Host a Fika server
+# Hosting a Fika server
 
 ## Getting started
 
 This section is dedicated to setting up Fika for hosting. There are different ways to allow players to join your server. Please read the different sections below to determine which method you will be using.
 
 {% hint style="warning" %}
-Please note that there is some technical knowledge required to achieve this. If you absolutely have no experience, you will have a hard time. Our Discord provides support in such cases.
+Please note that there is some technical knowledge required to achieve this. If you absolutely have no experience, you will have a hard time. Our [Discord](https://discord.gg/project-fika) provides support in such cases.
 {% endhint %}
 
 Before continuing, make sure:
 
-* You have followed **ALL** the steps in "Installing Fika."
+* You have followed **ALL** the steps in [Installing Fika](../installing-fika.md).
 * You can start the game and reach the main menu.
 * You can see the Fika watermark in the bottom-left corner.
 * You have **NO** other mods than Fika installed.
@@ -23,6 +23,3 @@ However due to certain network configuration or ISP restrictions, this may not b
 
 You can also host over LAN if all players are in the same house/network.
 
-
-
-**Pick one of the different hosting methods on the left menu.**
