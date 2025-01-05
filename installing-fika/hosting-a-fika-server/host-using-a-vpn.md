@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Host using a VPN
 
 A Virtual Private Network (VPN) enables you to join the same network via a public centralized server. You can either set up your own VPN or use a VPN service such as RAdmin, ZeroTier, etc. This method is recommended only as a last resort if you are unable to use any other hosting options.
@@ -57,7 +71,7 @@ If you see errors (red text) then that means your configuration is invalid or yo
 
 At this point, your server should be accessible to your friends, and you can start playing.
 
-Your friends will need to [install Fika](https://github.com/project-fika/Fika-Documentation/wiki/02.-Installing-Fika) as well and follow the steps to [join a Fika server](https://github.com/project-fika/Fika-Documentation/wiki/04.-Joining-a-Fika-server) first.
+Your friends will need to [install Fika](../) as well and follow the steps to [join a Fika server](../joining-a-fika-server/).
 
 [Click here](../../Playing-Fika.md) to learn how to host a raid.
 

@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Client
 
 To open up your client configuration, press the `F12` key while in-game. Head to the `Fika Core` section to configure the settings.

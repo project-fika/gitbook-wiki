@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Host over LAN
 
 Hosting over LAN allows you to play with someone in the same house/network without internet access and without any real port forwarding other than allowing the application in your local firewall. You can get your LAN IP by opening `cmd` and typing `ipconfig`. Your LAN address is usually the **IPv4 address** returned, e.g. `192.168.1.150`.
@@ -44,7 +58,7 @@ If you see errors (red text) then that means your configuration is invalid or yo
 
 At this point, your server should be accessible to your friends, and you can start playing.
 
-Your friends will need to [install Fika](https://github.com/project-fika/Fika-Documentation/wiki/02.-Installing-Fika) as well and follow the steps to [join a Fika server](https://github.com/project-fika/Fika-Documentation/wiki/04.-Joining-a-Fika-server) first.
+Your friends will need to [install Fika](../) as well and follow the steps to [join a Fika server](../joining-a-fika-server/).
 
 [Click here](../../Playing-Fika.md#hosting-a-raid) to learn how to host a raid.
 
