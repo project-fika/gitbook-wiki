@@ -49,32 +49,44 @@ We recommend reading the [General information](../General-information.md) sectio
 
 {% step %}
 ### Extract Fika-Plugin to your SPT folder
+
+<figure><img src="../.gitbook/assets/release_7zip_ss.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Extract Fika-Server to your SPT folder&#x20;
+### Extract Fika-Server to your SPT folder
+
+<figure><img src="../.gitbook/assets/server_7zip_ss.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Start `SPT.Server.exe`
 
 You should see: `Mod: server version: <Fika version> by: Fika loaded` in the console window. If you don't see it, you did not extract Fika-Server in the correct location.
+
+<figure><img src="../.gitbook/assets/sptserver_loaded_ss.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Start `SPT.Launcher.exe`
 
 Create and/or login to your account, then start the game.
+
+<figure><img src="../.gitbook/assets/sptlauncher_ss.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Validate that Fika successfully loaded
 
 You should get a Fika disclaimer upon entering the menu. Read the disclaimer and wait until the timer runs out.
+
+<figure><img src="../.gitbook/assets/tos_fika_ss.png" alt="" width="290"><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/fika_mainmenu_version_ss.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Close the game and continue with the next steps
+### Exit the game and continue with the next steps
 {% endstep %}
 {% endstepper %}
 
