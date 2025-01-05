@@ -29,8 +29,8 @@ This section describes the steps to create or join a Fika raid to play with your
 * Click "Next" in Practice Game Mode screen
 * Click "Next" in Insurance screen
 * Click "Host Raid" in Lobby screen
-* Set the amount of players (including you) that will join your raid
 * Press "Start"
+* Once all players joined, you can start the raid
 
 Once your raid is loaded, you'll see "Waiting for X players." This means your friends can now see your raid in the lobby screen and join it.
 

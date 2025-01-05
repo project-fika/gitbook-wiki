@@ -46,7 +46,9 @@ public void RegisterPacket<T, TUserData>(Action<T, TUserData> handle) where T : 
 
 The `INetSerializable` needs to be a packet that you have created, and these methods are invoked when that packet is received. The second method also passes the `NetPeer`, which can be used to filter "packet bouncing" when received on the `FikaServer`. You handle the logic you want when receiving the packet in these methods.
 
-> \[!CAUTION] Failing to register a packet will result in endless `exceptions` being thrown. Please register your packets correctly!
+{% hint style="danger" %}
+Failing to register a packet will result in endless `exceptions` being thrown. Please register your packets correctly!
+{% endhint %}
 
 ## Creating a Packet
 
@@ -70,8 +72,6 @@ public void SendDataToAll<T>(ref T packet, DeliveryMethod deliveryMethod, NetPee
 
 `SendDataToPeer` can be used to send a packet to just one `NetPeer` (which is useful for a response callback). `SendDataToAll` sends data to all clients, you can use the `peerToExclude` to exclude one `NetPeer`, which is useful if you don't want to "bounce" a packet back to the sender, but relay it to other clients. An example of this can be found [here](https://github.com/project-fika/Fika-Plugin/blob/28a1a94361feb89b170dc40e80e81ee767a185c1/Fika.Core/Networking/FikaServer.cs#L1180). In this scenario, we receive a player state and send it to everyone else, except for the one sending it as they are not interested in their own state.
 
-
-
 ```mermaid
 flowchart LR
 
@@ -91,7 +91,9 @@ public void SendData<T>(ref T packet, DeliveryMethod deliveryMethod) where T : I
 
 It sends data to the server.
 
-> \[!IMPORTANT] A client only has one `NetPeer` and it is the server! A client is never aware of other clients.
+{% hint style="warning" %}
+A client only has one `NetPeer` and it is the server! A client is never aware of other clients.
+{% endhint %}
 
 ## Tips and useful classes
 
