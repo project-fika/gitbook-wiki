@@ -24,16 +24,16 @@ layout:
 
 ### Individual credits
 
-| Name            | Notes                                                                                           |
-| --------------- | ----------------------------------------------------------------------------------------------- |
-| Lacyway         | Creator of Fika; many contributions to the Tarkov modding community                             |
-| Archangel       | Active developer of Fika and contributor to SPT; an amazingly well talented individual          |
-| chomp           | Massive contributions to the SPT project; helping the Tarkov modding community every single day |
-| Nexus           | Many contributions to Fika and a massively knowledgeable individual                             |
-| TheSparta       | Many contributions to Fika, rewrote a large portion of the server plugin                        |
-| Senko           | Many contributions to Fika; one of the OG Tarkov modder                                         |
-| DeadLeaves      | Many contributions to Fika; creator of multiple mods                                            |
-| Ghostfenixx     | Creator of SVM, a widely used mod on SPT; a dedicated individual within the Fika community      |
-| SSH             | Co-creator of Fika; creator of multiple mods                                                    |
-| RaiRaiTheRaichu | Creator of many widely used mods on SPT; amazing dedication to the SPT community                |
-| CWX             | Many contributions to Fika, widely known modder and dedicated to the Tarkov modding community   |
+| Name            | Notes                                                                                         |
+| --------------- | --------------------------------------------------------------------------------------------- |
+| Lacyway         | Creator of Fika and its community; many contributions to the Tarkov modding scene             |
+| SSH             | Co-creator of Fika; creator of multiple mods such as visceral dismemberment                   |
+| Archangel       | Active developer of Fika and contributor to SPT                                               |
+| chomp           | Massive contributions to the SPT project                                                      |
+| Nexus           | Many contributions to Fika, helping with complex issues                                       |
+| TheSparta       | Many contributions to Fika, rewrote a large portion of the server plugin                      |
+| Senko           | Many contributions to Fika; helping whenever possible                                         |
+| DeadLeaves      | Many contributions to Fika; creator of multiple mods                                          |
+| Ghostfenixx     | Creator of SVM, a widely used mod on SPT; a dedicated individual within the Fika community    |
+| RaiRaiTheRaichu | Creator of many widely used mods on SPT; massive dedication to the SPT community              |
+| CWX             | Many contributions to Fika, widely known modder and dedicated to the Tarkov modding community |
