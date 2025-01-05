@@ -2,7 +2,7 @@
 
 ## Getting started
 
-This section describes the steps to create or join a Fika raid to play with your friends. Before continuing, ensure that you followed all the steps to [host your Fika server](hosting-a-fika-server/) or [join a Fika server](joining-a-fika-server/).
+This section describes the steps to create or join a Fika raid to play with your friends. Before continuing, ensure that you followed all the steps to [host your Fika server](installing-fika/hosting-a-fika-server/) or [join a Fika server](installing-fika/joining-a-fika-server/).
 
 ## Hosting a raid
 

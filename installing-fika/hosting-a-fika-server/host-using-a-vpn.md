@@ -59,6 +59,6 @@ At this point, your server should be accessible to your friends, and you can sta
 
 Your friends will need to [install Fika](https://github.com/project-fika/Fika-Documentation/wiki/02.-Installing-Fika) as well and follow the steps to [join a Fika server](https://github.com/project-fika/Fika-Documentation/wiki/04.-Joining-a-Fika-server) first.
 
-[Click here](../Playing-Fika.md) to learn how to host a raid.
+[Click here](../../Playing-Fika.md) to learn how to host a raid.
 
-[Click here](../fika-configuration/) to learn more about additional Fika configurations.
+[Click here](../../fika-configuration/) to learn more about additional Fika configurations.
