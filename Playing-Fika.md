@@ -30,11 +30,10 @@ This section describes the steps to create or join a Fika raid to play with your
 * Click "Next" in Insurance screen
 * Click "Host Raid" in Lobby screen
 * Press "Start"
-* Once all players joined, you can start the raid
 
 Once your raid is loaded, you'll see "Waiting for X players." This means your friends can now see your raid in the lobby screen and join it.
 
-The raid will start when all players joined the raid and loaded the map. You will spawn together by default.
+When all players joined, you can start the raid.
 
 ## Joining a raid
 
