@@ -17,15 +17,15 @@ layout:
 
 <figure><img src=".gitbook/assets/1080p_launchertest2.png" alt=""><figcaption></figcaption></figure>
 
-[![Discord](https://img.shields.io/discord/1202292159366037545?style=plastic\&logo=discord\&logoColor=FFFFFF\&label=Fika%20Discord)](https://discord.gg/project-fika) [![Downloads](https://img.shields.io/github/downloads/project-fika/Fika-Plugin/total?style=plastic\&logo=github)](https://github.com/project-fika/Fika-Plugin/releases/latest) ![Size](https://img.shields.io/github/languages/code-size/project-fika/Fika-Plugin?style=plastic\&logo=github) ![Issues](https://img.shields.io/github/issues/project-fika/Fika-Plugin?style=plastic\&logo=github) [![License](https://img.shields.io/badge/CC--BY--NC--SA--4.0-blue?style=plastic\&logo=creativecommons\&logoColor=FFFFFF\&label=License)](https://github.com/project-fika/Fika-Plugin/blob/main/LICENSE.md)
-
 ## Introduction
 
 Project Fika is an unofficial SPT mod designed to enable co-op multiplayer gameplay with your friends in Escape from Tarkov. You can progress through quests, share items, and fight AI bots (PMCs, SCAVs, and Bosses) together.
 
 The backend infrastructure (characters, inventory, quests, trading, etc.) is handled by the Escape From Tarkov backend server emulator [Single Player Tarkov (SPT)](https://sp-tarkov.com).
 
-Project Fika is **NOT** an official SPT mod. Do not contact the SPT team for support inquiries if you're using Fika.
+{% hint style="warning" %}
+Project Fika is **NOT** an official SPT mod. Do not contact the SPT team for support inquiries if you're using Fika. Join our [Discord](https://discord.gg/project-fika) for assistance.
+{% endhint %}
 
 ## Quick links
 
