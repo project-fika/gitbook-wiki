@@ -25,4 +25,4 @@ layout:
 * Press the arrow on the right corner.
 * You should now be able to create your profile and log in to the server.
 
-[Click here](vpn.md#joining-a-raid) to learn how to join a raid.
+[Click here](../Playing-Fika.md#joining-a-raid) to learn how to join a raid.
