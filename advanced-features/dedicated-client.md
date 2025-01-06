@@ -38,7 +38,7 @@ Please note that there is some technical knowledge required to achieve this. If 
 
 * Install Escape From Tarkov on the server that you're planning to host the dedicated client on using the official BSG launcher. Yes, this is required and there's no way around it.
 * You can delete the `EscapeFromTarkov_Data` folder in your official EFT folder to save disk space, but this is not mandatory. We recommend leaving it for future updates if you can.
-* Copy your working Fika installation to the server in a separate folder. This will be referred to as `dedicated folder` in the steps below. If this is not possible because the server is remote, we suggest following the [Installing Fika](../installing-fika/) procedure on the server hosting the dedicated client.
+* Copy your working Fika installation to the server in a separate folder. This will be referred to as `dedicated folder` in the steps below. If this is not possible because the server is remote, we suggest following the [Installing Fika](../installing-fika.md) procedure on the server hosting the dedicated client.
 * Download [Fika.Dedicated](https://github.com/project-fika/Fika-Dedicated/releases/latest)
 * Extract `Fika.Dedicated` to your `dedicated folder`.
 * Go to the machine where the SPT server is hosted.

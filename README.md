@@ -29,7 +29,7 @@ Project Fika is **NOT** an official SPT mod. Do not contact the SPT team for sup
 
 ## Quick links
 
-* [Getting started with Fika](installing-fika/) - Learn how to install Fika and play with your friends
+* [Getting started with Fika](installing-fika.md) - Learn how to install Fika and play with your friends
 * [Github page](https://github.com/project-fika) - Contribute to Fika
 * [Fika Discord](https://discord.gg/project-fika) - Be part of the Fika community
 
