@@ -10,6 +10,6 @@ You can contribute to the development of Project Fika by visiting our [GitHub or
 
 ## Wiki
 
-You can contribute to the Wiki by submitting a pull request to its [GitHub repository](https://github.com/project-fika/gitbook-wiki). We recommend using [GitBook](https://www.gitbook.com/)'s editor to make your changes. To do this, fork the repository and add it to your GitBook account. Enable Git Sync in GitBook to push your changes to your fork, then submit a pull request to our repository.
+You can contribute to the Wiki by submitting a pull request to its [GitHub repository](https://github.com/project-fika/gitbook-wiki). We recommend using [GitBook](https://www.gitbook.com/)'s editor to make your changes. To do this, fork the repository and add it to your GitBook account using GitBook's GitHub Sync integration app, then submit a pull request.
 
 You can also request to become an editor in our [Discord](https://discord.gg/project-fika). Contact one of the staff member.
