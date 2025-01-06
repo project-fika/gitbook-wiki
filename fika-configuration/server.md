@@ -16,6 +16,7 @@ layout:
 
 The server configuration can be found in the `user\mods\fika-server\assets\configs` folder. Open up `fika.jsonc` with a text editor.
 
+{% code fullWidth="true" %}
 ```json
 {
     "client": {
@@ -63,3 +64,4 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
     }
 }
 ```
+{% endcode %}
