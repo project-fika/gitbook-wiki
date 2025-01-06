@@ -14,7 +14,18 @@ layout:
 
 # Host over LAN
 
-Hosting over LAN allows you to play with someone in the same house/network without internet access and without any real port forwarding other than allowing the application in your local firewall. You can get your LAN IP by opening `cmd` and typing `ipconfig`. Your LAN address is usually the **IPv4 address** returned, e.g. `192.168.1.150`.
+Hosting over LAN allows you to play with someone in the same house/network without internet access and without any real port forwarding other than allowing the application in your local firewall.
+
+Your local IP address will be required to host over LAN. Follow the steps below to obtain it.
+
+* Press the `Windows key` and type `cmd`.
+
+<figure><img src="../../.gitbook/assets/win_run_cmd.png" alt="" width="563"><figcaption></figcaption></figure>
+
+* Type `ipconfig` and then press `enter` in the command prompt.&#x20;
+* The IP listed in IPv4 is what you will need for the next section, e.g. `192.168.0.152.` It will be referred to as `your_lan_ip`.
+
+<figure><img src="../../.gitbook/assets/fika_ipconfig.png" alt=""><figcaption><p>Your local IP address should appear under Ethernet adapter (if your connection is wired)</p></figcaption></figure>
 
 ### SPT/Fika configuration
 
@@ -22,6 +33,8 @@ Hosting over LAN allows you to play with someone in the same house/network witho
 * Change `ip` to `your_lan_ip`.
 * Change `backendIp` to `your_lan_ip`.
 * Save the file and close it.
+
+<figure><img src="../../.gitbook/assets/fika_lan_http.png" alt=""><figcaption><p>Example of a proper local IP address configuration in http.json</p></figcaption></figure>
 
 ### Windows Firewall
 
@@ -54,7 +67,7 @@ If you see errors (red text) then that means your configuration is invalid or yo
 * Find the Force IP and Force Bind IP in the "Fika.Core" section of the configuration manager.
 * Set both Force IP and Force Bind IP to your LAN IP. <- THIS IS A VERY IMPORTANT STEP, DO NOT SKIP IT.
 
-<figure><img src="../../.gitbook/assets/forceip.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/fika_lan_f12.png" alt=""><figcaption></figcaption></figure>
 
 At this point, your server should be accessible to your friends, and you can start playing.
 
