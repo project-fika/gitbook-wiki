@@ -32,7 +32,9 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
             "optional": [] // mods that are allowed outside of required
         },
         "useInertia": true, // if inertia should be enabled, default: true
-        "sharedQuestProgression": false // if quest progression in raid should be shared, default: false
+        "sharedQuestProgression": false, // if quest progression in raid should be shared, default: false
+        "canEditRaidSettings": true, // if editing raid settings is allowed, default: true
+        "enableTransists": true // if transit system is enabled, default: true
     },
     "server": {
         "giftedItemsLoseFIR": true, // if sent items should lose their FiR status, default: true
@@ -42,9 +44,22 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
         "showNonStandardProfile": false // if non-standard EFT profiles can be created, default: false
     },
     "natPunchServer": {
-        "enable": false, // if nat punching should be enabled, default: false
+        "enable": false, // if nat punching should be enabled; requires FikaServerTools, default: false
         "port": 6970, // nat punching port, default: 6970
         "natIntroduceAmount": 1
+    },
+    "dedicated": {
+        "profiles": {
+            "amount": 0 // how many dedicated client profiles should be generated, default: 0
+        },
+        "scripts": {
+            "generate": true, // if a launch script should be generated upon generating a dedicated client profile, default: true
+            "forceIp": "" // ip to set in the launch script, default: empty
+        }
+    },
+    "background": {
+        "enable": true, // use fika background in the SPT launcher, default: true
+        "easteregg": false // enable easter egg, default: false
     }
 }
 ```
