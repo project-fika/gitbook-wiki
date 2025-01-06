@@ -16,68 +16,38 @@ layout:
 
 To open up your client configuration, press the `F12` key while in-game. Head to the `Fika Core` section to configure the settings.
 
-**Coop**
+### Coop
 
-* **Show Notifications**: Enable custom notifications when a player dies, extracts, kills a boss, etc.
-* **Auto Extract**: Automatically extracts when playing as a client instead of entering free camera.
-* **Show Extract Message**: Whether to show the extract message after dying/extracting.
-* **Extract Key**: The key used to extract from the raid.
-* **Chat Key**: The key used to open the chat window.
+<table><thead><tr><th>Name</th><th width="171">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Show Feed</td><td>true</td><td>Enable custom notifications when a player dies, extracts, kills a boss, etc.</td></tr><tr><td>Auto Extract</td><td>false</td><td>Automatically extracts after the extraction countdown. As a host, this will only work if there are no clients connected.</td></tr><tr><td>Show Extract Message</td><td>true</td><td>Whether to show the extract message after dying/extracting.</td></tr><tr><td>Extract Key</td><td>F8</td><td>The key used to extract from the raid.</td></tr><tr><td>Enable Chat</td><td>false</td><td>Toggle to enable chat in game. Cannot be change mid raid.</td></tr><tr><td>Chat Key</td><td>RightControl</td><td>The key used to open the chat window.</td></tr><tr><td>Enable Online Players</td><td>true</td><td>If the online players menu should be shown in the menu.</td></tr><tr><td>Online Players Scale</td><td>1</td><td>The scale of the window that displays online players. Only change if it looks out of proportion. Requires a refresh of the main menu to take effect.</td></tr></tbody></table>
 
-**Coop | Custom**
+### Coop | Debug
 
-* **Show Player Name Plates**: Toggle Health-Bars & Names.
-* **Hide Health Bar**: Completely hides the health bar.
-* **Show HP% instead of bar**: Shows health in % amount instead of using the bar.
-* **Show Player Faction Icon**: Shows the player faction icon next to the HP bar.
-* **Hide Name Plate in Optic**: Hides the name plate when viewing through PiP scopes.
-* **Name Plates Use Optic Zoom**: name plate location should be displayed using the PiP optic camera.
-* **Decrease Opacity In Peripheral**: Decreases the opacity of the name plates when not looking at a player.
-* **Name Plate Scale**: Size of the name plates.
-* **Opacity in ADS**: The opacity of the name plates when aiming down sights.
-* **Ping System**: Toggle Ping System. If enabled you can receive and send pings by pressing the ping key.
-* **Ping Button**: Button used to send pings.
-* **Ping Color**: The color of your pings when displayed for other players.
-* **Ping Size**: The multiplier of the ping size.
-* **Play Ping Animation**: Plays the pointing animation automatically when pinging. Can interfere with gameplay.
+<table><thead><tr><th>Name</th><th width="167">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Free Camera Button</td><td>F9</td><td>Button used to toggle free camera.</td></tr><tr><td>Allow Spectating Bots</td><td>true</td><td>If we should allow spectating bots if all players are dead/extracted.</td></tr><tr><td>AZERTY Mode</td><td>false</td><td>If free camera should use AZERTY keys for input.</td></tr><tr><td>Drone Mode</td><td>false</td><td>If the free camera should move only along the vertical axis like a drone.</td></tr><tr><td>Keybind Overlay</td><td>true</td><td>Keybind Overlay.</td></tr></tbody></table>
 
-**Coop | Quest Sharing**
+### Coop | Name Plates
 
-* **Quest Types**: Which quest types to receive and send.
+<table><thead><tr><th>Name</th><th width="167">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Show Player Name Plates</td><td>true</td><td>If name plates should be shown above teammates.</td></tr><tr><td>Hide Health Bar</td><td>false</td><td>Completely hides the health bar.</td></tr><tr><td>Show HP% instead of bar</td><td>false</td><td>Shows health in % amount instead of using the bar.</td></tr><tr><td>Show Effects</td><td>true</td><td>If status effects should be displayed below the health bar.</td></tr><tr><td>Show Player Faction Icon</td><td>true</td><td>Shows the player faction icon next to the HP bar.</td></tr><tr><td>Hide Name Plate in Optic</td><td>true</td><td>Hides the name plate when viewing through PiP scopes.</td></tr><tr><td>Name Plates Use Optic Zoom</td><td>true</td><td>If name plate location should be displayed using the PiP optic camera.</td></tr><tr><td>Decrease Opacity in Peripheral</td><td>true</td><td>Decreases the opacity of the name plates when not looking at a player.</td></tr><tr><td>Name Plate Scale</td><td>0.22</td><td>Size of the name plates.</td></tr><tr><td>Opacity in ADS</td><td>0.75</td><td>The opacity of the name plates when aiming down sights.</td></tr><tr><td>Max Distance to Show</td><td>500</td><td>The maximum distance at which name plates will become invisible, starts to fade at half the input value.</td></tr><tr><td>Minimum Opacity</td><td>0.1</td><td>The minimum opacity of the name plates.</td></tr><tr><td>Minimum Name Plate Scale</td><td>0.01</td><td>The minimum scale of the name plates.</td></tr><tr><td>Use Occlusion</td><td>false</td><td>Use occlusion to hide the name plate when the player is out of sight.</td></tr></tbody></table>
 
-**Coop | Debug**
+### Coop | Pinging
 
-* **Free Camera Button**: Button used to toggle free camera.
-* **AZERTY Mode**: If free camera should use AZERTY keys for input.
-* **Keybind Overlay**: an overlay with all free cam keybinds should show.
+<table><thead><tr><th>Name</th><th width="162">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Ping System</td><td>true</td><td>Toggle Ping System. If enabled you can receive and send pings by pressing the ping key.</td></tr><tr><td>Ping Button</td><td>Semicolon</td><td>Button used to send pings.</td></tr><tr><td>Ping Color</td><td>FFFFFFFF</td><td>The color of your pings when displayed for other players.</td></tr><tr><td>Ping Size</td><td>1</td><td>The multiplier of the ping size.</td></tr><tr><td>Ping Time</td><td>3</td><td>How long pings should be displayed.</td></tr><tr><td>Play Ping Animation</td><td>false</td><td>Plays the pointing animation automatically when pinging. Can interfere with gameplay.</td></tr><tr><td>Show Ping During Optics</td><td>false</td><td>If pings should be displayed while aiming down an optics scope.</td></tr><tr><td>Ping Use Optic Zoom</td><td>true</td><td>If ping location should be displayed using the PiP optic camera.</td></tr><tr><td>Ping Scale With Distance</td><td>true</td><td>If ping size should scale with distance from player.</td></tr><tr><td>Ping Minimum Opacity</td><td>0.05</td><td>The minimum opacity of pings when looking straight at them.</td></tr><tr><td>Show Ping Range</td><td>false</td><td>Shows the range from your player to the ping if enabled.</td></tr><tr><td>Ping Sound</td><td>SubQuestComplete</td><td>The audio that plays on ping. Acceptable values: SubQuestComplete, InsuranceInsured, ButtonClick, ButtonHover, InsuranceItemInsured, MenuButtonBottom, ErrorMessage, InspectWindow, InspectWindowClose, MenuEscape</td></tr></tbody></table>
 
-**Performance**
+### Coop | Quest Sharing
 
-* **Dynamic AI**: Use the dynamic AI system, disabling AI when they are outside of any player's range.
-* **Dynamic AI Range**: The range at which AI will be disabled dynamically.
-* **Dynamic AI Rate**: How often DynamicAI should scan for the range from all players.
+<table><thead><tr><th>Name</th><th width="162">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Quest Types</td><td>All</td><td>Which quest types to receive and send. PlaceBeacon is both markers and items. Acceptable values: Kills, Item, Location, PlaceBeacon, All</td></tr><tr><td>Show Notifications</td><td>true</td><td>If a notification should be shown when quest progress is shared with out.</td></tr><tr><td>Easy Kill Conditions</td><td>false</td><td>Enables easy kill conditions. When this is used, any time a friendly player kills something, it treats it as if you killed it for your quests as long as all conditions are met. This can be inconsistent and does not always work.</td></tr><tr><td>Shared Kill Experience</td><td>false</td><td>If enabled you will receive ½ of the experience when a friendly player kills an enemy (not bosses).</td></tr><tr><td>Shared Boss Experience</td><td>false</td><td>If enabled you will receive ½ of the experience when a friendly player kills a boss.</td></tr></tbody></table>
 
-**Performance | Max Bots**
+### Gameplay
 
-* **Enforced Spawn Limits**: Enforces spawn limits when spawning bots, making sure to not go over the vanilla limits. This mainly takes affect when using spawn mods or anything that modifies the bot limits.
-* **Despawn Furthest**: When enforcing spawn limits, should the furthest bot be de-spawned instead of blocking the spawn. This will make for a much more active raid on a lower Max Bots count. Helpful for weaker PCs. Will only despawn pmcs and scavs. If you don't run a dynamic spawn mod, this will however quickly exhaust the spawns on the map, making the raid very dead instead.
-* **Despawn Minimum Distance**: Don't despawn bots within this distance.
-* **Max Bots** `MAP`: Max amount of bots that can be active at the same time on `MAP`. Useful if you have a weaker PC. Set to 0 to disable.
+<table><thead><tr><th>Name</th><th width="162">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Disable Bot Metabolism</td><td>false</td><td>Disables metabolism on bots, preventing them from dying from loss of energy/hydration during long raids.</td></tr></tbody></table>
 
-**Network**
+### Network
 
-* **Native Sockets**: NativeSockets for gameplay traffic. This uses direct socket calls for send/receive to drastically increase speed and reduce GC pressure. Only for Windows/Linux and might not always work.
-* **Force IP**: Forces the server when hosting to use this IP when broadcasting to the backend instead of automatically trying to fetch it. Leave empty to disable. This is required when using a VPN, use your personal VPN IP.
-* **Force Bind IP**: Forces the server when hosting to use this local IP when starting the server. Leave empty to disable. This is required when using a VPN, use your personal VPN IP.
-* **Auto Server Refresh Rate**: Every X seconds the client will ask the server for the list of matches while at the lobby screen.
-* **UDP Port**: Port to use for UDP gameplay packets.
-* **Use UPnP**: Attempt to open ports using UPnP. Useful if you cannot open ports yourself but the router supports UPnP.
-* **Use NAT Punching**: Use NAT punching when hosting a raid. Only works with fullcone NAT type routers and requires NatPunchServer to be running on the SPT server. UPnP, Force IP and Force Bind IP are disabled with this mode.
-* **Connection Timeout**: How long it takes for a connection to be considered dropped if no packets are received.
+<table><thead><tr><th>Name</th><th width="175">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Native Sockets</td><td>true</td><td>Use NativeSockets for gameplay traffic. This uses direct socket calls for send/receive to drastically increase speed and reduce GC pressure. Only for Windows/Linux and might not always work.</td></tr><tr><td>Force IP</td><td>&#x3C;empty></td><td>Forces the server when hosting to use this IP when broadcasting to the backend instead of automatically trying to fetch it. Leave empty to disable.</td></tr><tr><td>Force Bind IP</td><td>0.0.0.0</td><td>Forces the server when hosting to use this local adapter when starting the server. Useful if you are hosting on a VPN.</td></tr><tr><td>UDP Port</td><td>25565</td><td>Port to use for UDP gameplay packets.</td></tr><tr><td>Use UPnP</td><td>false</td><td>Attempt to open ports using UPnP. Useful if you cannot open ports yourself but the router supports UPnP.</td></tr><tr><td>Use NAT Punching</td><td>false</td><td>Use NAT punching when hosting a raid. Only works with fullcone NAT type routers and requires NatPunchServer to be running on the SPT server. UPnP, Force IP and Force Bind IP are disabled with this mode.</td></tr><tr><td>Connection Timeout</td><td>15</td><td>How long it takes for a connection to be considered dropped if no packets are received.</td></tr><tr><td>Send Rate</td><td>Medium</td><td>How often per second movement packets should be sent (lower = less bandwidth used, slight more delay during interpolation). This only affects the host and will be synchronized to all clients.</td></tr><tr><td>Smoothing Rate</td><td>Medium</td><td>Local simulation is behind by (Send Rate * Smoothing Rate). This guarantees that we always have enough snapshots in the buffer to mitigate lags &#x26; jitter during interpolation.</td></tr></tbody></table>
 
-**Gameplay**
+### Performance
 
-* **Head Damage Multiplier**: X multiplier to damage taken on the head collider. 0.2 = 20%
-* **Armpit Damage Multiplier**: X multiplier to damage taken on the armpits collider. 0.2 = 20%
-* **Stomach Damage Multiplier**: X multiplier to damage taken on the stomach collider. 0.2 = 20%
-* **Disable Bot Metabolism**: Disables metabolism on bots, preventing them from dying from loss of energy/hydration during long raids.
+<table><thead><tr><th>Name</th><th width="171">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Dynamic AI</td><td>false</td><td>Disables AI logic at a certain range.</td></tr><tr><td>Dynamic AI Range</td><td>150</td><td>The range at which AI will be disabled dynamically.</td></tr><tr><td>Dynamic AI Rate</td><td>Medium</td><td>How often Dynamic AI should scan for the range from all players.</td></tr><tr><td>Ignore Snipers</td><td>true</td><td>Whether Dynamic AI should ignore sniper scavs.</td></tr></tbody></table>
+
+### Performance | Max Bots
+
+<table><thead><tr><th>Name</th><th width="172">Default value</th><th>Description</th></tr></thead><tbody><tr><td>Enforced Spawn Limits</td><td>false</td><td>Enforces spawn limits when spawning bots, making sure to not go over the vanilla limits. This mainly takes affect when using spawn mods or anything that modifies the bot limits. Will not block spawns of special bots like bosses.</td></tr><tr><td>Despawn Furthest</td><td>false</td><td>When enforcing spawn limits, should the furthest bot be de-spawned instead of blocking the spawn. This will make for a much more active raid on a lower Max Bots count. Helpful for weaker PCs. Will only despawn pmcs and scavs. If you don't run a dynamic spawn mod, this will however quickly exhaust the spawns on the map, making the raid very dead instead.</td></tr><tr><td>Despawn Minimum Distance</td><td>200</td><td>The minimum distance to despawn a bot.</td></tr><tr><td>Max Bots Factory</td><td>0</td><td>Max amount of bots that can be active at the same time on Factory. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Customs</td><td>0</td><td>Max amount of bots that can be active at the same time on Customs. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Interchange</td><td>0</td><td>Max amount of bots that can be active at the same time on  Interchange. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Reserve</td><td>0</td><td>Max amount of bots that can be active at the same time on Reserve. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Woods</td><td>0</td><td>Max amount of bots that can be active at the same time on Woods. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Shoreline</td><td>0</td><td>Max amount of bots that can be active at the same time on Shoreline. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Streets of Tarkov</td><td>0</td><td>Max amount of bots that can be active at the same time on Streets of Tarkov. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Ground Zero</td><td>0</td><td>Max amount of bots that can be active at the same time on Ground Zero. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Labs</td><td>0</td><td>Max amount of bots that can be active at the same time on Labs. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr><tr><td>Max Bots Lighthouse</td><td>0</td><td>Max amount of bots that can be active at the same time on Lighthouse. Useful if you have a weaker PC. Set to 0 to use vanilla limits. Cannot be changed during a raid.</td></tr></tbody></table>
