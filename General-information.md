@@ -51,7 +51,8 @@ In summary:
   * You can snap to their head by holding `SPACE` when jumping
   * You can snap to their back in a 3rd position view by holding `CTRL` when jumping
   * You can press the `HOME` key to temporarily toggle free cam controls
-* Damage multipliers for crucial areas on yourself
+* In-game chat system
+* Online player list
 * Dynamic AI for hosts, which disables AI when no one is near
 * Custom AI limits per map
 * Culling system to increase performance
@@ -59,7 +60,9 @@ In summary:
 * Pinging system to ping an area in the game for your teammates
 * Player health bars for your teammates
 * Quest progress sharing in raids
-* Dedicated client (more info here)
+* Dedicated client to offload AI and gain performance (more info [here](advanced-features/dedicated-client.md))
+* Network interpolation for smoother gameplay
+* UPnP and NAT Punching
 
 ## Limitations
 
