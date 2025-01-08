@@ -50,7 +50,7 @@ We recommend reading the [General information](../General-information.md) sectio
 {% step %}
 ### Extract Fika-Plugin to your SPT folder
 
-<figure><img src="../.gitbook/assets/release_7zip_ss.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/release_7zip_ss.png" alt="Image showing Windows File Explorer on left showing an SPT Install folder and on right a 7Zip window with Fika Release showing drag and drop procedure for installation."><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
