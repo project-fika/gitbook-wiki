@@ -14,7 +14,7 @@ layout:
 
 # Host using a VPN
 
-A Virtual Private Network (VPN) enables you to join the same network via a public centralized server. You can either set up your own VPN or use a VPN service such as RAdmin, ZeroTier, etc. This method is recommended only as a last resort if you are unable to use any other hosting options.
+A Virtual Private Network (VPN) enables you to join the same network via a public centralized server. You can either set up your own VPN or use a VPN service such as [RAdmin](https://www.radmin-vpn.com/), [ZeroTier](https://www.zerotier.com/download/), etc. This method is recommended only as a last resort if you are unable to use any other hosting options.
 
 {% hint style="warning" %}
 Free VPNs services are known to cause performance or connectivity problems, so use at your own risk. The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.
@@ -22,10 +22,10 @@ Free VPNs services are known to cause performance or connectivity problems, so u
 
 ### Installing the VPN client
 
-* Navigate to the VPN website and install their client.
+* Navigate to the VPN website of your choice and install their client.
 * Reboot your computer.
 * You might need to create a VPN channel/room that your friends needs to join.
-* Take note of your VPN IP (referred to as `your_vpn_ip` below), which is generally shown in the VPS client interface. You will need it in the following steps.
+* Take note of your VPN IP (referred to as `your_vpn_ip` below), which is generally shown in the VPN client interface. You will need it in the following steps.
 
 ### SPT/Fika configuration
 
