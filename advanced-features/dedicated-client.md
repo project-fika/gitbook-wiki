@@ -36,9 +36,8 @@ Please note that there is some technical knowledge required to achieve this. If 
 
 ### Installation
 
-* Install Escape From Tarkov on the server that you're planning to host the dedicated client on using the official BSG launcher. Yes, this is required and there's no way around it.
-* You can delete the `EscapeFromTarkov_Data` folder in your official EFT folder to save disk space, but this is not mandatory. We recommend leaving it for future updates if you can.
-* Copy your working Fika installation to the server in a separate folder. This will be referred to as `dedicated folder` in the steps below. If this is not possible because the server is remote, we suggest following the [Installing Fika](../installing-fika/) procedure on the server hosting the dedicated client.
+* Install Escape From Tarkov on the server that you're planning to host the dedicated client on using the official BSG launcher. This is required to validate that you own the game.
+* Copy your working Fika installation to the server in a separate folder. This will be referred to as `dedicated folder` in the steps below. If this is not possible, please follow the [Installing Fika](../installing-fika/) procedure on the server.
 * Download [Fika.Dedicated](https://github.com/project-fika/Fika-Dedicated/releases/latest)
 * Extract `Fika.Dedicated` to your `dedicated folder`.
 * Go to the machine where the SPT server is hosted.
@@ -67,11 +66,9 @@ Server is running, do not close while playing SPT, Happy playing!!
 * Navigate to `<SPT folder>\user\mods\fika-server\assets\scripts` and copy the batch file.
 * Paste the batch file inside your `dedicated folder`. It must be inside the same directory as `EscapeFromTarkov.exe`.
 * Run the batch file to start the dedicated client.
-* Close the dedicated client and navigate to `\BepInEx\config` and manually configure `com.fika.core.cfg` and `com.fika.dedicated.cfg`.
+* Start the game using your regular profile and click "Host Raid" in the lobby screen. Tick the "Use dedicated host" checkbox to start a raid using the dedicated host. If the check box is greyed out, the dedicated client was not able to connect to your SPT server. See the [troubleshooting](../Troubleshooting.md) section for more information.
 
-At this point you should be able to host a raid using the dedicated client. The option will be available when pressing "Host Raid" in the Lobby screen. If the check box is greyed out, it means the dedicated client was not able to connect to your SPT server.
+### Additional information
 
-### Additional info
-
-* Only install mods on the dedicated client that are necessary for a raid host, such as SAIN or SWAG+DONUTS.
-* Do not install mods that are for game play experience (Amanda.Graphics, MoreCheckmarks, EFTApi, GamePanelHud, DynamicMaps, LootValue, Ram Cleaner Interval, DeClutter, etc.). They will conflict and/or will not be necessary.
+* Only install mods on the dedicated client that are necessary for a raid host, such as SAIN or SWAG+DONUTS. General rule of thumb is to install AI or spawn mods.
+* Do not install mods that are designed for game play experience such as Amanda.Graphics, MoreCheckmarks, EFTApi, GamePanelHud, DynamicMaps, LootValue, Ram Cleaner Interval, DeClutter, etc.). They will conflict and/or will not be necessary.
