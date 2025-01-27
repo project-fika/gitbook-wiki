@@ -29,7 +29,7 @@ In summary:
 
 * Fika is a combination of a [BepInEx mod](https://github.com/project-fika/Fika-Plugin) (Fika-Plugin) and a [SPT plugin](https://github.com/project-fika/Fika-Server) (Fika-Server).
 * Fika uses SPT (with the Fika-Server plugin) as the back-end server for profile and lobby management.
-* Fika uses an efficient peer to peer UDP networking for game play. While Fika is still in development, the general consensus is that network performance is better than Escape From Tarkov live (provided the host has proper networking capabilities).
+* Fika uses the Client <-> Server UDP networking model for game play. While Fika is still in development, the general consensus is that network performance is better than Escape From Tarkov live (provided the host has proper networking capabilities).
 
 ## Main features
 
