@@ -14,6 +14,10 @@ layout:
 
 # VPN
 
+{% hint style="warning" %}
+Custom firewalls such as **BitDefender** may block your connection while playing. Make sure that you allow the connection or temporarily disable it while playing!
+{% endhint %}
+
 * Go to the VPN website and install their client.
 * Reboot your computer.
 * Ensure that you can communicate with the host by pinging their VPN IP. You might need to join their channel/room first.
