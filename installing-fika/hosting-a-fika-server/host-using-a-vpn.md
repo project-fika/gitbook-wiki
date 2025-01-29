@@ -17,7 +17,9 @@ layout:
 A Virtual Private Network (VPN) enables you to join the same network via a public centralized server. You can either set up your own VPN or use a VPN service such as [Radmin VPN](https://www.radmin-vpn.com/), [ZeroTier](https://www.zerotier.com/download/), etc. This method is recommended only as a last resort if you are unable to use any other hosting options.
 
 {% hint style="warning" %}
-Free VPNs services are known to cause performance or connectivity problems, so use at your own risk. The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.
+Free VPNs services are known to cause performance or connectivity problems, so use at your own risk. The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.\
+\
+Custom firewalls such as **BitDefender** may also block your connection while playing. Make sure that you allow the connection or temporarily disable it while playing!
 {% endhint %}
 
 ### Installing the VPN client
