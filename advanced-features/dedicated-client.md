@@ -38,6 +38,7 @@ Please note that there is some technical knowledge required to achieve this. If 
 
 * Install Escape From Tarkov on the server that you're planning to host the dedicated client on using the official BSG launcher. This is required to validate that you own the game.
 * Copy your working Fika installation to the server in a separate folder. This will be referred to as `dedicated folder` in the steps below. If this is not possible, please follow the [Installing Fika](../installing-fika/) procedure on the server.
+* Remove all the DLLs inside `<dedicated folder>\BepInEx\plugins` except for `Fika.Core.dll`.
 * Download [Fika.Dedicated](https://github.com/project-fika/Fika-Dedicated/releases/latest)
 * Extract `Fika.Dedicated` to your `dedicated folder`.
 * Go to the machine where the SPT server is hosted.
@@ -65,10 +66,20 @@ Server is running, do not close while playing SPT, Happy playing!!
 
 * Navigate to `<SPT folder>\user\mods\fika-server\assets\scripts` and copy the batch file.
 * Paste the batch file inside your `dedicated folder`. It must be inside the same directory as `EscapeFromTarkov.exe`.
-* Run the batch file to start the dedicated client.
-* Start the game using your regular profile and click "Host Raid" in the lobby screen. Tick the "Use dedicated host" checkbox to start a raid using the dedicated host. If the check box is greyed out, the dedicated client was not able to connect to your SPT server. See the [troubleshooting](../Troubleshooting.md) section for more information.
+* Run the batch file to start the dedicated client. A console window should show up. Do not close it.
+* Go back to your normal Fika folder and start the game using `SPT.Launcher` as you normally would.
+* Go to the lobby screen and click "Host Raid". Tick the "Use dedicated host" checkbox to start a raid using the dedicated host.
+
+{% hint style="warning" %}
+**WARNING**
+
+The dedicated client should never run any mods except for AI or spawn mods such as SAIN, MOAR lite or SWAG+DONUTS. They are only necessary because the raid host handles the AI and spawning.
+
+Running mods that are designed for game play experience WILL cause issues with the dedicated client. A few notable examples: Amanda.Graphics, MoreCheckmarks, EFTApi, GamePanelHud, DynamicMaps, LootValue, Ram Cleaner Interval, DeClutter, etc.).
+
+If you encounter any issues starting the dedicated client, this is most likely the reason.
+{% endhint %}
 
 ### Additional information
 
-* Only install mods on the dedicated client that are necessary for a raid host, such as SAIN or SWAG+DONUTS. General rule of thumb is to install AI or spawn mods.
-* Do not install mods that are designed for game play experience such as Amanda.Graphics, MoreCheckmarks, EFTApi, GamePanelHud, DynamicMaps, LootValue, Ram Cleaner Interval, DeClutter, etc.). They will conflict and/or will not be necessary.
+* If the "Use dedicated host" check box is greyed out, the dedicated client was unable to connect to your SPT server OR the dedicated client is already hosting a raid.
