@@ -75,7 +75,7 @@ Server is running, do not close while playing SPT, Happy playing!!
 
 The dedicated client should never run any mods except for AI or spawn mods such as SAIN, MOAR lite or SWAG+DONUTS. They are only necessary because the raid host handles the AI and spawning.
 
-Running mods that are designed for game play experience WILL cause issues with the dedicated client. A few notable examples: Amanda.Graphics, MoreCheckmarks, EFTApi, GamePanelHud, DynamicMaps, LootValue, Ram Cleaner Interval, DeClutter, etc.).
+Running mods that are designed for game play experience WILL cause issues with the dedicated client. A few notable examples: Amanda.Graphics, MoreCheckmarks, EFTApi, GamePanelHud, DynamicMaps, LootValue, Ram Cleaner Interval, DeClutter, etc.
 
 If you encounter any issues starting the dedicated client, this is most likely the reason.
 {% endhint %}
