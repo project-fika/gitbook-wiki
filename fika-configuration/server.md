@@ -16,52 +16,67 @@ layout:
 
 The server configuration can be found in the `user\mods\fika-server\assets\configs` folder. Open up `fika.jsonc` with a text editor.
 
-{% code fullWidth="false" %}
-```json
+{% code fullWidth="true" %}
+```json5
 {
     "client": {
-        "useBtr": true, // if the BTR should spawn on streets, default: true
-        "friendlyFire": true, // if friendly fire is enabled, default: true
-        "dynamicVExfils": false, // if vehicle exfils should scale to the amount of players in raid rather than default to 4, default: false
-        "allowFreeCam": false, // if the free cam can be toggled freely, default: false
-        "allowSpectateFreeCam": false, // if we are allowed to freecam when spectating players after death or extraction. Freecam is still enabled if all players have died or extracted, default: false
-        "allowItemSending": true, // if item sending should be enabled, default: true
-        "blacklistedItems": [], // item template ids that cannot be sent, e.g. ["5c94bbff86f7747ee735c08f", "5c1d0f4986f7744bb01837fa"] would not allow players to send access cards and black keycards
-        "forceSaveOnDeath": false, // if saving is forced upon death, preventing ALT+F4 cheese, default: false
+        "useBtr": true, // if the BTR should spawn
+        "friendlyFire": true, // if friendly fire is enabled
+        "dynamicVExfils": true, // if vehicle exfils should dynamically scale with the amount of players
+        "allowFreeCam": true, // if players can use the free cam while still alive
+        "allowSpectateFreeCam": true, // whether players are forced to spectate other players or if they can move freely
+        "blacklistedItems": [], // items that cannot be sent
+        "forceSaveOnDeath": false, // if a player's inventory is force saved when they die, mitigating ALT+F4 cheating
         "mods": {
-            "required": [], // required mods on the server, if enabled you should always include standard SPT mods: ["com.SPT.custom", "com.SPT.singleplayer", "com.SPT.core", "com.SPT.debugging", "com.fika.core", "com.bepis.bepinex.configurationmanager"]
-            "optional": [] // mods that are allowed outside of required
+            "required": [], // required mods by the client
+            "optional": [] // optional mods allowed to connect with
         },
-        "useInertia": true, // if inertia should be enabled, default: true
-        "sharedQuestProgression": false, // if quest progression in raid should be shared, default: false
-        "canEditRaidSettings": true, // if editing raid settings is allowed, default: true
-        "enableTransists": true // if transit system is enabled, default: true
+        "useInertia": true, // if inertia should be enabled, if disabled it will act as if you are not wearing anything
+        "sharedQuestProgression": true, // if quest progression should be shared
+        "canEditRaidSettings": true, // of clients can modify the raid settings before starting a raid
+        "enableTransits": false, // if transits are enabled
+        "anyoneCanStartRaid": false // if anyone can click "START RAID"
     },
     "server": {
-        "giftedItemsLoseFIR": true, // if sent items should lose their FiR status, default: true
-        "launcherListAllProfiles": false, // if launcher should show all profiles, default: false
-        "sessionTimeout": 5, // how long the server waits for a keepalive ping from a client until the session is considered crashed, default: 5
-        "showDevProfile": false, // if dev profiles can be created, default: false
-        "showNonStandardProfile": false // if non-standard EFT profiles can be created, default: false
+        "SPT": {
+            "http": {
+                "ip": "127.0.0.1", // the interface to listen on
+                "port": 6969, // the port to host on
+                "backendIp": "127.0.0.1", // the ip that is sent to clients to be used for requests
+                "backendPort": 6969 // the port that is sent to clients to be used for requests
+            },
+            "disableSPTChatBots": false // forces chat bots to be off
+        },
+        "allowItemSending": true, // allows players to send items to each other
+        "sentItemsLoseFIR": true, // if sent items lose their FIR status
+        "launcherListAllProfiles": false, // if all accounts are listed in the launcher
+        "sessionTimeout": 5, // how long in minutes it takes for a raid to be considered "lost" when not responding
+        "showDevProfile": false, // if dev profiles are enabled
+        "showNonStandardProfile": false, // if non-standard EFT profiles are enabled
+        "logClientModsInConsole": false // if all mods of a client connecting should be printed
     },
     "natPunchServer": {
-        "enable": false, // if nat punching should be enabled; requires FikaServerTools, default: false
-        "port": 6970, // nat punching port, default: 6970
+        "enable": false, // if the nat punching module is enabled
+        "port": 6790, // the port to use
         "natIntroduceAmount": 1
     },
-    "dedicated": {
+    "headless": {
         "profiles": {
-            "amount": 0 // how many dedicated client profiles should be generated, default: 0
+            "amount": 0, // the amount of profiles to be generated / used
+            "aliases": {} // the aliases to be show when selecting a headless client
         },
         "scripts": {
-            "generate": true, // if a launch script should be generated upon generating a dedicated client profile, default: true
-            "forceIp": "" // ip to set in the launch script, default: empty
-        }
+            "generate": true, // if the headless scripts should be generated
+            "forceIp": "" // the ip the headless connects to
+        },
+        "setLevelToAverageOfLobby": true, // use average level of all players when spawning bots on headless
+        "restartAfterAmountOfRaids": 0 // if the headless should restart after X raids, 0 to disable
     },
     "background": {
-        "enable": true, // use fika background in the SPT launcher, default: true
-        "easteregg": false // enable easter egg, default: false
+        "enable": true, // enables custom launcher background
+        "easteregg": false
     }
 }
 ```
 {% endcode %}
+
