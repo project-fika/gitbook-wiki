@@ -48,12 +48,12 @@ If everything is working properly, you should see something similar in the conso
 
 ```
 ModLoader: loading: 1 server mods...
-Mod: server version: 2.2.8 by: Fika loaded
+Mod: server version: 2.4.0 by: Fika loaded
 Server: executing startup callbacks...
 Importing database...
 Database import finished
-Started webserver at http://<your_lan_ip>:6969
-Started websocket at ws://<your_lan_ip>:6969
+Started webserver at https://<your_lan_ip>:6969
+Started websocket at wss://<your_lan_ip>:6969
 Server is running, do not close while playing SPT, Happy playing!!
 ```
 

@@ -20,6 +20,12 @@ Fika is an unofficial mod for SPT. Many features such as profiles, characters, h
 
 Project Fika adds a lobby interface for joining other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape from Tarkov experience by default.
 
+{% hint style="danger" %}
+\>**3.11** SPT is now using `https` instead of `http`, make sure that you update everything accordingly!
+{% endhint %}
+
+
+
 In summary:
 
 * SPT is the back-end server that provides the player profile, inventory, flea market, and many other Escape From Tarkov features.
@@ -71,5 +77,4 @@ In summary:
 * Only one active raid at a time. There are some underlying issues with the back-end server that may corrupt your profile when two or more raids are active at the same time.
 * Fika does not include any PvP mechanisms, as supporting PvP is not the goal of this project.
 * Fika does not offer a global matchmaking service. Only players connected to the same server can create or join raids.
-* VoIP is not implemented.
 * Some SPT mods are incompatible with Fika. SPT mods are typically designed for a standard SPT installation, which does not include multiplayer functionality. It is the responsibility of the mod's author to make their mod compatible with Fika if they choose to do so.

@@ -21,7 +21,9 @@ We do not provide a step-by-step tutorial for port forwarding because the router
 {% endhint %}
 
 {% hint style="warning" %}
-Not all ISP allows port forwarding. If you find yourself unable to port forward, you can rent a VPS to host your backend server or alternatively, use a VPN (ZeroTier, Radmin, Playit.gg, etc.). Free VPNs are known to cause performance or connectivity problems, so use at your own risk.
+Not all Internet Service Providers (ISP) allows port forwarding. If you find yourself unable to port forward, you can use a public VPN service such as ZeroTier, Radmin, Playit.gg, etc.).&#x20;
+
+Free VPNs are known to cause performance or connectivity problems, so use at your own risk. Click [here](host-using-a-vpn.md) to learn how to host using a VPN.
 {% endhint %}
 
 ### Router configuration
@@ -36,7 +38,7 @@ Not all ISP allows port forwarding. If you find yourself unable to port forward,
 
 * Navigate to your `<SPT Folder>\SPT_Data\Server\configs` and open `http.json`
 * Change `ip` to `0.0.0.0`
-* Change `backendIp` to your [WAN IP](https://ipv4.icanhazip.com/)
+* Change `backendIp` to `0.0.0.0`
 * Save the file and close it
 
 ### Windows Firewall
@@ -51,12 +53,12 @@ If everything is working properly, you should see something similar in the conso
 
 ```
 ModLoader: loading: 1 server mods...
-Mod: server version: 2.2.8 by: Fika loaded
+Mod: server version: 2.4.0 by: Fika loaded
 Server: executing startup callbacks...
 Importing database...
 Database import finished
-Started webserver at http://0.0.0.0:6969
-Started websocket at ws://0.0.0.0:6969
+Started webserver at https://0.0.0.0:6969
+Started websocket at wss://0.0.0.0:6969
 Server is running, do not close while playing SPT, Happy playing!!
 ```
 
