@@ -14,7 +14,7 @@ layout:
 
 # Server
 
-The server configuration can be found in the `user\mods\fika-server\assets\configs` folder. Open up `fika.jsonc` with a text editor.
+The server configuration can be found in the `user\mods\fika-server\assets\configs` folder. Open up `fika.jsonc` with a text editor. You need to launch the server at least once for this file to be generated.
 
 {% code fullWidth="true" %}
 ```json5

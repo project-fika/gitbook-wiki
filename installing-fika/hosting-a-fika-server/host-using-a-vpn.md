@@ -31,7 +31,9 @@ Custom firewalls such as **BitDefender** may also block your connection while pl
 
 ### SPT/Fika configuration
 
-* Navigate to your `<SPT Folder>\SPT_Data\Server\configs` and open `http.json`.
+* Start the **SPT.Server** at least once to generate the configuration files
+* Navigate to your `user\mods\fika-server\assets\configs` and open `fika.jsonc`
+* Navigate to the `server` section
 * Change `ip` to `your_vpn_ip`.
 * Change `backendIp` to `your_vpn_ip`.
 * Save the file and close it.
