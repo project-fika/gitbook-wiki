@@ -45,7 +45,7 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
                 "backendIp": "127.0.0.1", // the ip that is sent to clients to be used for requests
                 "backendPort": 6969 // the port that is sent to clients to be used for requests
             },
-            "disableSPTChatBots": false // forces chat bots to be off
+            "disableSPTChatBots": true // forces chat bots to be off
         },
         "allowItemSending": true, // allows players to send items to each other
         "sentItemsLoseFIR": true, // if sent items lose their FIR status
@@ -79,4 +79,3 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
 }
 ```
 {% endcode %}
-
