@@ -56,9 +56,9 @@ Mod: server version: 2.4.0 by: Fika loaded
 Server: executing startup callbacks...
 Importing database...
 Database import finished
-Found 0 dedicated client profiles.
-Created 1 dedicated client profiles!
-Generated launch script: /fika-server/assets/scripts/Start_dedicated_674e72ab0001917ea42a90fa.bat
+Found 0 headless client profiles.
+Created 1 headless client profiles!
+Generated launch script: /fika-server/assets/scripts/Start_headless_67d61ef943bed350dc0455f1.bat
 Started webserver at https://0.0.0.0:6969
 Started websocket at wss://0.0.0.0:6969
 Server is running, do not close while playing SPT, Happy playing!!
