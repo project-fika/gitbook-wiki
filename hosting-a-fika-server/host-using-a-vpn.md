@@ -75,7 +75,7 @@ If you see errors (red text) then that means your configuration is invalid or yo
 
 At this point, your server should be accessible to your friends, and you can start playing.
 
-Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../installing-fika/joining-a-fika-server/).
+Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../advanced-features/joining-a-fika-server/).
 
 [Click here](../playing-fika.md) to learn how to host a raid.
 

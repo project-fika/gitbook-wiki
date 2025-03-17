@@ -96,4 +96,4 @@ In order to host or join a Fika server, you must follow the necessary steps.
 
 [Click here](../hosting-a-fika-server/) if you're hosting a Fika server.
 
-[Click here](joining-a-fika-server/) if you're joining a Fika server.
+[Click here](../advanced-features/joining-a-fika-server/) if you're joining a Fika server.

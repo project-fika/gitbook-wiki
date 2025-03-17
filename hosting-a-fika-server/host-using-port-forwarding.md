@@ -70,7 +70,7 @@ If you see errors (red text) then that means your configuration is invalid or yo
 
 **Validate that your server is accessible.** To do this, you can try to access the port 6969 using an [online port checker](https://portchecker.co). Make sure the SPT server is running first before attempting this. If the port is closed, you may have an invalid configuration, Windows Firewall blocking the connection or your ISP does not allow port forwarding. See the Troubleshooting section for more details.
 
-Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../installing-fika/joining-a-fika-server/).
+Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../advanced-features/joining-a-fika-server/).
 
 [Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
 
