@@ -71,12 +71,12 @@ If you see errors (red text) then that means your configuration is invalid or yo
 * Find the Force IP and Force Bind IP in the "Fika.Core" section of the configuration manager.
 * Set both Force IP and Force Bind IP to your VPN IP. <- THIS IS A VERY IMPORTANT STEP, DO NOT SKIP IT.
 
-<figure><img src="../../.gitbook/assets/forceip.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/forceip.png" alt=""><figcaption></figcaption></figure>
 
 At this point, your server should be accessible to your friends, and you can start playing.
 
-Your friends will need to [install Fika](../../installing-fika/) as well and follow the steps to [join a Fika server](../../installing-fika/joining-a-fika-server/).
+Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../installing-fika/joining-a-fika-server/).
 
-[Click here](../) to learn how to host a raid.
+[Click here](../playing-fika.md) to learn how to host a raid.
 
-[Click here](../../fika-configuration/) to learn more about additional Fika configurations.
+[Click here](../fika-configuration/) to learn more about additional Fika configurations.

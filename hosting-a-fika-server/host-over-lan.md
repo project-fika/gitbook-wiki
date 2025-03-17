@@ -20,12 +20,12 @@ Your local IP address will be required to host over LAN. Follow the steps below 
 
 * Press the `Windows key` and type `cmd`.
 
-<figure><img src="../../.gitbook/assets/win_run_cmd.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/win_run_cmd.png" alt="" width="563"><figcaption></figcaption></figure>
 
 * Type `ipconfig` and then press `enter` in the command prompt.&#x20;
 * The IP listed in IPv4 is what you will need for the next section, e.g. `192.168.0.152.` It will be referred to as `your_lan_ip`.
 
-<figure><img src="../../.gitbook/assets/fika_ipconfig.png" alt=""><figcaption><p>Your local IP address should appear under Ethernet adapter (if your connection is wired)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fika_ipconfig.png" alt=""><figcaption><p>Your local IP address should appear under Ethernet adapter (if your connection is wired)</p></figcaption></figure>
 
 ### SPT/Fika configuration
 
@@ -36,7 +36,7 @@ Your local IP address will be required to host over LAN. Follow the steps below 
 * Change `backendIp` to `your_lan_ip`.
 * Save the file and close it.
 
-<figure><img src="../../.gitbook/assets/fika_lan_http.png" alt=""><figcaption><p>Example of a proper local IP address configuration in http.json</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fika_lan_http.png" alt=""><figcaption><p>Example of a proper local IP address configuration in http.json</p></figcaption></figure>
 
 ### Windows Firewall
 
@@ -69,12 +69,12 @@ If you see errors (red text) then that means your configuration is invalid or yo
 * Find the Force IP and Force Bind IP in the "Fika.Core" section of the configuration manager.
 * Set both Force IP and Force Bind IP to your LAN IP. <- THIS IS A VERY IMPORTANT STEP, DO NOT SKIP IT.
 
-<figure><img src="../../.gitbook/assets/fika_lan_f12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/fika_lan_f12.png" alt=""><figcaption></figcaption></figure>
 
 At this point, your server should be accessible to your friends, and you can start playing.
 
-Your friends will need to [install Fika](../../installing-fika/) as well and follow the steps to [join a Fika server](../../installing-fika/joining-a-fika-server/).
+Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../installing-fika/joining-a-fika-server/).
 
-[Click here](../#hosting-a-raid) to learn how to host a raid.
+[Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
 
-[Click here](../../fika-configuration/) to learn more about additional Fika configurations.
+[Click here](../fika-configuration/) to learn more about additional Fika configurations.

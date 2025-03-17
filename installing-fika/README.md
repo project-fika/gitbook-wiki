@@ -94,6 +94,6 @@ You should get a Fika disclaimer upon entering the menu. Read the disclaimer and
 
 In order to host or join a Fika server, you must follow the necessary steps.
 
-[Click here](../playing-fika/hosting-a-fika-server/) if you're hosting a Fika server.
+[Click here](../hosting-a-fika-server/) if you're hosting a Fika server.
 
 [Click here](joining-a-fika-server/) if you're joining a Fika server.
