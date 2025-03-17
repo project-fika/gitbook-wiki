@@ -17,7 +17,7 @@
   * [Client](fika-configuration/client.md)
   * [Server](fika-configuration/server.md)
 * [Advanced features](advanced-features/README.md)
-  * [Headless client](advanced-features/dedicated-client.md)
+  * [Headless client](advanced-features/headless-client.md)
 * [Modding Fika](Modding-Fika.md)
 * [Troubleshooting](Troubleshooting.md)
 * [Contribute to Fika](contribute-to-fika.md)

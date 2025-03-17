@@ -66,7 +66,7 @@ In summary:
 * Pinging system to ping an area in the game for your teammates
 * Player health bars for your teammates
 * Quest progress sharing in raids
-* Headless client to offload AI and gain performance (more info [here](advanced-features/dedicated-client.md))
+* Headless client to offload AI and gain performance (more info [here](advanced-features/headless-client.md))
 * Network interpolation for smoother gameplay
 * UPnP and NAT Punching
 
