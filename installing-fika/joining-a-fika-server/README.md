@@ -16,7 +16,7 @@ layout:
 
 ## Getting started
 
-This section is dedicated for setting up Fika to join a server. The server owner must have followed all the steps in the [Hosting a Fika server](../hosting-a-fika-server/) section first before you follow the steps below.
+This section is dedicated for setting up Fika to join a server. The server owner must have followed all the steps in the [Hosting a Fika server](../../playing-fika/hosting-a-fika-server/) section first before you follow the steps below.
 
 {% hint style="info" %}
 Most of the time, connection issues are caused by improper network configuration by the server owner. We cannot stress enough the importance of the server owner taking a few minutes to read the "Hosting a Fika Server" guide and following every step carefully.

@@ -24,7 +24,7 @@ Please note that there is some technical knowledge required to achieve this. If 
 
 Before continuing, make sure:
 
-* You have followed **ALL** the steps in [Installing Fika](../).
+* You have followed **ALL** the steps in [Installing Fika](../../installing-fika/).
 * You can start the game and reach the main menu.
 * You can see the Fika watermark in the bottom-left corner.
 * You have **NO** other mods than Fika installed.
