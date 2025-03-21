@@ -40,7 +40,7 @@ Free VPNs are known to cause performance or connectivity problems, so use at you
 * Navigate to your `user\mods\fika-server\assets\configs` and open `fika.jsonc`
 * Navigate to the `server` section
 * Change `ip` to `0.0.0.0`
-* Change `backendIp` to your [WAN IP](https://www.whatismyip.com/)
+* Change `backendIp` to `0.0.0.0` (use your [WAN IP](https://www.whatismyip.com/) instead if you are having issues)
 * Save the file and close it
 
 ### Windows Firewall

@@ -17,7 +17,7 @@ layout:
 The headless client is an exclusive Fika feature that allows you to host a raid on a separate Escape From Tarkov instance. You are able to offload the AI calculation and other resource-intensive task to improve game play performance. FPS gains are usually around 25% to 50% depending on your computer specifications and amount of bots in the game.
 
 {% hint style="warning" %}
-Please note that there is some technical knowledge required to achieve this. If you absolutely have no experience, you will have a hard time. Our Discord provides support in such cases.
+Please note that there is some technical knowledge required to achieve this. If you absolutely have no experience, you will have a hard time.
 {% endhint %}
 
 ### General info
@@ -29,9 +29,9 @@ Please note that there is some technical knowledge required to achieve this. If 
 
 ### Hardware requirements
 
-* A modern CPU with at least 4 cores @ 3.2GHz +.
+* A modern CPU with at least 4 cores @ >3.2GHz.
 * 16GB of RAM (virtual paging can alleviate this requirement but will degrade performance).
-* 50GB disk space with SSD/NVME drive. HDD is NOT recommended for Fika in any shape or form.
+* 50GB disk space with SSD/NVME drive. HDD is NOT sutiable for Fika or Tarkov in general.
 * Graphics card not required.
 
 ### Installation
@@ -75,7 +75,7 @@ Server is running, do not close while playing SPT, Happy playing!!
 
 The headless client should never run any mods except for AI or spawn mods such as SAIN, MOAR lite or SWAG+DONUTS. They are only necessary because the raid host handles the AI and spawning.
 
-Running mods that are designed for game play experience WILL cause issues with the headless client. A few notable examples: Amanda.Graphics, MoreCheckmarks, EFTApi, GamePanelHud, DynamicMaps, LootValue, Ram Cleaner Interval, DeClutter, etc.
+Running mods that are designed for game play experience WILL cause issues with the headless client. A few notable examples: **Amanda.Graphics**, **MoreCheckmarks**, **EFTApi**, **GamePanelHud**, **DynamicMaps**, **LootValue**, **Ram Cleaner Interval**, **DeClutter**, etc.
 
 If you encounter any issues starting the headless client, this is most likely the reason.
 {% endhint %}
