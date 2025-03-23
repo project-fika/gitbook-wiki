@@ -58,7 +58,7 @@ Importing database...
 Database import finished
 Found 0 headless client profiles.
 Created 1 headless client profiles!
-Generated launch script: /fika-server/assets/scripts/Start_headless_67d61ef943bed350dc0455f1.bat
+Generated launch script: /fika-server/assets/scripts/Start_headless_67d61ef943bed350dc0455f1.ps1
 Started webserver at https://0.0.0.0:6969
 Started websocket at wss://0.0.0.0:6969
 Server is running, do not close while playing SPT, Happy playing!!
@@ -71,7 +71,7 @@ Server is running, do not close while playing SPT, Happy playing!!
 {% hint style="warning" %}
 **WARNING**
 
-If the PowerShell window briefly appears and then disappears then your **ExecutionPolicy** might be set to **Restricted**. This should be **RemoteSigned** by default but used to be **Restricted**, so if your Windows installation is not recent or you do not have PowerShell updated it will be set **Restricted**.
+If the PowerShell window briefly appears and then disappears then your **ExecutionPolicy** might be set to **Restricted**. This should be **RemoteSigned** by default but used to be **Restricted**, so if your Windows installation is not recent or you do not have PowerShell updated it will be set to **Restricted**.
 
 To update your execution policy, open a PowerShell window and write:
 
@@ -79,7 +79,7 @@ To update your execution policy, open a PowerShell window and write:
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-Once done, click **ENTER** and close the window. You can read more about Execution Policies [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
+Once done, press **ENTER** and close the window. You can read more about Execution Policies [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
 {% endhint %}
 
 * Go back to your normal Fika folder and start the game using `SPT.Launcher.exe` as you normally would.
