@@ -76,7 +76,7 @@ If the PowerShell window briefly appears and then disappears then your **Executi
 To update your execution policy, open a PowerShell window and write:
 
 ```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 Once done, click **ENTER** and close the window. You can read more about Execution Policies [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
