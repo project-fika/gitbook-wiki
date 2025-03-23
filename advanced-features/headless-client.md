@@ -64,14 +64,29 @@ Started websocket at wss://0.0.0.0:6969
 Server is running, do not close while playing SPT, Happy playing!!
 ```
 
-* Navigate to `<SPT folder>\user\mods\fika-server\assets\scripts` and copy the batch file.
+* Navigate to `<SPT folder>\user\mods\fika-server\assets\scripts` and copy the .ps1 file.
 * Paste the batch file inside your `headless folder`. It must be inside the same directory as `EscapeFromTarkov.exe`.
-* Run the batch file to start the headless client. A console window should show up. **Do not close it**.
-* Go back to your normal Fika folder and start the game using `SPT.Launcher.exe` as you normally would.
-* Go to the lobby screen and click `Host Raid`. Tick the `Use headless host` checkbox to start a raid using the headless host.
+* Right-click the .ps1 file and select `Run with Powershell`. A console window should show up. <mark style="color:red;">**Do not close it!**</mark>
 
 {% hint style="warning" %}
 **WARNING**
+
+If the PowerShell window briefly appears and then disappears then your **ExecutionPolicy** might be set to **Restricted**. This should be **RemoteSigned** by default but used to be **Restricted**, so if your Windows installation is not recent or you do not have PowerShell updated it will be set **Restricted**.
+
+To update your execution policy, open a PowerShell window and write:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
+
+Once done, click **ENTER** and close the window. You can read more about Execution Policies [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
+{% endhint %}
+
+* Go back to your normal Fika folder and start the game using `SPT.Launcher.exe` as you normally would.
+* Go to the lobby screen and click `Host Raid`. Tick the `Use headless host` checkbox to start a raid using the headless host.
+
+{% hint style="info" %}
+**NOTICE**
 
 The headless client should never run any mods except for AI or spawn mods such as SAIN, MOAR lite or SWAG+DONUTS. They are only necessary because the raid host handles the AI and spawning.
 
