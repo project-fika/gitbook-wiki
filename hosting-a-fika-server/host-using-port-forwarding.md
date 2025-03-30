@@ -75,3 +75,5 @@ Your friends will need to [install Fika](../installing-fika/) as well and follow
 [Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
 
 [Click here](../fika-configuration/) to learn more about additional Fika configurations.
+
+If you are playing on a PC separate from where your `SPT.server.exe` is running, you will need to forward UDP (default of 25565) to the gaming PC, instead of the machine `SPT.server.exe` is running on.
