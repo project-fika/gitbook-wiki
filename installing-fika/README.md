@@ -36,15 +36,11 @@ We recommend reading the [General information](../General-information.md) sectio
 
 {% stepper %}
 {% step %}
-### Download Fika-Plugin
-
-{% embed url="https://github.com/project-fika/Fika-Plugin/releases/latest" %}
+### Download [Fika-Plugin](https://github.com/project-fika/Fika-Plugin/releases/latest)
 {% endstep %}
 
 {% step %}
-### Download Fika-Server
-
-{% embed url="https://github.com/project-fika/Fika-Server/releases/latest" %}
+### Download [Fika-Server](https://github.com/project-fika/Fika-Server/releases/latest)
 {% endstep %}
 
 {% step %}

@@ -16,20 +16,16 @@ layout:
 
 ## How does Fika work?
 
-Fika is an unofficial mod for SPT. Many features such as profiles, characters, hideouts, inventory, quests, and trading, are provided by [SPT](https://sp-tarkov.com/).
+Fika is an unofficial mod for SPT. Many features such as profiles, characters, hideouts, inventory, quests, and trading are provided by [SPT](https://sp-tarkov.com/).
 
-Project Fika adds a lobby interface for joining other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape from Tarkov experience by default.
+Project Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape from Tarkov experience by default. In summary:
+
+* SPT is the back-end server that allows you to start the game without using BSG servers - it provides the player profile, inventory, flea market, and many other Escape From Tarkov features.
+* Fika is the mod component that adds multiplayer capabilities which allow players to host or join a raid to play together.
 
 {% hint style="danger" %}
 \>**3.11** SPT is now using `https` instead of `http`, make sure that you update everything accordingly!
 {% endhint %}
-
-
-
-In summary:
-
-* SPT is the back-end server that provides the player profile, inventory, flea market, and many other Escape From Tarkov features.
-* Fika is the component that adds multiplayer capabilities which allow players to host or join a raid to play together.
 
 ## Specifications
 
@@ -44,7 +40,7 @@ In summary:
 * Join someone else's raid.
 * Play together against bots, share items, progress quests together in the same raid.
 * Preserve character, quest, inventory, and hideout progression.
-* Use client/server mods from [SPT](https://hub.sp-tarkov.com/) (some mods are not compatible).
+* Use client/server mods from [SPT](https://hub.sp-tarkov.com/) (some mods are not compatible - see [Limitations](General-information.md#limitations)).
 
 ## Other features
 

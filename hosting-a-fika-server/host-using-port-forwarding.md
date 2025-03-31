@@ -14,11 +14,7 @@ layout:
 
 # Host using port forwarding
 
-Port forwarding is a networking process that allows external devices to access services on a private network by redirecting specific communication requests from an external IP address and port to an internal IP address and port. Port forwarding can be configured through your router's settings interface, which is usually accessible by entering the gateway IP address into a web browser.
-
-{% hint style="info" %}
-We do not provide a step-by-step tutorial for port forwarding because the router settings interface varies between different models and manufacturers. Make sure to research how to achieve port forwarding for your specific router model.
-{% endhint %}
+Port forwarding is a networking process that allows external devices to access one or multiple ports of a machine within your home network. Port forwarding can be configured through your router's settings interface, which is usually accessible by entering the gateway IP address into a web browser.
 
 {% hint style="warning" %}
 Not all Internet Service Providers (ISP) allows port forwarding. If you find yourself unable to port forward, you can use a public VPN service such as ZeroTier, Radmin, Playit.gg, etc.).&#x20;
@@ -28,11 +24,17 @@ Free VPNs are known to cause performance or connectivity problems, so use at you
 
 ### Router configuration
 
+{% hint style="info" %}
+We do not provide a step-by-step tutorial for port forwarding because the router settings interface varies between different models and manufacturers. Make sure to research how to achieve port forwarding for your specific router model.
+{% endhint %}
+
 * Go in your router's configuration interface (open browser and type the [gateway IP](https://www.whatismyip.com/finding-your-default-gateway-address/))
 * Access the port forward menu
 * Port forward the following ports to your computer:
   * 6969 TCP (SPT backend server)
   * 25565 UDP (Fika in-game networking)
+
+If you are playing on a PC separate from where your `SPT.server.exe` is running, you will need to forward UDP (default of 25565) to the gaming PC, instead of the machine `SPT.server.exe` is running on.
 
 ### SPT/Fika configuration
 
@@ -75,5 +77,3 @@ Your friends will need to [install Fika](../installing-fika/) as well and follow
 [Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
 
 [Click here](../fika-configuration/) to learn more about additional Fika configurations.
-
-If you are playing on a PC separate from where your `SPT.server.exe` is running, you will need to forward UDP (default of 25565) to the gaming PC, instead of the machine `SPT.server.exe` is running on.

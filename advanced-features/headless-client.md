@@ -23,9 +23,9 @@ Please note that there is some technical knowledge required to achieve this. If 
 ### General info
 
 * The headless client is basically another Fika instance that will automatically host raids. All players becomes clients (including the host).
-* Graphic rendering is disabled in order to make the headless client as lightweight as possible. However, the headless client is **NOT** a true headless headless server. It still requires all the game files and a pretty hefty amount of RAM in order to work (especially for maps such as Streets).
+* Graphic rendering is disabled in order to make the headless client as lightweight as possible. However, the headless client is **NOT** a true headless headless server. It still requires all the game files and a pretty hefty amount of RAM in order to work (especially for bigger maps such as Streets).
 * In other words, it's a patched Escape From Tarkov instance that poorly imitates a headless server. The benefits are still huge and we recommend using it if you have the resources to improve your game play experience.
-* It is recommended to run the headless client on a separate machine. We do not recommend using a VPS; as stated above this is not a real headless headless server and resources needed to run the headless client are quite huge for a VPS.
+* It is recommended to run the headless client on a separate physical machine. We do not recommend using a VPS; as stated above, this is not a real headless server and resources needed to run the headless client are generally too big for a typical VPS.
 
 ### Hardware requirements
 
@@ -65,7 +65,7 @@ Server is running, do not close while playing SPT, Happy playing!!
 ```
 
 * Navigate to `<SPT folder>\user\mods\fika-server\assets\scripts` and copy the .ps1 file.
-* Paste the batch file inside your `headless folder`. It must be inside the same directory as `EscapeFromTarkov.exe`.
+* Paste the script file inside your `headless folder`. It must be in the same directory as `EscapeFromTarkov.exe`.
 * Right-click the .ps1 file and select `Run with Powershell`. A console window should show up. <mark style="color:red;">**Do not close it!**</mark>
 
 {% hint style="warning" %}
@@ -85,17 +85,15 @@ Once done, press **ENTER** and close the window. You can read more about Executi
 * Go back to your normal Fika folder and start the game using `SPT.Launcher.exe` as you normally would.
 * Go to the lobby screen and click `Host Raid`. Tick the `Use headless host` checkbox to start a raid using the headless host.
 
-{% hint style="info" %}
+### Additional information
+
+{% hint style="danger" %}
 **NOTICE**
 
-The headless client should never run any mods except for AI or spawn mods such as SAIN, MOAR lite or SWAG+DONUTS. They are only necessary because the raid host handles the AI and spawning.
+Generally, the headless client does not need to have the same client mods as the players (clients). The only exceptions to this rule are **AI mods (SAIN)**, **spawn mods (MOAR, DONUTS)** and mods that have **implemented synchronization with Fika (That's Lit, UIFixes)**. Always make sure to look at the SPT mod page or the mod's thread in our Discord to confirm.
 
-Running mods that are designed for game play experience WILL cause issues with the headless client. A few notable examples: **Amanda.Graphics**, **MoreCheckmarks**, **EFTApi**, **GamePanelHud**, **DynamicMaps**, **LootValue**, **Ram Cleaner Interval**, **DeClutter**, etc.
-
-If you encounter any issues starting the headless client, this is most likely the reason.
+Using mods that are designed for game play experience on the headless **will** cause issues with the headless client. The headless client does not function the same way as a normal Fika instance and will cause issues with the mods. A few notable examples: **Amanda.Graphics**, **MoreCheckmarks**, **EFTApi**, **GamePanelHud**, **DynamicMaps**, **LootValue**, **Ram Cleaner Interval**, **DeClutter**, etc.
 {% endhint %}
-
-### Additional information
 
 * If the `Use headless host` check box is greyed out, the headless client was unable to connect to your SPT server OR the headless client is already hosting a raid.
 * Troubleshoot connectivity issues the same way you would do for a normal Fika instance.
