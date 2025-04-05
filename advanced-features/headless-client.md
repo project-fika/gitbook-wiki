@@ -39,7 +39,7 @@ Please note that there is some technical knowledge required to achieve this. If 
 * Install Escape From Tarkov on the server that you're planning to host the headless client on using the official BSG launcher. This is required to validate that you own the game.
 * Copy your working Fika installation to the server in a separate folder. This will be referred to as `headless folder` in the steps below. If this is not possible, please follow the [Installing Fika](../installing-fika/) procedure on the server and make sure to run the game using `SPT.Launcher.exe` at least once.
 * Remove all the DLLs inside `<headless folder>\BepInEx\plugins` except for `Fika.Core.dll` and the `spt` subfolder.
-* Download [Fika.Headless](https://github.com/project-fika/Fika-Headless/releases/tag/v1.3.0)
+* Download [Fika.Headless](https://github.com/project-fika/Fika-Headless/releases/latest)
 * Extract `Fika.Headless`to your `headless folder`.
 * Go to the machine where the SPT server is hosted.
 * Navigate to `<SPT folder>\user\mods\fika-server\assets\configs` and open `fika.jsonc`.
