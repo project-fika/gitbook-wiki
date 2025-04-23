@@ -32,6 +32,23 @@ We recommend reading the [General information](../General-information.md) sectio
 * Bleeding edge versions of SPT are _**NOT**_ supported by Fika.
 * Identify your SPT installation folder. This will be referred to as `SPT folder`.
 
+## Hardware Requirements
+
+These are recommendations for a smooth experience:
+
+* **CPU**: i7 8700k / Ryzen 5 3600X
+* **GPU**: GTX 2070 / RX 5700 XT
+* **Memory** 16 GB _minimum_, 32 GB _highly recommended_
+* **Storage**: SSD is mandatory, no support is given for installations on a HDD
+
+These are recommendations for a dedicated client:
+
+* **CPU**: >4 GHz per core
+* **Memory**: >16 GB, 32 GB highly recommended
+* **Storage**: SSD is mandatory
+
+The biggest gain in Fika (and in SPT in general) will be getting a stronger CPU and RAM.
+
 ## Installation
 
 {% stepper %}
