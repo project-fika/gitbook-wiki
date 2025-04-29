@@ -31,7 +31,7 @@ Please note that there is some technical knowledge required to achieve this. If 
 
 * A modern CPU with at least 4 cores @ >3.2GHz.
 * 16GB of RAM (virtual paging can alleviate this requirement but will degrade performance).
-* 50GB disk space with SSD/NVME drive. HDD is NOT sutiable for Fika or Tarkov in general.
+* 50GB disk space with SSD/NVME drive. HDD is NOT suitable for Fika or Tarkov in general.
 * Graphics card not required.
 
 ### Installation
