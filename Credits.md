@@ -37,3 +37,4 @@ layout:
 | Ghostfenixx     | Creator of SVM, a widely used mod on SPT; a dedicated individual within the Fika community    |
 | RaiRaiTheRaichu | Creator of many widely used mods on SPT; massive dedication to the SPT community              |
 | CWX             | Many contributions to Fika, widely known modder and dedicated to the Tarkov modding community |
+| Shynd           | Active contributor and resident helper of Fika                                                |
