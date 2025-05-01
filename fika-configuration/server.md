@@ -22,7 +22,7 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
     "client": {
         "useBtr": true, // if the BTR should spawn
         "friendlyFire": true, // if friendly fire is enabled
-        "dynamicVExfils": true, // if vehicle exfils should dynamically scale with the amount of players
+        "dynamicVExfils": false, // if vehicle exfils should dynamically scale with the amount of players
         "allowFreeCam": true, // if players can use the free cam while still alive
         "allowSpectateFreeCam": true, // whether players are forced to spectate other players or if they can move freely
         "blacklistedItems": [], // items that cannot be sent
@@ -32,7 +32,7 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
             "optional": [] // optional mods allowed to connect with
         },
         "useInertia": true, // if inertia should be enabled, if disabled it will act as if you are not wearing anything
-        "sharedQuestProgression": true, // if quest progression should be shared
+        "sharedQuestProgression": false, // if quest progression should be shared, affects shared XP options as well
         "canEditRaidSettings": true, // of clients can modify the raid settings before starting a raid
         "enableTransits": false, // if transits are enabled
         "anyoneCanStartRaid": false // if anyone can click "START RAID"
@@ -40,9 +40,9 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
     "server": {
         "SPT": {
             "http": {
-                "ip": "127.0.0.1", // the interface to listen on
+                "ip": "0.0.0.0", // the interface to listen on
                 "port": 6969, // the port to host on
-                "backendIp": "127.0.0.1", // the ip that is sent to clients to be used for requests
+                "backendIp": "0.0.0.0", // the ip that is sent to clients to be used for requests
                 "backendPort": 6969 // the port that is sent to clients to be used for requests
             },
             "disableSPTChatBots": true // forces chat bots to be off
