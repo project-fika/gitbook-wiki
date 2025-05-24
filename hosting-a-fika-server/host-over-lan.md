@@ -36,7 +36,7 @@ Your local IP address will be required to host over LAN. Follow the steps below 
 * Change `backendIp` to `your_lan_ip`.
 * Save the file and close it.
 
-<figure><img src="../.gitbook/assets/fika_lan_http.png" alt=""><figcaption><p>Example of a proper local IP address configuration in http.json</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fika_jsonc_lan.png" alt=""><figcaption><p>Edit LAN IP in fika.jsonc</p></figcaption></figure>
 
 ### Windows Firewall
 
