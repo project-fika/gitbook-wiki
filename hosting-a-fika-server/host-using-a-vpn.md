@@ -66,6 +66,12 @@ If you see errors (red text) then that means your configuration is invalid or yo
 {% endhint %}
 
 * Launch `SPT.Launcher.exe`.
+* Click the "Settings" button.
+* Click "Developer mode"
+* Enter the server's **VPN address** in the URL section. DO NOT leave out `https://` and do not add a slash at the end.
+* The URL box should look like this: `https://20.21.22.23:6969`.
+* Press the arrow on the right corner.
+* You should now be able to create your profile and log in to the server.
 * Start the game.
 * Once you are in the main menu, press `F12` to bring up the configuration manager.
 * Find the Force IP and Force Bind IP in the "Fika.Core" section of the configuration manager.
