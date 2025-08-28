@@ -20,20 +20,13 @@ We do not provide a step-by-step tutorial for port forwarding because the router
   * 6969 TCP (SPT backend server)
   * 25565 UDP (Fika in-game networking)
 
+{% hint style="info" %}
 If you are playing on a PC separate from where your `SPT.server.exe` is running, you will need to forward UDP (default of 25565) to the gaming PC, instead of the machine `SPT.server.exe` is running on.
-
-### SPT/Fika configuration
-
-* Start the **SPT.Server** at least once to generate the configuration files
-* Navigate to your `user\mods\fika-server\assets\configs` and open `fika.jsonc`
-* Navigate to the `server` section
-* Change `ip` to `0.0.0.0`
-* Change `backendIp` to `0.0.0.0` (use your [WAN IP](https://www.whatismyip.com/) instead if you are having issues)
-* Save the file and close it
+{% endhint %}
 
 ### Windows Firewall
 
-You will need to configure the Windows Firewall to allow inbound traffic to the 6969 TCP and 25565 UDP ports. If you don't know how, you can use [FikaUtils](https://github.com/Lacyway/FikaUtils/releases/latest).
+Installing Fika using Fika-Installer will automatically configure your Windows firewall.
 
 ### Last steps
 
@@ -56,9 +49,19 @@ Server is running, do not close while playing SPT, Happy playing!!
 If you see errors (red text) then that means your configuration is invalid or you are unable to host using the configured IP address/port. We recommend visiting the "Troubleshooting" section of the Wiki or join our Discord for assistance.
 {% endhint %}
 
-**Validate that your server is accessible.** To do this, you can try to access the port 6969 using an [online port checker](https://portchecker.co). Make sure the SPT server is running first before attempting this. If the port is closed, you may have an invalid configuration, Windows Firewall blocking the connection or your ISP does not allow port forwarding. See the Troubleshooting section for more details.
+### **Testing connectivity**
 
-Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../joining-a-fika-server/).
+* Make sure SPT.Server.exe is running
+* Obtain your public IP address [here](https://api.ipify.org/)
+* Go to an [online port checker](https://portchecker.co)
+* Enter your public IP address and port 6969
+* Test the port connectivity
+
+If the port is closed, you may have an invalid configuration, Windows Firewall blocking the connection or your ISP does not allow port forwarding. Validate all your network settings.
+
+### Hosting a raid
+
+Your Fika instance is now ready to host a raid.
 
 [Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
 

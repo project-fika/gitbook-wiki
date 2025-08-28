@@ -26,7 +26,7 @@ Custom firewalls such as **BitDefender** may also block your connection while pl
 
 ### Windows Firewall
 
-You will need to configure the Windows Firewall to allow inbound traffic to the port 6969 TCP and 25565 UDP. If you don't know how, you can use [FikaUtils](https://github.com/Lacyway/FikaUtils/releases/latest).
+Installing Fika using FIka-Installer will automatically configure Windows firewall.
 
 Alternatively, the VPN client may offer a way to open ports in the Windows Firewall. Make sure to double check your VPN client settings.
 
@@ -61,14 +61,22 @@ If you see errors (red text) then that means your configuration is invalid or yo
 * Start the game.
 * Once you are in the main menu, press `F12` to bring up the configuration manager.
 * Find the Force IP and Force Bind IP in the "Fika.Core" section of the configuration manager.
-* Set both Force IP and Force Bind IP to your VPN IP. <- THIS IS A VERY IMPORTANT STEP, DO NOT SKIP IT.
+* Set both Force IP and Force Bind IP to your VPN IP.
 
 <figure><img src="../.gitbook/assets/forceip.png" alt=""><figcaption></figcaption></figure>
 
-At this point, your server should be accessible to your friends, and you can start playing.
+### Testing connectivity
 
-Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../joining-a-fika-server/).
+* Ensure that you created a channel/group in the VPN client
+* Ensure that your friend(s) have joined the channel/group in the VPN client
+* Ask your friend(s) to ping your VPN IP
 
-[Click here](../playing-fika.md) to learn how to host a raid.
+If the ping fails then it means that the VPN is not working correctly. Reboot your PC (including your friend(s), validate your VPN settings and ensure you all joined the same VPN channel/group in the VPN client. Custom firewalls such as BitDefender can block VPN communication - try turning it off.
+
+### Hosting a raid
+
+Your Fika instance is now ready to host a raid.
+
+[Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
 
 [Click here](../fika-configuration/) to learn more about additional Fika configurations.

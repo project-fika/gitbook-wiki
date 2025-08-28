@@ -53,13 +53,20 @@ If you see errors (red text) then that means your configuration is invalid or yo
 * Start the game.
 * Once you are in the main menu, press `F12` to bring up the configuration manager.
 * Find the Force IP and Force Bind IP in the "Fika.Core" section of the configuration manager.
-* Set both Force IP and Force Bind IP to your LAN IP. <- THIS IS A VERY IMPORTANT STEP, DO NOT SKIP IT.
+* Set both Force IP and Force Bind IP to your LAN IP.
 
 <figure><img src="../.gitbook/assets/fika_lan_f12.png" alt=""><figcaption></figcaption></figure>
 
-At this point, your server should be accessible to your friends, and you can start playing.
+### **Testing connectivity**
 
-Your friends will need to [install Fika](../installing-fika/) as well and follow the steps to [join a Fika server](../joining-a-fika-server/).
+* Grab your local IP address by opening `cmd` and typing `ipconfig`. You must find the correct local IP address of the network adapter you are using (Ethernet or Wi-Fi)
+* Ask your friend(s) to ping your local IP address
+
+If the ping fails then it means that you grabbed the wrong local IP address or that your network configuration is invalid. Validate your network settings.
+
+### Hosting a raid
+
+Your Fika instance is now ready to host a raid.
 
 [Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
 
