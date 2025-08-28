@@ -15,9 +15,10 @@ Please note that there is some technical knowledge required to achieve this. If 
 
 ### Recommended hardware requirements
 
+* Dedicated machine for running the headless client. **VPS will NOT work**.
 * A modern CPU with at least 4 cores @ 4GHz+.
 * 32 GB RAM (16 GB can work but will provide reduced performance due to virtual paging).
-* 50 GB disk space with SSD/NVME drive. HDD is NOT supported.
+* 100 GB disk space with SSD/NVME drive. **HDD is NOT supported**.
 
 ### Notes
 
@@ -60,7 +61,7 @@ If you get an admin rights prompt, this is normal. Fika-Installer requires admin
 {% endstep %}
 
 {% step %}
-### Choose `Install Fika` (option 1)
+### Choose `Install Fika`
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -72,13 +73,13 @@ If you get an admin rights prompt, this is normal. Fika-Installer requires admin
 {% endstep %}
 
 {% step %}
-### Choose `Advanced options` (option 2)
+### Choose `Advanced options`
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Choose `Install Fika Headless` (option 1)
+### Choose `Install Fika Headless`
 
 <figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -106,7 +107,9 @@ Wait for "Server is running, happy playing" message in the console.
 {% endstep %}
 
 {% step %}
-### Right-click `Start_headless_xxx.ps1` and click `Run with Powershell`
+### Start the headless client script
+
+Right-click `Start_headless_xxx.ps1` and click `Run with Powershell`.
 
 <figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
@@ -136,7 +139,7 @@ Two console windows will appear after running the script: the Fika Headless Watc
 {% endstep %}
 
 {% step %}
-### Start Fika on your computer
+### Start Fika
 
 The headless client is now ready to host a raid. Start Fika (SPT.Launcher) on your computer.&#x20;
 
@@ -146,9 +149,9 @@ The headless client is now ready to host a raid. Start Fika (SPT.Launcher) on yo
 {% endstep %}
 
 {% step %}
-### Start a raid using the headless client
+### Host a raid using the headless client
 
-Navigate the menu like you would normally do to reach the `Raids` menu and click `Host Raid`.
+Navigate the in-game menu like you would normally do to reach the `Raids` menu and click `Host Raid`.
 
 <figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
@@ -168,21 +171,20 @@ Your friend(s) can join the headless client's raid when you see this screen. Whe
 
 ### Modding
 
-The headless client is very sensitive to modding. Do **not** install the same mods you use in Fika. Because the headless client is heavily modified, most mods will likely cause crashes or make it unstable.
+The headless client is very sensitive to modding. Do **NOT** install the same mods you use in Fika. Because the headless client is heavily modified, most mods will likely cause crashes or make it unstable.
 
 **✅ YOU CAN INSTALL:**
 
 * AI mods (SAIN)
 * Spawn mods (MOAR, DONUTS)
-* Mods that specifically mention headless client support (That's Lit, UIFixes)
+* Mods that specifically mention headless client support (That's Lit, UIFixes, etc.)
 
 **❌ DO NOT INSTALL:**
 
-* RAM/VRAM cleaner mods (RAM Cleaner, VRAM Cleaner)
+* RAM/VRAM cleaner mods (RAM Cleaner, VRAM Cleaner, etc.)
 * Performance mods (DeClutter, etc.)
 * Any other mods not listed in the **YOU CAN INSTALL** section
 
+### Troubleshooting
 
-
-
-
+* If the `Use dedicated host` checkbox is greyed out, it means that the headless client is unavailable. It could be caused by unsupported mods installed in the headless client, networking issues, or other factors. Note that the headless client can only host one raid at a time.
