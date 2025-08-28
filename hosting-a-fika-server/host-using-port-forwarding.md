@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Host using port forwarding
 
 Port forwarding is a networking process that allows external devices to access one or multiple ports of a machine within your home network. Port forwarding can be configured through your router's settings interface, which is usually accessible by entering the gateway IP address into a web browser.

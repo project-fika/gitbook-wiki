@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Installing Fika
 
 ## Before installing Fika
@@ -28,48 +14,56 @@ We recommend reading the [General information](../General-information.md) sectio
 
 ## Prerequisites
 
-* You must have an up-to-date and working installation of SPT **with no mods installed**.
+* You must have an up-to-date and working installation of [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/) **with no mods installed**.
 * Bleeding edge versions of SPT are _**NOT**_ supported by Fika.
-* Identify your SPT installation folder. This will be referred to as `SPT folder`.
+* Locate your SPT installation folder. This will be referred to as `SPT folder` in the steps below.
 
 ## Hardware Requirements
-
-These are recommendations for a smooth experience:
 
 * **CPU**: i7 8700k / Ryzen 5 3600X
 * **GPU**: GTX 2070 / RX 5700 XT
 * **Memory**: 32 GB RAM
 * **Storage**: SSD is mandatory, no support is given for installations on a HDD
 
-These are recommendations for a dedicated client:
-
-* **CPU**: >4 GHz per core
-* **Memory**: 32 GB RAM
-* **Storage**: SSD is mandatory
-
-The biggest gain in Fika (and in SPT in general) will be getting a stronger CPU and RAM.
+The biggest gain in Fika (and in SPT in general) will be getting a stronger CPU and RAM. The AMD X3D series will provide the best performance due to the cache speed.
 
 ## Installation
 
 {% stepper %}
 {% step %}
-### Download [Fika-Plugin](https://github.com/project-fika/Fika-Plugin/releases/latest)
+### Install [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/)
+
+A fresh installation of SPT is **required** before installing Fika.
+
+**Do not install mods yet!**
 {% endstep %}
 
 {% step %}
-### Download [Fika-Server](https://github.com/project-fika/Fika-Server/releases/latest)
+### Download [Fika-Installer](https://github.com/project-fika/Fika-Installer/releases/latest)
 {% endstep %}
 
 {% step %}
-### Extract Fika-Plugin to your SPT folder
+### Copy `Fika-Installer` inside your SPT folder
 
-<figure><img src="../.gitbook/assets/release_7zip_ss.png" alt="Image showing Windows File Explorer on left showing an SPT Install folder and on right a 7Zip window with Fika Release showing drag and drop procedure for installation."><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Extract Fika-Server to your SPT folder
+### Start `Fika-Installer.exe`
 
-<figure><img src="../.gitbook/assets/server_7zip_ss.png" alt=""><figcaption></figcaption></figure>
+If you get an admin rights prompt, this is normal. Fika-Installer requires admin rights to set up the firewall rules.
+{% endstep %}
+
+{% step %}
+### Choose `Install Fika` (option 1)
+
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### Close `Fika-Installer` when installation is completed
+
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

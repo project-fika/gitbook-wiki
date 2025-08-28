@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Fika configuration
 
 This section describes how to configure Fika. Fika has two type of configuration: client configuration and server configuration.

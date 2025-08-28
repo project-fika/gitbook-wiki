@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Host using Playit.gg
 
 Playit.gg is a proxy that makes it possible to host servers without having to port forward by relaying the game traffic over one of their data centers.&#x20;

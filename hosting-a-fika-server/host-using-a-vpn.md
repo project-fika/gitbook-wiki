@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Host using a VPN
 
 A Virtual Private Network (VPN) enables you to join the same network via a public centralized server. You can either set up your own VPN or use a VPN service such as [Radmin VPN](https://www.radmin-vpn.com/), [ZeroTier](https://www.zerotier.com/download/), etc. This method is recommended only as a last resort if you are unable to use any other hosting options.
