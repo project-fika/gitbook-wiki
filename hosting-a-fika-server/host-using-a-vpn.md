@@ -26,7 +26,7 @@ Custom firewalls such as **BitDefender** may also block your connection while pl
 
 ### Windows Firewall
 
-Installing Fika using FIka-Installer will automatically configure Windows firewall.
+Installing Fika using FIka-Installer will automatically configure the Windows firewall.
 
 Alternatively, the VPN client may offer a way to open ports in the Windows Firewall. Make sure to double check your VPN client settings.
 

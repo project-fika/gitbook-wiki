@@ -26,7 +26,7 @@ If you are playing on a PC separate from where your `SPT.server.exe` is running,
 
 ### Windows Firewall
 
-Installing Fika using Fika-Installer will automatically configure your Windows firewall.
+Installing Fika using Fika-Installer will automatically configure the Windows firewall.
 
 ### Last steps
 

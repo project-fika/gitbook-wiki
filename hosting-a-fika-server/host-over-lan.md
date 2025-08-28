@@ -26,7 +26,7 @@ Your local IP address will be required to host over LAN. Follow the steps below 
 
 ### Windows Firewall
 
-You will need to configure the Windows Firewall to allow inbound traffic to the port 6969 TCP and 25565 UDP. If you don't know how, you can use [FikaUtils](https://github.com/Lacyway/FikaUtils/releases/latest).
+Installing Fika using Fika-Installer will automatically configure the Windows firewall.
 
 ### Last steps
 
