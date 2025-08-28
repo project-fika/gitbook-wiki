@@ -43,7 +43,7 @@ A fresh installation of SPT is **required** before installing Fika.
 {% endstep %}
 
 {% step %}
-### Copy `Fika-Installer` inside your SPT folder
+### Copy `Fika-Installer.exe` inside your SPT folder
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -69,7 +69,7 @@ If you get an admin rights prompt, this is normal. Fika-Installer requires admin
 {% step %}
 ### Start `SPT.Server.exe`
 
-You should see: `Mod: server version: <Fika version> by: Fika loaded` in the console window. If you don't see it, you did not extract Fika-Server in the correct location.
+You should see: `Mod: server version: <Fika version> by: Fika loaded` in the console window.
 
 <figure><img src="../.gitbook/assets/sptserver_loaded_ss.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}

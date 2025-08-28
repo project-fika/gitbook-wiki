@@ -30,7 +30,9 @@ Please note that there is some technical knowledge required to achieve this. If 
 {% step %}
 ### Install Escape From Tarkov using BSG Launcher
 
-Escape From Tarkov must be installed on the server where you are planning to install the headless client. This is required to ensure that you own the game.
+Escape From Tarkov must be installed on the server where you are planning to install the headless client. This is required to ensure that you own the game.&#x20;
+
+**Fika will NOT work if you skip this step!**
 {% endstep %}
 
 {% step %}
@@ -126,9 +128,9 @@ Once done, press **ENTER** and close the window. You can read more about Executi
 {% endstep %}
 
 {% step %}
-### Fika Headless Watcher will automatically start the headless client
+### Wait for the headless client to load
 
-There will be two console windows: the Fika Headless Watcher and the headless client console. Do not close them. Wait for the headless client to load. Activity will stop in the console when loading is completed.
+Two console windows will appear after running the script: the Fika Headless Watcher and the headless client console. **Do not close them**. Wait for the headless client to load. Activity will stop in the console when loading is completed.
 
 <figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -144,17 +146,19 @@ The headless client is now ready to host a raid. Start Fika (SPT.Launcher) on yo
 {% endstep %}
 
 {% step %}
-### Click `Host Raid`, check `Use headless host` and click `Start Raid`
+### Start a raid using the headless client
 
-This will request the headless client to start a raid in the selected location. Please wait for the headless client to load the raid.
+Navigate the menu like you would normally do to reach the `Raids` menu and click `Host Raid`.
 
 <figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+
+Check the `Use Dedicated Host box` and press `Start`. This will request the headless client to start a raid in the selected location. Wait for the headless client to load the raid.
 
 <figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Your friend(s) can join when the raid is initialized
+### Start the raid when the headless client is ready
 
 Your friend(s) can join the headless client's raid when you see this screen. When everybody has joined, press `Start Raid`.
 
@@ -162,15 +166,23 @@ Your friend(s) can join the headless client's raid when you see this screen. Whe
 {% endstep %}
 {% endstepper %}
 
-### Additional information
+### Modding
 
-{% hint style="danger" %}
-**NOTICE**
+The headless client is very sensitive to modding. Do **not** install the same mods you use in Fika. Because the headless client is heavily modified, most mods will likely cause crashes or make it unstable.
 
-The headless client does not need to have the same client mods as the players (clients). The only exceptions to this rule are **AI mods (SAIN)**, **spawn mods (MOAR, DONUTS)** and mods that have **implemented synchronization with Fika (That's Lit, UIFixes)**. Always make sure to look at the SPT mod page or the mod's thread in our Discord to confirm if you should install the mod on your headless client.
+**✅ YOU CAN INSTALL:**
 
-Using mods that are designed for game play experience on the headless **will** cause issues with the headless client. The headless client does not function the same way as a normal Fika instance and will cause issues with the mods. A few notable examples: **Amanda.Graphics**, **MoreCheckmarks**, **EFTApi**, **GamePanelHud**, **DynamicMaps**, **LootValue**, **Ram Cleaner Interval**, **DeClutter**, etc.
-{% endhint %}
+* AI mods (SAIN)
+* Spawn mods (MOAR, DONUTS)
+* Mods that specifically mention headless client support (That's Lit, UIFixes)
 
-* If the `Use headless host` check box is greyed out, the headless client was unable to connect to your SPT server OR the headless client is already hosting a raid.
-* Troubleshoot connectivity issues the same way you would do for a normal Fika instance.
+**❌ DO NOT INSTALL:**
+
+* RAM/VRAM cleaner mods (RAM Cleaner, VRAM Cleaner)
+* Performance mods (DeClutter, etc.)
+* Any other mods not listed in the **YOU CAN INSTALL** section
+
+
+
+
+
