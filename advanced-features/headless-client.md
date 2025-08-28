@@ -98,7 +98,7 @@ If you get an admin rights prompt, this is normal. Fika-Installer requires admin
 
 <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
-Wait for "Server is ready, happy playing" message in the console.
+Wait for "Server is running, happy playing" message in the console.
 
 <figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
