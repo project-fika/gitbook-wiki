@@ -45,7 +45,7 @@ A fresh installation of SPT is **required** before installing Fika.
 {% step %}
 ### Copy `Fika-Installer.exe` inside your SPT folder
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -57,7 +57,7 @@ If you get an admin rights prompt, this is normal. Fika-Installer requires admin
 {% step %}
 ### Choose `Install Fika` (option 1)
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

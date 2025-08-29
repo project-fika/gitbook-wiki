@@ -1,27 +1,27 @@
 # General information
 
-## How does Fika work?
+## What is Fika?
 
-Fika is an unofficial mod for SPT. Many features such as profiles, characters, hideouts, inventory, quests, and trading are provided by [SPT](https://sp-tarkov.com/).
+Fika is an unofficial cooperative multiplayer mod for [SPT](https://sp-tarkov.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape from Tarkov experience by default.&#x20;
 
-Project Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape from Tarkov experience by default. In summary:
+In summary:
 
 * SPT is the back-end server that allows you to start the game without using BSG servers - it provides the player profile, inventory, flea market, and many other Escape From Tarkov features.
-* Fika is the mod component that adds multiplayer capabilities which allow players to host or join a raid to play together.
+* Fika is the mod component that adds cooperative multiplayer capabilities which allow players to host or join a raid to play together.
 
-{% hint style="danger" %}
-\>**3.11** SPT is now using `https` instead of `http`, make sure that you update everything accordingly!
+{% hint style="warning" %}
+Fika is NOT an official mod for SPT. Do NOT contact SPT for any questions related to Fika. Please use our Discord instead. Our Discord provides support for both SPT and Fika.
 {% endhint %}
 
 ## Specifications
 
-* Fika is a combination of a [BepInEx mod](https://github.com/project-fika/Fika-Plugin) (Fika-Plugin) and a [SPT plugin](https://github.com/project-fika/Fika-Server) (Fika-Server).
+* Fika is a combination of a [BepInEx mod](https://github.com/project-fika/Fika-Plugin) and a [SPT plugin](https://github.com/project-fika/Fika-Server).
 * Fika uses SPT (with the Fika-Server plugin) as the back-end server for profile and lobby management.
 * Fika uses the Client <-> Server UDP networking model for game play. While Fika is still in development, the general consensus is that network performance is better than Escape From Tarkov live (provided the host has proper networking capabilities).
 
 ## Main features
 
-* Host your own server.
+* Host your own server or join a local/external server.
 * Create your own raid (or play solo).
 * Join someone else's raid.
 * Play together against bots, share items, progress quests together in the same raid.
@@ -54,9 +54,9 @@ Project Fika adds a lobby interface to join other players' raids and provide in-
 
 ## Limitations
 
-* You cannot play SPT/Fika without owning a legitimate copy of Escape From Tarkov. You will be banned if you're caught.
-* There is practically no protection against abuse or cheating. Fika is designed to be played with trusted friends. Hosting a public server is strongly discouraged. We will NEVER support public servers.
+* You cannot play Fika without owning a legitimate copy of Escape From Tarkov. You will be banned if you're caught.
+* There is no protection against abuse or cheating. Fika is designed to be played with trusted friends. **Hosting a public server is strongly discouraged**. We will NEVER support public servers.
 * Only one active raid at a time. There are some underlying issues with the back-end server that may corrupt your profile when two or more raids are active at the same time.
-* Fika does not include any PvP mechanisms, as supporting PvP is not the goal of this project.
+* Fika does not include any PvP mechanisms. Supporting PvP is not the goal of this project.
 * Fika does not offer a global matchmaking service. Only players connected to the same server can create or join raids.
-* Some SPT mods are incompatible with Fika. SPT mods are typically designed for a standard SPT installation, which does not include multiplayer functionality. It is the responsibility of the mod's author to make their mod compatible with Fika if they choose to do so.
+* Many SPT mods are incompatible with Fika. SPT mods are typically designed for a standard SPT installation, which does not include multiplayer functionality. It is the responsibility of the mod's author to make their mod compatible with Fika, if they choose to do so.

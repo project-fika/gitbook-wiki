@@ -12,7 +12,7 @@ Custom firewalls such as **BitDefender** may also block your connection while pl
 
 * Navigate to the VPN website of your choice and install their client.
 * Reboot your computer.
-* You might need to create a VPN channel/room that your friends needs to join.
+* You might need to create a VPN channel/room that your friends needs to join. Refer to the VPN client documentation if needed.
 * Take note of your VPN IP (referred to as `your_vpn_ip` below), which is generally shown in the VPN client interface. You will need it in the following steps.
 
 ### SPT/Fika configuration

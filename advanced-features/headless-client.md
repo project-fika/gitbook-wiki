@@ -51,7 +51,7 @@ If your SPT server is currently located on a different machine, please copy it t
 {% step %}
 ### Copy `Fika-Installer.exe` inside the `SPT folder`
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -63,7 +63,7 @@ If you get an admin rights prompt, this is normal. Fika-Installer requires admin
 {% step %}
 ### Choose `Install Fika`
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
