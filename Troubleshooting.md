@@ -14,12 +14,17 @@ description: Created by Shynd
   * The upside of this change is that you will no longer have any configuration settings overwritten when updating SPT or Fika.
 * SPT 3.11 has moved to **`https`** so make sure the URL in everyone's `SPT.Launcher.exe` begins with `https://`.
 
-### I do not see my friend(s) on the Online Players list on the main menu
+### I do not see my friend(s) on the Online Players list on the main menu / I cannot see my friend's raid in the raid list
 
-* Only one person in the group launches `SPT.Server.exe`.
+<mark style="color:$danger;">**Only one person in the group launches SPT.Server.exe**</mark>
+
 * Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](hosting-a-fika-server/) instructions.
+* Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](joining-a-fika-server/) instructions.
+* Also make sure that everyone has Fika [installed](installing-fika/). On the main menu, it should say FIKA in the bottom-left of the screen.
 
 ### My friend is getting an error about open ports when trying to join my raid
+
+**Make sure everyone is following** [**the instructions for hosting/joining a raid**](playing-fika.md) **correctly.**
 
 #### If your group is using Radmin VPN (or any other VPN client)
 
@@ -28,13 +33,13 @@ description: Created by Shynd
 
 #### If your group is port forwarding
 
-* Whoever clicks the `HOST RAID` button needs to ensure that they have port forwarded 25565/udp in their router. The raid is hosted by the person who presses `HOST RAID`, not by the `SPT.Server` host.
+* Whoever clicks the `HOST RAID` button needs to ensure that they have port forwarded 25565/udp in their router to the PC where they are playing SPT. The raid is hosted by the person who presses `HOST RAID`, not by the `SPT.Server` host.
 
 #### If you are using headless client
 
 * If you are using the headless client to host raids and you are getting this error, you need to make sure the headless client is set up to accept incoming connections the same way any normal client would be.&#x20;
-* **If you are port forwarding**, your port forward rule for 25565/udp needs to go to the PC that is running the headless client.&#x20;
-* **If you are using a VPN**, you need to open up your `<headless install>/BepInEx/config/com.fika.core.cfg` in a text editor and make sure the VPN IP of the headless client machine is set for both `Force IP` and `Force Bind IP`. The VPN client must also be installed and configured on the headless client PC as well.
+  * **If you are port forwarding**, your port forward rule for 25565/udp needs to go to the PC that is running the headless client.&#x20;
+  * **If you are using a VPN**, you need to open up your `<headless install>/BepInEx/config/com.fika.core.cfg` in a text editor and make sure the VPN IP of the headless client machine is set for both `Force IP` and `Force Bind IP`. The VPN client must also be installed and configured on the headless client PC as well.
 
 ### I cannot see SPT chat bots like Commando / I cannot create the type of profile I want / I cannot enable quest sharing in F12
 
@@ -43,7 +48,7 @@ description: Created by Shynd
 ### I cannot use transits
 
 * Transits are disabled with Fika for SPT 3.11.x unless you are using a [headless client](advanced-features/headless-client.md) as a raid host.
-* Simply because transits are fragile & host migration is complex, transits are currently disabled under most circumstances. If you are just trying to complete quests that require transiting from one map to another, you can utilize a mod like [Skipper](https://hub.sp-tarkov.com/files/file/1861-skipper/) to mark those quests complete. Play both raids, complete the task to the best of your ability, then skip it. Or just ignore these quests. You can also solve this with the mod [No Transit Tasks](https://hub.sp-tarkov.com/files/file/2616-no-transit-tasks/).
+  * Simply because transits are fragile & host migration is complex, transits are currently disabled under most circumstances. If you are just trying to complete quests that require transiting from one map to another, you can utilize a mod like [Skipper](https://hub.sp-tarkov.com/files/file/1861-skipper/) to mark those quests complete. Play both raids, complete the task to the best of your ability, then skip it. Or just ignore these quests. You can also solve this with the mod [No Transit Tasks](https://hub.sp-tarkov.com/files/file/2616-no-transit-tasks/).
 
 ## Headless Client Common Issues
 
@@ -59,7 +64,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 #### The type initializer for `SPT.Custom.Patches.CustomAiPatch`...
 
-* Make sure `SPT.Server.exe` is running and loaded and able to be connected to. Your headless client is not able to connect to the backend server. Make sure the server is running and the `BackendUrl` at the top of the launch .ps1 script is correct. Also make sure you are not running `_TEMPLATE.ps1`, the launch script should be named `Start_headless_someuid.ps1`.
+* Your headless client is not able to connect to the backend server. Make sure `SPT.Server.exe` is running and loaded and able to be connected to and the `BackendUrl` at the top of the launch .ps1 script is correct. Also make sure you are not running `_TEMPLATE.ps1`; the launch script should be named `Start_headless_someuid.ps1`.
   * SPT.Server.exe and headless client on the same machine:
     * If you're using a VPN, `BackendUrl` should be `https://your.vpn.ip.addr:6969`.
     * If you're port forwarding, `BackendUrl` should be `https://127.0.0.1:6969`.
@@ -69,7 +74,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 #### The type initializer for `SPT.Custom.Patches.EasyAssetsPatch`...
 
-* Copy these two DLL files from your working and already-launched SPT install to your headless client.
+* Either reinstall following [the directions here](advanced-features/headless-client.md), or copy these two DLL files from your working and already-launched SPT install to your headless client.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
