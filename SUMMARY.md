@@ -19,7 +19,7 @@
 * [Advanced features](advanced-features/README.md)
   * [Headless client](advanced-features/headless-client.md)
 * [Modding Fika](Modding-Fika.md)
-* [FAQ](faq/README.md)
+* [FAQ](Troubleshooting.md)
   * [Set up required/optional mods](faq/set-up-required-optional-mods.md)
   * [Configure mods for the headless client](faq/configure-mods-for-the-headless-client.md)
   * [Guidance on which mods should be used on the headless client](faq/guidance-on-which-mods-should-be-used-on-the-headless-client.md)

@@ -1,5 +1,19 @@
 ---
 description: Created by Shynd
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 # Guidance on which mods should be used on the headless client

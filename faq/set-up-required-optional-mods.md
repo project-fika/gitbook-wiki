@@ -13,7 +13,7 @@ layout:
   pagination:
     visible: false
   metadata:
-    visible: false
+    visible: true
 ---
 
 # Set up required/optional mods

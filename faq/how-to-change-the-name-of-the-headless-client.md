@@ -1,5 +1,19 @@
 ---
 description: Created by Shynd
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 # How to change the name of the headless client
