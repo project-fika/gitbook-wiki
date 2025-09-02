@@ -38,7 +38,7 @@ description: Created by Shynd
 
 ### I cannot see SPT chat bots like Commando / I cannot create the type of profile I want / I cannot enable quest sharing in F12
 
-* Review the Fika-Server mod [configuration options](fika-configuration/).
+* Review the Fika-Server mod [configuration options](fika-configuration/server.md).
 
 ### I cannot use transits
 
