@@ -1,7 +1,5 @@
 ---
-description: >-
-  Below are links to common problems & solutions, good information to reference,
-  guides, etc.
+description: Created by Shynd
 ---
 
 # FAQ
@@ -70,8 +68,4 @@ description: >-
 * Copy these two DLL files from your working and already-launched SPT install to your headless client.
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-## Guides / Information
-
-### How to set up Fika required/optional mod enforcement
 
