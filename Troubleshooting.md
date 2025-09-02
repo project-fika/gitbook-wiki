@@ -49,7 +49,11 @@ description: Created by Shynd
 
 ### The headless client launch script just opens and closes
 
-* Run the following command in Powershell: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`
+* Run the following command in Powershell:&#x20;
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
 
 ### I get an error popup about `A patch in SPTCustomPlugin FAILED` when starting the headless client
 
