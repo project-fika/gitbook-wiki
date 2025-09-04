@@ -49,7 +49,7 @@ The server configuration can be found in the `user\mods\fika-server\assets\confi
     "headless": {
         "profiles": {
             "amount": 0, // the amount of profiles to be generated / used
-            "aliases": {} // the aliases to be show when selecting a headless client
+            "aliases": {/*"ID-of-client": "Display Name"*/} // the aliases to be show when selecting a headless client
         },
         "scripts": {
             "generate": true, // if the headless scripts should be generated
