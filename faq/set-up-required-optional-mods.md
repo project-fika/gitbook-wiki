@@ -36,7 +36,7 @@ Get-Content $LogFile | ForEach-Object {
 
 $CSVOutput = $ModGuids -join ', '
 
-Write-Host $CSVOut
+Write-Host $CSVOutput
 ```
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
