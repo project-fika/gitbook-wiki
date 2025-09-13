@@ -9,7 +9,7 @@ description: Created by Shynd
 ### I changed `http.json` but my server still says `0.0.0.0`
 
 * There is no longer any need to edit `http.json` (or anything else) in `SPT_Data\` — anything entered in `http.json` is overwritten by the `ip` and `backendIp` values in `user/mods/fika-server/assets/configs/fika.jsonc`.
-  * Server mod configuration wiki page [here](fika-configuration/server.md).
+  * Server mod configuration wiki page [here](../fika-configuration/server.md).
 * You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
   * The upside of this change is that you will no longer have any configuration settings overwritten when updating SPT or Fika.
 * SPT 3.11 has moved to **`https`** so make sure the URL in everyone's `SPT.Launcher.exe` begins with `https://`.
@@ -18,13 +18,13 @@ description: Created by Shynd
 
 <mark style="color:$danger;">**Only one person in the group launches SPT.Server.exe**</mark>
 
-* Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](hosting-a-fika-server/) instructions.
-* Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](joining-a-fika-server/) instructions.
-* Also make sure that everyone has Fika [installed](installing-fika/). On the main menu, it should say FIKA in the bottom-left of the screen.
+* Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](../hosting-a-fika-server/) instructions.
+* Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](../joining-a-fika-server/) instructions.
+* Also make sure that everyone has Fika [installed](../installing-fika/). On the main menu, it should say FIKA in the bottom-left of the screen.
 
 ### My friend is getting an error about open ports when trying to join my raid
 
-**Make sure everyone is following** [**the instructions for hosting/joining a raid**](playing-fika.md) **correctly.**
+**Make sure everyone is following** [**the instructions for hosting/joining a raid**](../playing-fika.md) **correctly.**
 
 #### If your group is using Radmin VPN (or any other VPN client)
 
@@ -43,11 +43,11 @@ description: Created by Shynd
 
 ### I cannot see SPT chat bots like Commando / I cannot create the type of profile I want / I cannot enable quest sharing in F12
 
-* Review the Fika-Server mod [configuration options](fika-configuration/server.md).
+* Review the Fika-Server mod [configuration options](../fika-configuration/server.md).
 
 ### I cannot use transits
 
-* Transits are disabled with Fika for SPT 3.11.x unless you are using a [headless client](advanced-features/headless-client.md) as a raid host.
+* Transits are disabled with Fika for SPT 3.11.x unless you are using a [headless client](../advanced-features/headless-client.md) as a raid host.
   * Simply because transits are fragile & host migration is complex, transits are currently disabled under most circumstances. If you are just trying to complete quests that require transiting from one map to another, you can utilize a mod like [Skipper](https://hub.sp-tarkov.com/files/file/1861-skipper/) to mark those quests complete. Play both raids, complete the task to the best of your ability, then skip it. Or just ignore these quests. You can also solve this with the mod [No Transit Tasks](https://hub.sp-tarkov.com/files/file/2616-no-transit-tasks/).
 
 ## Headless Client Common Issues
@@ -74,7 +74,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 #### The type initializer for `SPT.Custom.Patches.EasyAssetsPatch`...
 
-* Either reinstall following [the directions here](advanced-features/headless-client.md), or copy these two DLL files from your working and already-launched SPT install to your headless client.
+* Either reinstall following [the directions here](../advanced-features/headless-client.md), or copy these two DLL files from your working and already-launched SPT install to your headless client.
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
