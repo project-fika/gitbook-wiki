@@ -22,14 +22,14 @@ Installing Fika using Fika-Installer will automatically configure the Windows Fi
 
 ## Set your local IP in Fika
 
-* Start `SPT.Server.exe` at least once to generate the configuration files.
+* Start `SPT.Server.exe` at least once to generate the configuration files, then close it.
 * Navigate to your `user\mods\fika-server\assets\configs` and open `fika.jsonc`.
-* Navigate to the `server` section.
+* Find the `server` section.
 * Change `ip` to `your_lan_ip`.
 * Change `backendIp` to `your_lan_ip`.
 * Save the file and close it.
 
-<figure><img src="../.gitbook/assets/fika_jsonc_lan.png" alt=""><figcaption><p>Edit LAN IP in fika.jsonc</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fika_jsonc_lan.png" alt=""><figcaption></figcaption></figure>
 
 * Launch `SPT.Server.exe`.
 

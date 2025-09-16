@@ -32,7 +32,7 @@ Alternatively, the VPN client may offer a way to open ports in the Windows Firew
 * Change `ip` to `your_vpn_ip`.
 * Change `backendIp` to `your_vpn_ip`.
 * Save the file and close it.
-* Launch `SPT.Server.exe`.
+* Start `SPT.Launcher.exe`.
 * Click the "Settings" button.
 * Check the `Developer mode` box.
 * Enter your VPN address in the URL section. DO NOT leave out `https://` and do not add a slash at the end. The URL box should look like this: `https://20.21.22.23:6969`.
