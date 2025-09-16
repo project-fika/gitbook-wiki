@@ -50,16 +50,16 @@ Server is running, do not close while playing SPT, Happy playing!!
 If you see errors (red text) then your configuration is invalid or you are unable to host using the configured IP address/port.
 {% endhint %}
 
-* Start the game using `SPT.Launcher.exe`.
-* Once you are in the main menu, press `F12` to bring up the configuration manager.
-* Find the Force IP and Force Bind IP in the "Fika.Core" section of the configuration manager.
-* Set both Force IP and Force Bind IP to your LAN IP.
+* Start `SPT.Launcher.exe`.
+* Press `F12` when in-game to bring up the configuration manager.
+* Find the `Force IP` and `Force Bind IP` in the `Fika.Core` section of the configuration manager.
+* Set both `Force IP` and `Force Bind IP` to `your_lan_ip`.
 
 <figure><img src="../.gitbook/assets/fika_lan_f12.png" alt=""><figcaption></figcaption></figure>
 
 ## Testing connectivity
 
-* Ask your friend(s) to ping your local IP address from a computer within the same local network
+* Ask your friend(s) to ping your local IP address from a computer within the same local network.
 
 If the ping fails then it means that you grabbed the wrong local IP address or that your network configuration is invalid. Validate your network settings.
 
