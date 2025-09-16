@@ -6,6 +6,8 @@ A Virtual Private Network (VPN) enables you to join the same network via a publi
 Free VPNs services are known to cause performance or connectivity problems, so use at your own risk. The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.\
 \
 Custom firewalls such as **BitDefender** may also block your connection while playing. Make sure that you allow the connection or temporarily disable it while playing!
+
+You may also experience issues if you are using another VPN service, even if it is disabled. If you have problems, consider uninstalling any other virtual network adapters.
 {% endhint %}
 
 ### Installing the VPN client
