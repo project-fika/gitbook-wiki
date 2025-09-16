@@ -24,7 +24,7 @@ Installing Fika using FIka-Installer will automatically configure the Windows fi
 
 Alternatively, the VPN client may offer a way to open ports in the Windows Firewall. Make sure to double check your VPN client settings.
 
-### SPT/Fika configuration
+### Set your VPN IP in Fika
 
 * Start `SPT.Server.exe` at least once to generate the configuration files, then close it.
 * Navigate to `user\mods\fika-server\assets\configs` and open `fika.jsonc`.

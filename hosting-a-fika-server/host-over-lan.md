@@ -57,6 +57,10 @@ If you see errors (red text) then your configuration is invalid or you are unabl
 
 <figure><img src="../.gitbook/assets/fika_lan_f12.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+Note: Players willing to host a raid will also need to set the `Force IP` and `Force Bind IP` in their respective Fika configuration.
+{% endhint %}
+
 ## Testing connectivity
 
 * Ask your friend(s) to ping your local IP address from a computer within the same local network.
