@@ -2,34 +2,46 @@
 description: Created by Shynd
 ---
 
-# FAQ
+# FAQ and Guides
 
 ## General Common Issues
 
-### I changed `http.json` but my server still says `0.0.0.0`
+### ❓I changed `http.json` but my server still says `0.0.0.0`
 
 * There is no longer any need to edit `http.json` (or anything else) in `SPT_Data\` — anything entered in `http.json` is overwritten by the `ip` and `backendIp` values in `user/mods/fika-server/assets/configs/fika.jsonc`.
-  * Server mod configuration wiki page [here](../fika-configuration/server.md).
+  * Server mod configuration documentation can be found [here](../fika-configuration/server.md).
 * You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
   * The upside of this change is that you will no longer have any configuration settings overwritten when updating SPT or Fika.
 * SPT 3.11 has moved to **`https`** so make sure the URL in everyone's `SPT.Launcher.exe` begins with `https://`.
 
-### I do not see my friend(s) on the Online Players list on the main menu / I cannot see my friend's raid in the raid list
+***
 
-<mark style="color:$danger;">**Only one person in the group launches SPT.Server.exe**</mark>
+### ❓I do not see my friend(s) on the Online Players list on the main menu / I cannot see my friend's raid in the raid list
+
+{% hint style="danger" %}
+<mark style="color:$warning;">**Only one person in the group launches SPT.Server.exe.**</mark>
+{% endhint %}
 
 * Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](../hosting-a-fika-server/) instructions.
 * Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](../joining-a-fika-server/) instructions.
-* Also make sure that everyone has Fika [installed](../installing-fika/). On the main menu, it should say FIKA in the bottom-left of the screen.
+* Make sure that everyone has Fika [installed](../installing-fika/). On the main menu, it should say FIKA in the bottom-left of the screen.
 
-### My friend is getting an error about open ports when trying to join my raid
+***
 
+### ❓My friend is getting an error about open ports when trying to join my raid
+
+{% hint style="info" %}
 **Make sure everyone is following** [**the instructions for hosting/joining a raid**](../playing-fika.md) **correctly.**
+{% endhint %}
 
 #### If your group is using Radmin VPN (or any other VPN client)
 
-* Whoever clicks the `HOST RAID` button needs to follow these instructions exactly as they are written:
-  * Navigate to the Fika.Core plugin settings in your F12 configuration menu and scroll down to the Network header. Select your own VPN IP from the Force Bind IP dropdown selection box, then type that same exact IP in the Force IP box just above. Also verify that the settings Use UPnP and Use NAT Punching are both unchecked/disabled.
+* Whoever clicks the `HOST RAID` button needs to follow these instructions **exactly as they are written**:
+  * Navigate to the Fika.Core plugin settings in your F12 configuration menu and scroll down to the Network header. Select <mark style="color:$warning;">**your own VPN IP**</mark> from the `Force Bind IP` dropdown selection box, then type that <mark style="color:$warning;">**same exact IP**</mark> in the `Force IP` box just above.\
+    \
+    If you do not see the correct IP available in the `Force Bind IP` selection box, make sure you have the VPN client installed and are connected and then re-read the paragraph above very carefully.\
+    \
+    Also verify that the settings Use UPnP and Use NAT Punching are both unchecked/disabled.
 
 #### If your group is port forwarding
 
@@ -41,18 +53,35 @@ description: Created by Shynd
   * **If you are port forwarding**, your port forward rule for 25565/udp needs to go to the PC that is running the headless client.&#x20;
   * **If you are using a VPN**, you need to open up your `<headless install>/BepInEx/config/com.fika.core.cfg` in a text editor and make sure the VPN IP of the headless client machine is set for both `Force IP` and `Force Bind IP`. The VPN client must also be installed and configured on the headless client PC as well.
 
-### I cannot see SPT chat bots like Commando / I cannot create the type of profile I want / I cannot enable quest sharing in F12
+***
+
+### ❓ I cannot see SPT chat bots like Commando / I cannot create the type of profile I want / I cannot enable quest sharing in F12
 
 * Review the Fika-Server mod [configuration options](../fika-configuration/server.md).
 
-### I cannot use transits
+***
+
+### ❓I cannot use transits
 
 * Transits are disabled with Fika for SPT 3.11.x unless you are using a [headless client](../advanced-features/headless-client.md) as a raid host.
-  * Simply because transits are fragile & host migration is complex, transits are currently disabled under most circumstances. If you are just trying to complete quests that require transiting from one map to another, you can utilize a mod like [Skipper](https://hub.sp-tarkov.com/files/file/1861-skipper/) to mark those quests complete. Play both raids, complete the task to the best of your ability, then skip it. Or just ignore these quests. You can also solve this with the mod [No Transit Tasks](https://hub.sp-tarkov.com/files/file/2616-no-transit-tasks/).
+  * Simply because transits are fragile & host migration is complex, transits are currently disabled under most circumstances. If you are just trying to complete quests that require transiting from one map to another, you can utilize a mod like [Skipper](https://hub.sp-tarkov.com/files/file/1861-skipper/) to mark those quests complete. Play both raids, complete the task to the best of your ability, then skip it. Or just ignore these quests.\
+    \
+    You can also solve this with the mod [No Transit Tasks](https://hub.sp-tarkov.com/files/file/2616-no-transit-tasks/).
+
+***
+
+### ❓How do I uninstall Fika?
+
+* Navigate to `BepInEx/plugins/` and delete `Fika.Core.dll`
+* Navigate to `user/mods/` and delete the `fika-server/` folder
+* Open SPT.Launcher.exe, click Settings in the top-right, and (if applicable) change URL back to `https://127.0.0.1:6969`\
+
+
+***
 
 ## Headless Client Common Issues
 
-### The headless client launch script just opens and closes
+### ❓The headless client launch script just opens and closes
 
 * Run the following command in Powershell:&#x20;
 
@@ -60,7 +89,9 @@ description: Created by Shynd
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
 
-### I get an error popup about `A patch in SPTCustomPlugin FAILED` when starting the headless client
+***
+
+### ❓I get an error popup about `A patch in SPTCustomPlugin FAILED` when starting the headless client
 
 #### The type initializer for `SPT.Custom.Patches.CustomAiPatch`...
 

@@ -18,20 +18,17 @@ layout:
 
 # Guidance on which mods should be used on the headless client
 
-## Note: The headless client is a _client_ -- clients only load things in `BepInEx/`. Any mod that is in `user/mods/` is loaded only by the backend server, SPT.Server.exe.
+## Note: The headless client is a _client_ — clients only load things in `BepInEx/`. Any mod that is in `user/mods/` is loaded only by the backend server, SPT.Server.exe.
 
 To expand a bit on what I mean about the difference between a plugin I assume the headless client **needs** vs a plugin I assume the headless client does not need:
 
 * **Does it only have an effect while in stash or hideout? If yes, then it's probably&#x20;**_**not**_**&#x20;necessary for the headless client.**
   * This would be something like QuickSell. It is not necessary to have on the headless client because it only affects in-stash behavior.
   * Plugins in this category may be fine to leave installed on the headless client and they may cause issues. They are unlikely to _solve_ any issues.
-*   **Does it only change how information or graphics are displayed, without changing that information? If yes, then it's probably&#x20;**_**not**_**&#x20;necessary for the headless client.**
-
-    * This would include things like MoreCheckmarks, AmandsGraphics, DynamicMaps, ItemSellPrice, et al. These plugins take existing information that is available already in the game client and display it in a different way. They do not add or change any behavior.
-    * Plugins in this category also may be fine to leave installed on the headless client, and they also may cause issues. They are unlikely to _solve_ any issues.
-    * Remember that the headless client is navigating menus automatically to start a raid and finish a raid. Anything that changes menus or patches menus may cause problems.
-
-    ,
+* **Does it only change how information or graphics are displayed, without changing that information? If yes, then it's probably&#x20;**_**not**_**&#x20;necessary for the headless client.**
+  * This would include things like MoreCheckmarks, AmandsGraphics, DynamicMaps, ItemSellPrice, et al. These plugins take existing information that is available already in the game client and display it in a different way. They do not add or change any behavior.
+  * Plugins in this category also may be fine to leave installed on the headless client, and they also may cause issues. They are unlikely to _solve_ any issues.
+  * Remember that the headless client is navigating menus automatically to start a raid and finish a raid. Anything that changes menus or patches menus may cause problems.
 * **Does it change in-raid behavior in some way? If yes, it's probably necessary.**
   * This would be something like SAIN, which affects AI behavior, or bot spawn mods, or UIFixes which changes _how inventory behaves_, or anything else that you think _**might**_ have an effect on in-raid behavior.
   * Plugins in this category are sometimes difficult to spot. Something like UIFixes may not be obvious that it _changes_ inventory behavior, and it may not be apparent to users that the raid host is authoritative on inventory actions.

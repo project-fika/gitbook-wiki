@@ -1,5 +1,9 @@
 # Standard connection
 
+{% hint style="info" %}
+If your group is port forwarding, you will need the server host to send you their Public/WAN IPv4. This can be found with services like whatismyip.com or portchecker.co.
+{% endhint %}
+
 * Launch `SPT.Launcher.exe`.
 
 <figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>

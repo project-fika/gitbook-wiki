@@ -12,6 +12,8 @@ Free VPNs are known to cause performance or connectivity problems, so use at you
 
 {% hint style="info" %}
 We do not provide a step-by-step tutorial for port forwarding because the router settings interface varies between different models and manufacturers. Make sure to research how to achieve port forwarding for your specific router model.
+
+You may be able to find guides for your router on [PortForward.com](https://portforward.com/) or by searching Google.
 {% endhint %}
 
 * Go in your router's configuration interface (open browser and type the [gateway IP](https://www.whatismyip.com/finding-your-default-gateway-address/)).
@@ -56,6 +58,8 @@ If you see errors (red text) then your configuration is invalid or you are unabl
 * Test the port connectivity.
 
 If the port is closed, you may have an invalid configuration, Windows Firewall blocking the connection or your ISP does not allow port forwarding. Validate all your network settings or host using a [VPN client](host-using-a-vpn.md).
+
+If the port shows as Open, your server is available for connections from friends. You will need to send them your Public IPv4 formatted like `https://your.pub.lic.ip:6969` for them to enter into their Launcher -> Settings -> URL field to connect to your server.
 
 ## Hosting a raid
 

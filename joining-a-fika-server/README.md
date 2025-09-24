@@ -21,7 +21,3 @@ In order to join a Fika server, you must configure SPT Launcher to connect to an
 
 * [Standard connection](standard-connection.md) (port forwarding, LAN)
 * [VPN connection](vpn.md)
-* [Playit.gg](https://discuss.playit.gg/t/setup-an-escape-from-tarkov-multiplayer-server-with-spt-fika/3352) (external source)
-
-
-

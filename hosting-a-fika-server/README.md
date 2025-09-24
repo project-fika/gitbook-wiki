@@ -14,6 +14,7 @@ Before continuing, make sure:
 * You can start the game and reach the main menu.
 * You can see the Fika watermark in the bottom-left corner.
 * You have **NO** other mods than Fika installed.
+  * You may install mods later, but it is important to get everything working without any mods first.
 
 ## Choosing your hosting method
 
@@ -22,3 +23,5 @@ The preferred and officially supported way of hosting a Fika server is by port f
 However due to certain network configuration or ISP restrictions, this may not be possible for you. In that case, someone else in your group should attempt to host using port forwarding. If no one is able to host using port forwarding, the alternative is to use a VPN such as Radmin VPN or ZeroTier. Keep in mind that using a free VPN service may cause instability or poor performance during gameplay.
 
 You can also host over LAN if all players are in the same house/network.
+
+<a href="host-using-port-forwarding.md" class="button primary" data-icon="arrow-pointer">Host with Port Forwarding</a> <a href="host-using-a-vpn.md" class="button primary" data-icon="arrow-pointer">Host using a VPN</a> <a href="host-over-lan.md" class="button primary" data-icon="arrow-pointer">Host over LAN</a>
