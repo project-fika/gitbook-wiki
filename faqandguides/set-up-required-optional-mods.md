@@ -1,5 +1,4 @@
 ---
-description: Created by Shynd
 layout:
   width: default
   title:

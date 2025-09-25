@@ -118,9 +118,9 @@ Right-click `Start_headless_xxx.ps1` and click `Run with Powershell`.
 {% hint style="warning" %}
 **WARNING**
 
-If the PowerShell window briefly appears and then disappears then your **ExecutionPolicy** might be set to **Restricted**. This should be **RemoteSigned** by default but used to be **Restricted**, so if your Windows installation is not recent or you do not have PowerShell updated it will be set to **Restricted**.
+If the PowerShell window briefly appears and then disappears then your **ExecutionPolicy** might be set to **Restricted**.
 
-To update your execution policy, open a PowerShell window and write:
+To update your execution policy, open a Powershell window as Administrator and write:
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser

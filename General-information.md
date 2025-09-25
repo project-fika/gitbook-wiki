@@ -2,15 +2,15 @@
 
 ## What is Fika?
 
-Fika is an unofficial cooperative multiplayer mod for [SPT](https://sp-tarkov.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape from Tarkov experience by default.&#x20;
+Fika is an unofficial cooperative multiplayer mod for [SPT](https://sp-tarkov.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape From Tarkov experience by default.&#x20;
 
 In summary:
 
-* SPT is the back-end server that allows you to start the game without using BSG servers - it provides the player profile, inventory, flea market, and many other Escape From Tarkov features.
+* SPT is the back-end server that allows you to start the game without using BSG servers — it provides the player profile, inventory, flea market, and many other Escape From Tarkov features.
 * Fika is the mod component that adds cooperative multiplayer capabilities which allow players to host or join a raid to play together.
 
 {% hint style="warning" %}
-Fika is NOT an official mod for SPT. Do NOT contact SPT for any questions related to Fika. Please use our Discord instead. Our Discord provides support for both SPT and Fika.
+Fika is NOT an official mod for SPT. Do **NOT** contact SPT for any questions related to Fika. Instead, please join our [Discord](https://discord.gg/project-fika) server where you can find support for both SPT and Fika.
 {% endhint %}
 
 ## Specifications

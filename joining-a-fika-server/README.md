@@ -14,6 +14,7 @@ Before continuing, make sure:
 * You can start the game and reach the main menu.
 * You can see the Fika watermark in the bottom-left corner.
 * You have **NO** other mods than Fika installed.
+  * You may install mods later, but it is important to get everything working without any mods first.
 
 ### Setting up SPT Launcher
 
