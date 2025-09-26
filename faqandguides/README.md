@@ -103,9 +103,13 @@ Transits are disabled with Fika for SPT 3.11.x unless you are using a [headless 
 
 ### ❓How do I uninstall Fika?
 
-1. Navigate to `BepInEx/plugins/` and delete `Fika.Core.dll`
-2. Navigate to `user/mods/` and delete the `fika-server/` folder
-3. Open SPT.Launcher.exe, click Settings in the top-right, and (if applicable) change URL back to `https://127.0.0.1:6969`\
+Start `Fika-Installer` and choose `Uninstall Fika`.
+
+Alternatively, you can do it manually using the following steps:
+
+* Navigate to `BepInEx/plugins/` and delete `Fika.Core.dll`
+* Navigate to `user/mods/` and delete the `fika-server/` folder
+* Open SPT.Launcher.exe, click Settings in the top-right, and (if applicable) change URL back to `https://127.0.0.1:6969`\
 
 
 ***
