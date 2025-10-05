@@ -21,7 +21,7 @@ layout:
 This means that you must be able to start a game in SPT without any issues, and you should not be running any mods before installing Fika. Please ensure this is the case before continuing with the next steps.
 
 {% hint style="info" %}
-If you are unsure how to install SPT, please follow their instructions [here](https://hub.sp-tarkov.com/files/file/672-spt-installer/) and come back here once they are completed. Again, make sure that your SPT installation works before continuing.
+If you are unsure how to install SPT, please follow their instructions [here](https://forge.sp-tarkov.com/installer) and come back here once they are completed. Again, make sure that your SPT installation works before continuing.
 {% endhint %}
 
 We recommend reading the [General information](../General-information.md) section so you have a better understanding of how Fika works.
