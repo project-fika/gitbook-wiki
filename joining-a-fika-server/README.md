@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Joining a Fika server
 
 ## Getting started
@@ -28,6 +14,7 @@ Before continuing, make sure:
 * You can start the game and reach the main menu.
 * You can see the Fika watermark in the bottom-left corner.
 * You have **NO** other mods than Fika installed.
+  * You may install mods later, but it is important to get everything working without any mods first.
 
 ### Setting up SPT Launcher
 
@@ -35,7 +22,3 @@ In order to join a Fika server, you must configure SPT Launcher to connect to an
 
 * [Standard connection](standard-connection.md) (port forwarding, LAN)
 * [VPN connection](vpn.md)
-* [Playit.gg](https://discuss.playit.gg/t/setup-an-escape-from-tarkov-multiplayer-server-with-spt-fika/3352) (external source)
-
-
-

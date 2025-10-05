@@ -3,17 +3,6 @@ description: >-
   A page listing all the credits for each project and individuals who
   contributed to Project Fika and/or the Tarkov modding community in no specific
   order.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
 ---
 
 # Credits
