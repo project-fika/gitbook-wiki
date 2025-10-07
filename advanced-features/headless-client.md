@@ -25,13 +25,30 @@ Please note that there is some technical knowledge required to achieve this. If 
 * The installation process below will guide you through the steps to set up the SPT server and headless client on the same machine. It is possible to separate the SPT server and the headless client, but there is no performance benefit, and the steps are more involved. Therefore, this setup will not be covered in this guide.
 * Linux is NOT supported and covered by this article. Visit the dedicated Linux channel in our Discord for assistance.
 
+<details>
+
+<summary><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> Read this if you wish to run the headless client on the same computer where you are playing SPT <span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span></summary>
+
+The instructions below follow the officially supported use case for a headless client where you run it on a separate computer from where you are playing SPT. If you are choosing to run the headless client locally on the same computer where you play, you must have **two complete SPT installs**:
+
+1. Your existing SPT+Fika installation where you will be playing the game
+2. A completely separate SPT+Fika installation in a different folder that will be acting as the raid host - yes, the full 50+ GB install
+
+You can create the 2nd install manually or you can utilize Fika-Installer to do it automatically by running Fika-Installer.exe in an empty folder where you want to create the copy.
+
+It does not matter which install you choose to run SPT.Server.exe from, but you must choose one and only ever run SPT.Server.exe from the same folder. Delete the SPT.Server.exe that you chose not to use to reduce confusion.
+
+Please note that you likely need **more** than 32GB RAM for this to be a worthwhile endeavor, and support may be limited.
+
+</details>
+
 ### Installation
 
 {% stepper %}
 {% step %}
 ### Install Escape From Tarkov using BSG Launcher
 
-Escape From Tarkov must be installed on the server where you are planning to install the headless client. This is required to ensure that you own the game.&#x20;
+Escape From Tarkov must be installed on the computer where you are planning to run the headless client. This is required to ensure that you own the game.&#x20;
 
 **Fika will NOT work if you skip this step!**
 {% endstep %}
@@ -39,7 +56,7 @@ Escape From Tarkov must be installed on the server where you are planning to ins
 {% step %}
 ### Install [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/)
 
-If your SPT server is currently located on a different machine, please copy it to the server where you are planning to install the headless client. It must contain the full game. If you are unable to copy it due to the size, install SPT on the server using the [SPT Installer](https://hub.sp-tarkov.com/files/file/672-spt-installer/) instead.
+If your SPT server is currently located on a different machine, please copy it to the computer where you are planning to install the headless client. It must contain the full game. If you are unable to copy it due to the size, install SPT on the server using the [SPT Installer](https://hub.sp-tarkov.com/files/file/672-spt-installer/) instead.
 
 **Do NOT install SPT in your official Escape From Tarkov folder!**
 {% endstep %}
@@ -178,6 +195,7 @@ The headless client is very sensitive to modding. Do **NOT** install the same mo
 * AI mods (SAIN)
 * Spawn mods (MOAR, DONUTS)
 * Mods that specifically mention headless client support (That's Lit, UIFixes, etc.)
+* Any mod that reasonably changes in-raid behavior, like entering custom quest zones or having to do with inventory (VCQL, Pack'n'Strap, etc.)
 
 **❌ DO NOT INSTALL:**
 
@@ -188,3 +206,5 @@ The headless client is very sensitive to modding. Do **NOT** install the same mo
 ### Troubleshooting
 
 * If the `Use dedicated host` checkbox is greyed out, it means that the headless client is unavailable. It could be caused by unsupported mods installed in the headless client, networking issues, or other factors. Note that the headless client can only host one raid at a time.
+* If your headless client is failing to load, launch it in Graphics mode by pressing `G` during the startup of the launch script if possible. If launching in Graphics mode is not possible, look in the `<timestamp> errors.log` in the SPT log folder for hints. Often this is caused by having a malfunctioning or invalid plugin, and sometimes also from missing a plugin that is required by one of the mods on the server.
+* See other common issues in [FAQ and Guides](../faqandguides/)
