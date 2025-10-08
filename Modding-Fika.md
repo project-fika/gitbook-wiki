@@ -166,13 +166,13 @@ Let:
 Then, the **total packet size in bytes** is:
 
 $$
-Packet Size (bytes)=N×Selement​+Hpacket​+HUDP​+HIP​
+\text{Packet Size (bytes)} = N \times S_{\text{element}} + H_{\text{packet}} + H_{\text{udp}} + H_{\text{ip}}
 $$
 
 To convert to **bits**:
 
 $$
-Packet Size (bits)=8×(N×Selement+Hpacket+HUDP+HIP)
+\text{Packet Size (bits)} = 8 \times \Big( N \cdot S_{\text{element}} + H_{\text{packet}} + H_{\text{udp}} + H_{\text{ip}} \Big)
 $$
 
 ***
