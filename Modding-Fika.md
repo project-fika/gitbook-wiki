@@ -2,7 +2,7 @@
 description: Currently not updated for 3.11
 ---
 
-# Modding Fika
+# Creating Fika-Compatible Mods
 
 ## Fika Events
 
@@ -27,14 +27,14 @@ You can read the source code [here](https://github.com/project-fika/Fika-Plugin/
 To register packets, subscribe to the `FikaNetworkManagerCreatedEvent` and access the `IFikaNetworkManager`. In the manager you can call either of these methods:
 
 ```cs
-public void RegisterPacket<T>(Action<T> handle) where T : INetSerializable, new();
+void RegisterPacket<T>(Action<T> handle) where T : INetSerializable, new();
 ```
 
 ```cs
-public void RegisterPacket<T, TUserData>(Action<T, TUserData> handle) where T : INetSerializable, new();
+void RegisterPacket<T, TUserData>(Action<T, TUserData> handle) where T : INetSerializable, new();
 ```
 
-The `INetSerializable` needs to be a packet that you have created, and these methods are invoked when that packet is received. The second method also passes the `NetPeer`, which can be used to filter "packet bouncing" when received on the `FikaServer`. You handle the logic you want when receiving the packet in these methods.
+The `INetSerializable` needs to be a packet that you have created, and these methods are invoked when that packet is received. The second method also passes the `NetPeer`, which is useful on the `FikaServer`. You handle the logic however you want when receiving the packet with these methods.
 
 {% hint style="danger" %}
 Failing to register a packet will result in endless `exceptions` being thrown. Please register your packets correctly!
@@ -42,51 +42,66 @@ Failing to register a packet will result in endless `exceptions` being thrown. P
 
 ## Creating a Packet
 
-To create a packet, implement the `INetSerializable` interface into a new `class`. For packets that are sent often, I highly recommend using a `struct`. Add the data that you need in the form of `Field` and make all of them `public`. Then use the `Serialize()` and `Deserialize()` to write/read data. You can find an example [here](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Networking/Packets/Communication/BotStatePacket.cs), which also includes how to write an `enum`. There are also a lot of extensions to write EFT/Unity specific data (e.g. `Vector3`) that you can find [here](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Networking/FikaSerializationExtensions.cs).
+To create a packet, implement the `INetSerializable` interface into a new `class`. For packets that are sent often, I highly recommend using a `struct`. Add the data that you need in the form of `Field` and make all of them `Public`. Use the `Serialize()` and `Deserialize()` methods to write/read data. You can find an example [here](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Networking/Packets/Communication/BotStatePacket.cs), which also includes how to write an `enum`. There are also a lot of extensions to write EFT/Unity specific data (e.g. `Vector3`) that you can find [here](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Networking/FikaSerializationExtensions.cs).
+
+Do not instantiate and send new collections in packets that are sent often, e.g. `List<T>` or `T[]`. The allocations will become expensive. Fika has an interface `IReusable` that you can use to reuse a single instance of a packet, and only mutate the collections that exist in it.
+
+```csharp
+void RegisterReusable<T, TUserData>(Action<T, TUserData> handle) where T : class, IReusable, new();
+```
+
+An example of these packets can be found [here](https://github.com/project-fika/Fika-Plugin/blob/47a9d37aa40e2e7cc0b9628c7114115cd3805cd4/Fika.Core/Networking/Packets/World/WorldPacket.cs). Create the class somewhere, keep track of it and reuse it. You can find an example of that in the [FikaClientWorld](https://github.com/project-fika/Fika-Plugin/blob/47a9d37aa40e2e7cc0b9628c7114115cd3805cd4/Fika.Core/Main/ClientClasses/FikaClientWorld.cs).
 
 ## Sending a Packet
 
-To send a packet, you need a `IFikaNetworkManager`. This is either a `FikaServer` or `FikaClient` that you can access with the `Comfort.Common` using e.g. `Singleton<FikaServer>.Instance`. To determine whether you are a server or client, use `FikaBackendUtils.IsServer`.
+To send a packet, you need a `IFikaNetworkManager`. This is either a `FikaServer` or `FikaClient` that you can access with the `Comfort.Common` namespace using `Singleton<IFikaNetworkManager>.Instance`. To determine whether you are a server or client, use `FikaBackendUtils.IsServer`.
 
-#### Server
-
-Use either of these methods:
+Use this method to send packets:
 
 ```cs
-public void SendDataToPeer<T>(NetPeer peer, ref T packet, DeliveryMethod deliveryMethod) where T : INetSerializable
+void SendData<T>(ref T packet, DeliveryMethod deliveryMethod, bool broadcast = false) where T : INetSerializable;
 ```
 
-```cs
-public void SendDataToAll<T>(ref T packet, DeliveryMethod deliveryMethod, NetPeer peerToExclude = null) where T : INetSerializable
-```
+The `broadcast` argument determines whether it will be sent to _all other clients_. As the server, this is always `true`.
 
-`SendDataToPeer` can be used to send a packet to just one `NetPeer` (which is useful for a response callback). `SendDataToAll` sends data to all clients, you can use the `peerToExclude` to exclude one `NetPeer`, which is useful if you don't want to "bounce" a packet back to the sender, but relay it to other clients. An example of this can be found [here](https://github.com/project-fika/Fika-Plugin/blob/28a1a94361feb89b170dc40e80e81ee767a185c1/Fika.Core/Networking/FikaServer.cs#L1180). In this scenario, we receive a player state and send it to everyone else, except for the one sending it as they are not interested in their own state.
+If you want to send to just one specific `NetPeer`, e.g. after receiving a packet and you want to respond to that peer:
+
+```csharp
+void SendDataToPeer<T>(ref T packet, DeliveryMethod deliveryMethod, NetPeer peer) where T : INetSerializable;
+```
 
 ```mermaid
 flowchart LR
 
 A[Send from Client 1] --->|Packet| B[Receive on Server]
-B --> C{Bounce?}
-C -->|Yes| D[Send to Client 1 & 2]
-C -->|No| E[Send to Client 2]
+B --> C{Broadcast?}
+C -->|Yes| D[Send to Client 2 & 3]
+C -->|No| E[Done]
 ```
+
+{% hint style="warning" %}
+A client only has one `NetPeer` and it is _**always**_ the server! A client is never aware of other clients.
+{% endhint %}
+
+Some specific functions are class specific, and cannot be called from the interface singleton. You can access the specific `FikaServer` or `FikaClient` using e.g. `Singleton<FikaServer>.Instance`.
+
+The specific methods are:
 
 #### Client
 
-Use this method:
-
-```cs
-public void SendData<T>(ref T packet, DeliveryMethod deliveryMethod) where T : INetSerializable
+```csharp
+public void SendReusable<T>(T packet, DeliveryMethod deliveryMethod) where T : class, IReusable, new()
 ```
 
-It sends data to the server.
+#### Server
 
-{% hint style="warning" %}
-A client only has one `NetPeer` and it is the server! A client is never aware of other clients.
-{% endhint %}
+```csharp
+public void SendReusableToAll<T>(T packet, DeliveryMethod deliveryMethod, NetPeer peerToExlude = null) where T : class, IReusable, new()
+```
 
 ## Tips and useful classes
 
 * [FikaBackendUtils](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Coop/Utils/FikaBackendUtils.cs) has tons of useful methods/properties/fields that can be used.
 * [FikaGlobals](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Coop/Utils/FikaGlobals.cs) has some helper methods that can be useful during development.
 * [CoopHandler](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Coop/Components/CoopHandler.cs) has useful properties and methods, mainly to track players (especially human). It can be accessed on the `Singleton<IFikaNetworkManager>.Instance` or [CoopHandler.TryGetCoopHandler()](https://github.com/project-fika/Fika-Plugin/blob/18f02d5713b0e13cc02998b9e79489a55ac8249d/Fika.Core/Coop/Components/CoopHandler.cs#L62C40-L62C67) depending on your code style preference.
+* [FikaSerializationExtensions](https://github.com/project-fika/Fika-Plugin/blob/47a9d37aa40e2e7cc0b9628c7114115cd3805cd4/Fika.Core/Networking/FikaSerializationExtensions.cs) have tons of good extension methods to handle data, e.g. packing a `float`. If precision is not important to the last decimal, it's recommended to pack your primitives.
