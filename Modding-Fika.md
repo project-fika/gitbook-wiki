@@ -257,7 +257,7 @@ $$
 20,800×60=1,248,000bytes/minute ≈ 1,248MB/minute (1.19 MiB)
 $$
 
-#### Interpolation
+### Interpolation
 
 As you can see from the breakdown, this is a lot of wasted data that could be throttled and sent less frequently, and potentially interpolated instead by lerping the values and sending the time when sending and comparing with the time when received.
 
@@ -300,6 +300,14 @@ That is \~1080bytes saved per second:
 $$
 1{,}440 - 320 = 1{,}120\ \text{bytes/sec}
 $$
+
+### Summary
+
+Even though saving **1,12 KB per second** might seem small for a single message stream, network usage scales linearly.\
+Each actor (or entity) may send several of these updates — position, rotation, state, velocity, and so on.\
+When you multiply that by **dozens of properties per actor** and **many actors active at once**, the total bandwidth grows rapidly.
+
+Optimizing even a few bytes or reducing send frequency per update can therefore lead to **massive overall savings** across the entire simulation or multiplayer session.
 
 ## Tips and useful classes
 
