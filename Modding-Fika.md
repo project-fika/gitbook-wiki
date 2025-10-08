@@ -286,19 +286,19 @@ You can then send the current time (`Time.unscaledTime`) and compare it with cur
 20 messages/sec at 16 bytes:
 
 $$
-16bytes×20=320bytes/sec
+16 \times 20 = 320\ \text{bytes/sec}
 $$
 
 120 messages/sec at 12 bytes:
 
 $$
-12bytes×120=1,400bytes/sec
+12 \times 120 = 1{,}440\ \text{bytes/sec}
 $$
 
 That is \~1080bytes saved per second:
 
 $$
-1,400−320=1,080bytes/sec
+1{,}440 - 320 = 1{,}120\ \text{bytes/sec}
 $$
 
 ## Tips and useful classes
