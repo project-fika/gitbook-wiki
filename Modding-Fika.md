@@ -303,11 +303,28 @@ $$
 
 ### Summary
 
-Even though saving **1,12 KB per second** might seem small for a single message stream, network usage scales linearly.\
-Each actor (or entity) may send several of these updates — position, rotation, state, velocity, and so on.\
-When you multiply that by **dozens of properties per actor** and **many actors active at once**, the total bandwidth grows rapidly.
+By combining **time synchronization** with **lerp-based smoothing**, we can create fluid, latency-tolerant motion without spamming the network.\
+Instead of sending full position updates every frame, we send fewer messages that include a timestamp and interpolate locally:
 
-Optimizing even a few bytes or reducing send frequency per update can therefore lead to **massive overall savings** across the entire simulation or multiplayer session.
+$$
+\text{lerpedValue} = (1 - t) \cdot \text{oldValue} + t \cdot \text{newValue}
+$$
+
+This allows clients to smoothly reconstruct movement based on timing differences rather than raw frequency.
+
+For example, reducing from **120 messages/sec at 12 bytes** to **20 messages/sec at 16 bytes** saves:
+
+$$
+1{,}440 - 320 = 1{,}120\ \text{bytes/sec}
+$$
+
+While **1,12 KB/sec** per stream might seem small, it scales quickly — each actor can send multiple data streams (position, rotation, animation state, etc.), and with many actors, the savings multiply dramatically.
+
+Optimizing send frequency and payload size is one of the most effective ways to achieve **smooth, efficient, and scalable networked movement**.
+
+{% hint style="info" %}
+This approach doesn’t just apply to movement — it’s equally useful for synchronizing any time-based value, such as animations, UI transitions, physics states, or even audio parameters.
+{% endhint %}
 
 ## Tips and useful classes
 
