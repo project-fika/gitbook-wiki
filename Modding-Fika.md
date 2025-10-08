@@ -114,6 +114,65 @@ public void SendReusable<T>(T packet, DeliveryMethod deliveryMethod) where T : c
 public void SendReusableToAll<T>(T packet, DeliveryMethod deliveryMethod, NetPeer peerToExlude = null) where T : class, IReusable, new()
 ```
 
+***
+
+## General Information About Data
+
+{% hint style="info" %}
+Keep in mind that performance and bandwidth is not free! Do not send redundant data every `Update()` unless you have to.&#x20;
+
+Fika has a class that you can inherit called `ThrottledMono`, where you can set an `UpdateRate` which is how many times it should update per seconds. This can dramatically increase performance and reduce bandwidth used.
+{% endhint %}
+
+### Calculating Packet Size (UDP with Headers)
+
+When sending data over a network using UDP, each packet consists of:
+
+1. Your payload (the actual data, e.g., floats)
+2. Packet-specific overhead (1–4 bytes depending on the type, e.g. `Unreliable` or `ReliableOrdered`)
+3. UDP header (8 bytes)
+4. IP header (20–60 bytes, depending on IPv4 options)
+
+It’s important to account for all headers, not just the payload, because small payloads can become inefficient due to header overhead.
+
+#### Formula
+
+Let:
+
+* _**N**_ = number of elements being sent
+* _**S**_<sub>element</sub> = size of one element in bytes (e.g., 4 bytes for a `float`)
+* _**H**_<sub>packet​</sub> = packet-specific overhead (1–4 bytes)
+* _**H**_<sub>UDPH​</sub> = UDP header size (8 bytes)
+* _**H**_<sub>IPH</sub>​ = IP header size (20–60 bytes)
+
+Then, the **total packet size in bytes** is:
+
+$$
+Packet Size (bytes)=N×Selement​+Hpacket​+HUDP​+HIP​
+$$
+
+To convert to **bits**:
+
+$$
+Packet Size (bits)=8×(N×Selement+Hpacket+HUDP+HIP)
+$$
+
+***
+
+#### Example
+
+Suppose you are sending a `Vector3`, which is 3 floats (4 bytes each), with 2 bytes of packet-specific overhead, 8 bytes UDP header, and 20 bytes IP header:
+
+$$
+Packet Size=3×4+2+8+20=42 bytes
+$$
+
+$$
+Packet Size in bits=42×8=336 bits
+$$
+
+Even this small payload, if sent frequently (e.g., every frame in a game), can consume significant bandwidth. Notice that even though the payload is only 12 bytes, headers increase the total packet size almost _**4×**_.
+
 ## Tips and useful classes
 
 * [FikaBackendUtils](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Coop/Utils/FikaBackendUtils.cs) has tons of useful methods/properties/fields that can be used.
