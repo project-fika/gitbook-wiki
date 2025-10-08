@@ -23,15 +23,19 @@ layout:
 
 Fika has a lot of events that you can subscribe to, which makes it easier to run code at certain key moments of the raid. To subscribe to an event, use:
 
+{% code overflow="wrap" %}
 ```cs
 public static void SubscribeEvent<TEvent>(Action<TEvent> callback) where TEvent : FikaEvent
 ```
+{% endcode %}
 
 To unsubscribe, use:
 
+{% code overflow="wrap" %}
 ```cs
 public static void UnsubscribeEvent<TEvent>(Action<TEvent> callback) where TEvent : FikaEvent
 ```
+{% endcode %}
 
 The event triggered will usually pass an important object related to the event, e.g. `FikaNetworkManagerCreatedEvent` passes a `IFikaNetworkManager` (named `Manager` in the object). This object can then be accessed if needed.
 
@@ -41,13 +45,17 @@ You can read the source code [here](https://github.com/project-fika/Fika-Plugin/
 
 To register packets, subscribe to the `FikaNetworkManagerCreatedEvent` and access the `IFikaNetworkManager`. In the manager you can call either of these methods:
 
+{% code overflow="wrap" fullWidth="false" %}
 ```cs
 void RegisterPacket<T>(Action<T> handle) where T : INetSerializable, new();
 ```
+{% endcode %}
 
+{% code overflow="wrap" fullWidth="false" %}
 ```cs
 void RegisterPacket<T, TUserData>(Action<T, TUserData> handle) where T : INetSerializable, new();
 ```
+{% endcode %}
 
 The `INetSerializable` needs to be a packet that you have created, and these methods are invoked when that packet is received. The second method also passes the `NetPeer`, which is useful on the `FikaServer`. You handle the logic however you want when receiving the packet with these methods.
 
@@ -61,9 +69,11 @@ To create a packet, implement the `INetSerializable` interface into a new `class
 
 Do not instantiate and send new collections in packets that are sent often, e.g. `List<T>` or `T[]`. The allocations will become expensive. Fika has an interface `IReusable` that you can use to reuse a single instance of a packet, and only mutate the collections that exist in it.
 
+{% code overflow="wrap" %}
 ```csharp
 void RegisterReusable<T, TUserData>(Action<T, TUserData> handle) where T : class, IReusable, new();
 ```
+{% endcode %}
 
 An example of these packets can be found [here](https://github.com/project-fika/Fika-Plugin/blob/47a9d37aa40e2e7cc0b9628c7114115cd3805cd4/Fika.Core/Networking/Packets/World/WorldPacket.cs). Create the class somewhere, keep track of it and reuse it. You can find an example of that in the [FikaClientWorld](https://github.com/project-fika/Fika-Plugin/blob/47a9d37aa40e2e7cc0b9628c7114115cd3805cd4/Fika.Core/Main/ClientClasses/FikaClientWorld.cs).
 
@@ -73,17 +83,21 @@ To send a packet, you need a `IFikaNetworkManager`. This is either a `FikaServer
 
 Use this method to send packets:
 
+{% code overflow="wrap" %}
 ```cs
 void SendData<T>(ref T packet, DeliveryMethod deliveryMethod, bool broadcast = false) where T : INetSerializable;
 ```
+{% endcode %}
 
 The `broadcast` argument determines whether it will be sent to _all other clients_. As the server, this is always `true`.
 
 If you want to send to just one specific `NetPeer`, e.g. after receiving a packet and you want to respond to that peer:
 
+{% code overflow="wrap" %}
 ```csharp
 void SendDataToPeer<T>(ref T packet, DeliveryMethod deliveryMethod, NetPeer peer) where T : INetSerializable;
 ```
+{% endcode %}
 
 ```mermaid
 flowchart LR
@@ -104,15 +118,19 @@ The specific methods are:
 
 #### Client
 
+{% code overflow="wrap" %}
 ```csharp
 public void SendReusable<T>(T packet, DeliveryMethod deliveryMethod) where T : class, IReusable, new()
 ```
+{% endcode %}
 
 #### Server
 
+{% code overflow="wrap" %}
 ```csharp
 public void SendReusableToAll<T>(T packet, DeliveryMethod deliveryMethod, NetPeer peerToExlude = null) where T : class, IReusable, new()
 ```
+{% endcode %}
 
 ***
 
