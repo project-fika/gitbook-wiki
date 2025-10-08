@@ -5,7 +5,7 @@ icon: house-window
 
 # Home
 
-<figure><img src=".gitbook/assets/1080p_launchertest2.png" alt=""><figcaption></figcaption></figure>
+<div data-full-width="false" data-with-frame="true"><figure><img src=".gitbook/assets/1080p_launchertest2.png" alt=""><figcaption></figcaption></figure></div>
 
 ## Introduction
 
