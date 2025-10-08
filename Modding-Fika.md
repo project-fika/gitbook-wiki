@@ -171,7 +171,50 @@ $$
 Packet Size in bits=42×8=336 bits
 $$
 
-Even this small payload, if sent frequently (e.g., every frame in a game), can consume significant bandwidth. Notice that even though the payload is only 12 bytes, headers increase the total packet size almost _**4×**_.
+Even this small payload, if sent frequently (e.g., every frame in a game), can consume significant bandwidth. Notice that even though the payload is only 12 bytes, headers increase the total packet size almost _**4×**_.\
+\
+Now imagine this being unthrottled, and the client is running at 120 FPS:\
+We already have:
+
+$$
+Packet Size=42 bytes
+$$
+
+If we send 120 packets per second:
+
+$$
+Data per second (bytes)=42×120
+$$
+
+#### Step-by-step
+
+* Packet size is 42 bytes.
+* Sending 120 packets per second.
+* Multiply packet size by number of packets: 42 × 120.
+* Break it down:&#x20;
+
+$$
+42×120=42×(12×10)=(42×12)×10
+$$
+
+$$
+42×12=504
+$$
+
+$$
+504×10=5,040
+$$
+
+* Total data per second in bytes = 5,040 bytes.
+* Convert to bits: 5,040 × 8 = 40,320 bits per second.
+
+Convert to bits:
+
+$$
+5,040×8=40,320 bits per second (bps)
+$$
+
+This is _**a lot**_ of wasted bandwidth and CPU usage. Unless it's critical, do not send data every tick. Rather, interpolate values on the receiving end if needed.
 
 ## Tips and useful classes
 
