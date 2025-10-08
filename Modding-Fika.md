@@ -224,7 +224,6 @@ $$
 $$
 
 * Total data per second in bytes = 5,040 bytes.
-* Convert to bits: 5,040 × 8 = 40,320 bits per second.
 
 Convert to bits:
 
@@ -232,7 +231,75 @@ $$
 5,040×8=40,320 bits per second (bps)
 $$
 
-This is _**a lot**_ of wasted bandwidth and CPU usage. Unless it's critical, do not send data every tick. Rather, interpolate values on the receiving end if needed.
+This is _**a lot**_ of wasted bandwidth and CPU usage. Unless it's critical, do not send data every tick. Rather, interpolate values on the receiving end if needed. Breaking it down further:
+
+$$
+Data transferred=5KB/s×60s=300KB
+$$
+
+That is 300KB per minute for _**one**_, _**single**_ `Vector3`. That is almost ¼ of the bandwidth that Fika sends for _**all bots states**_ every minute.
+
+The size of one entire player state (52 bytes), 20/s:
+
+$$
+52×20=1040bytes/sec per entity
+$$
+
+Assuming we have 20 bots:
+
+$$
+1040×20=20,800bytes/sec total
+$$
+
+Now per minute:
+
+$$
+20,800×60=1,248,000bytes/minute ≈ 1,248MB/minute (1.19 MiB)
+$$
+
+#### Interpolation
+
+As you can see from the breakdown, this is a lot of wasted data that could be throttled and sent less frequently, and potentially interpolated instead by lerping the values and sending the time when sending and comparing with the time when received.
+
+Interpolation factor _**t**_:
+
+$$
+t = \frac{\text{currentTime} - \text{sentTime}}{\text{receivedTime} - \text{sentTime}}
+$$
+
+Clamp _**t**_ between 0 and 1
+
+$$
+t = \max(0, \min(1, t))
+$$
+
+Linear interpolation formula:
+
+$$
+\text{lerpedValue} = \text{oldValue} + (\text{newValue} - \text{oldValue}) \cdot t
+$$
+
+You can then send the current time (`Time.unscaledTime`) and compare it with current time when received, and smooth out differences using the equations above.
+
+#### Now comparing the different methods of sending:
+
+20 messages/sec at 16 bytes:
+
+$$
+16bytes×20=320bytes/sec
+$$
+
+120 messages/sec at 12 bytes:
+
+$$
+12bytes×120=1,400bytes/sec
+$$
+
+That is \~1080bytes saved per second:
+
+$$
+1,400−320=1,080bytes/sec
+$$
 
 ## Tips and useful classes
 
