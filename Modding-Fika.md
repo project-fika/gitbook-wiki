@@ -25,6 +25,11 @@ Fika has a lot of events that you can subscribe to, which makes it easier to run
 
 {% code overflow="wrap" %}
 ```cs
+/// <summary>
+/// Subscribes a callback to a specific type of Fika event.
+/// </summary>
+/// <typeparam name="TEvent">The type of the event to subscribe to.</typeparam>
+/// <param name="callback">The callback to invoke when the event is dispatched.</param>
 public static void SubscribeEvent<TEvent>(Action<TEvent> callback) where TEvent : FikaEvent
 ```
 {% endcode %}
@@ -33,6 +38,11 @@ To unsubscribe, use:
 
 {% code overflow="wrap" %}
 ```cs
+/// <summary>
+/// Unsubscribes a callback from a specific type of Fika event.
+/// </summary>
+/// <typeparam name="TEvent">The type of the event to unsubscribe from.</typeparam>
+/// <param name="callback">The callback to remove from the event subscription.</param>
 public static void UnsubscribeEvent<TEvent>(Action<TEvent> callback) where TEvent : FikaEvent
 ```
 {% endcode %}
@@ -47,15 +57,23 @@ To register packets, subscribe to the `FikaNetworkManagerCreatedEvent` and acces
 
 {% code overflow="wrap" fullWidth="false" %}
 ```cs
+/// <summary>
+/// Registers a packet to the <see cref="NetPacketProcessor"/>.
+/// </summary>
+/// <typeparam name="T">The packet type.</typeparam>
+/// <param name="handle">The <see cref="Action"/> to run when receiving the packet.</param>
 void RegisterPacket<T>(Action<T> handle) where T : INetSerializable, new();
 ```
 {% endcode %}
 
-{% code overflow="wrap" fullWidth="false" %}
-```cs
-void RegisterPacket<T, TUserData>(Action<T, TUserData> handle) where T : INetSerializable, new();
-```
-{% endcode %}
+<pre class="language-cs" data-overflow="wrap" data-full-width="false"><code class="lang-cs">/// &#x3C;summary>
+/// Registers a packet to the &#x3C;see cref="NetPacketProcessor"/> with user data.
+/// &#x3C;/summary>
+/// &#x3C;typeparam name="T">The packet type.&#x3C;/typeparam>
+/// &#x3C;typeparam name="TUserData">The user data type.&#x3C;/typeparam>
+/// &#x3C;param name="handle">The &#x3C;see cref="Action"/> to run when receiving the packet.&#x3C;/param>
+<strong>void RegisterPacket&#x3C;T, TUserData>(Action&#x3C;T, TUserData> handle) where T : INetSerializable, new();
+</strong></code></pre>
 
 The `INetSerializable` needs to be a packet that you have created, and these methods are invoked when that packet is received. The second method also passes the `NetPeer`, which is useful on the `FikaServer`. You handle the logic however you want when receiving the packet with these methods.
 
@@ -71,6 +89,13 @@ Do not instantiate and send new collections in packets that are sent often, e.g.
 
 {% code overflow="wrap" %}
 ```csharp
+/// <summary>
+/// Registers a reusable packet to the <see cref="NetPacketProcessor"/> with user data. Reusable uses the same instance throughout the lifetime of the <see cref="NetManager"/>.
+/// Custom types must be registered with <see cref="RegisterCustomType{T}(Action{NetDataWriter, T}, Func{NetDataReader, T})"/> first.
+/// </summary>
+/// <typeparam name="T">The packet type.</typeparam>
+/// <typeparam name="TUserData">The user data type.</typeparam>
+/// <param name="handle">The <see cref="Action"/> to run when receiving the packet.</param>
 void RegisterReusable<T, TUserData>(Action<T, TUserData> handle) where T : class, IReusable, new();
 ```
 {% endcode %}
@@ -85,6 +110,13 @@ Use this method to send packets:
 
 {% code overflow="wrap" %}
 ```cs
+/// <summary>
+/// Sends a packet.
+/// </summary>
+/// <typeparam name="T">The type of packet to send, which must implement <see cref="INetSerializable"/>.</typeparam>
+/// <param name="packet">The packet instance to send, passed by reference.</param>
+/// <param name="deliveryMethod">The delivery method (reliable, unreliable, etc.) to use for sending the packet.</param>
+/// <param name="broadcast">If <see langword="true"/>, the packet will be sent to multiple recipients; otherwise, it will be sent to a single target (server is always broadcast).</param>
 void SendData<T>(ref T packet, DeliveryMethod deliveryMethod, bool broadcast = false) where T : INetSerializable;
 ```
 {% endcode %}
@@ -95,6 +127,16 @@ If you want to send to just one specific `NetPeer`, e.g. after receiving a packe
 
 {% code overflow="wrap" %}
 ```csharp
+/// <summary>
+/// Sends a packet of data directly to a specific peer.
+/// </summary>
+/// <typeparam name="T">The type of packet to send, which must implement <see cref="INetSerializable"/>.</typeparam>
+/// <param name="packet">The packet instance to send, passed by reference.</param>
+/// <param name="deliveryMethod">The delivery method (reliable, unreliable, etc.) to use for sending the packet.</param>
+/// <param name="peer">The target <see cref="NetPeer"/> that will receive the packet.</param>
+/// <remarks>
+/// Should only be used as a <see cref="FikaServer"/>, since a <see cref="FikaClient"/> only has one <see cref="NetPeer"/>.
+/// </remarks>
 void SendDataToPeer<T>(ref T packet, DeliveryMethod deliveryMethod, NetPeer peer) where T : INetSerializable;
 ```
 {% endcode %}
@@ -120,6 +162,15 @@ The specific methods are:
 
 {% code overflow="wrap" %}
 ```csharp
+/// <summary>
+/// Sends a reusable packet
+/// </summary>
+/// <typeparam name="T">The <see cref="IReusable"/> to send</typeparam>
+/// <param name="packet">The <see cref="INetSerializable"/> to send</param>
+/// <param name="deliveryMethod">The deliverymethod</param>
+/// <remarks>
+/// Reusable will always be of type broadcast when sent from a client
+/// </remarks>
 public void SendReusable<T>(T packet, DeliveryMethod deliveryMethod) where T : class, IReusable, new()
 ```
 {% endcode %}
