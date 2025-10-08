@@ -191,14 +191,15 @@ $$
 
 Even this small payload, if sent frequently (e.g., every frame in a game), can consume significant bandwidth. Notice that even though the payload is only 12 bytes, headers increase the total packet size almost _**4×**_.\
 \
-Now imagine this being unthrottled, and the client is running at 120 FPS:\
-We already have:
+Now imagine this being unthrottled, and the client is running at 120 FPS:
+
+<mark style="color:$info;">We already have:</mark>
 
 $$
 Packet Size=42 bytes
 $$
 
-If we send 120 packets per second:
+<mark style="color:$info;">If we send 120 packets per second:</mark>
 
 $$
 Data per second (bytes)=42×120
@@ -209,7 +210,8 @@ $$
 * Packet size is 42 bytes.
 * Sending 120 packets per second.
 * Multiply packet size by number of packets: 42 × 120.
-* Break it down:&#x20;
+
+<mark style="color:$info;">Break it down:</mark>&#x20;
 
 $$
 42×120=42×(12×10)=(42×12)×10
@@ -223,9 +225,7 @@ $$
 504×10=5,040
 $$
 
-* Total data per second in bytes = 5,040 bytes.
-
-Convert to bits:
+<mark style="color:$info;">Convert to bits:</mark>
 
 $$
 5,040×8=40,320 bits per second (bps)
@@ -239,41 +239,43 @@ $$
 
 That is 300KB per minute for _**one**_, _**single**_ `Vector3`. That is almost ¼ of the bandwidth that Fika sends for _**all bots states**_ every minute.
 
-The size of one entire player state (52 bytes), 20/s:
+<mark style="color:$info;">The size of one entire player state (52 bytes), 20/s:</mark>
 
 $$
 52×20=1040bytes/sec per entity
 $$
 
-Assuming we have 20 bots:
+<mark style="color:$info;">Assuming we have 20 bots:</mark>
 
 $$
 1040×20=20,800bytes/sec total
 $$
 
-Now per minute:
+<mark style="color:$info;">Now per minute:</mark>
 
 $$
 20,800×60=1,248,000bytes/minute ≈ 1,248MB/minute (1.19 MiB)
 $$
 
+***
+
 ### Interpolation
 
 As you can see from the breakdown, this is a lot of wasted data that could be throttled and sent less frequently, and potentially interpolated instead by lerping the values and sending the time when sending and comparing with the time when received.
 
-Interpolation factor _**t**_:
+<mark style="color:$info;">Interpolation factor</mark> <mark style="color:$info;"></mark>_<mark style="color:$info;">**t**</mark>_<mark style="color:$info;">:</mark>
 
 $$
 t = \frac{\text{currentTime} - \text{sentTime}}{\text{receivedTime} - \text{sentTime}}
 $$
 
-Clamp _**t**_ between 0 and 1
+<mark style="color:$info;">Clamp</mark> <mark style="color:$info;"></mark>_<mark style="color:$info;">**t**</mark>_ <mark style="color:$info;"></mark><mark style="color:$info;">between 0 and 1:</mark>
 
 $$
 t = \max(0, \min(1, t))
 $$
 
-Linear interpolation formula:
+<mark style="color:$info;">Linear interpolation formula:</mark>
 
 $$
 \text{lerpedValue} = \text{oldValue} + (\text{newValue} - \text{oldValue}) \cdot t
@@ -281,21 +283,21 @@ $$
 
 You can then send the current time (`Time.unscaledTime`) and compare it with current time when received, and smooth out differences using the equations above.
 
-#### Now comparing the different methods of sending:
+#### Now comparing the different methods of sending
 
-20 messages/sec at 16 bytes:
+<p align="center"><mark style="color:$info;">20 messages/sec at 16 bytes:</mark></p>
 
 $$
 16 \times 20 = 320\ \text{bytes/sec}
 $$
 
-120 messages/sec at 12 bytes:
+<p align="center"><mark style="color:$info;">120 messages/sec at 12 bytes:</mark></p>
 
 $$
 12 \times 120 = 1{,}440\ \text{bytes/sec}
 $$
 
-That is \~1080bytes saved per second:
+<p align="center"><mark style="color:$info;">That is ~1080bytes saved per second:</mark></p>
 
 $$
 1{,}440 - 320 = 1{,}120\ \text{bytes/sec}
