@@ -1,5 +1,6 @@
 ---
 description: This section describes all the different ways you can contribute to Fika.
+icon: code
 ---
 
 # Contribute to Fika

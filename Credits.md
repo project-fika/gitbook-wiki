@@ -3,6 +3,7 @@ description: >-
   A page listing all the credits for each project and individuals who
   contributed to Project Fika and/or the Tarkov modding community in no specific
   order.
+icon: rectangle-list
 ---
 
 # Credits

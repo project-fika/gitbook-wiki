@@ -2,6 +2,7 @@
 description: >-
   Below you will find common questions and solutions. More in-depth guides can
   be found under the table of contents links on the left.
+icon: comments-question-check
 ---
 
 # FAQ and Guides

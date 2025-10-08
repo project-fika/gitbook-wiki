@@ -1,5 +1,6 @@
 ---
 description: Welcome to Project Fika Wiki!
+icon: house-window
 ---
 
 # Home

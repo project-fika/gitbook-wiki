@@ -1,8 +1,12 @@
+---
+icon: circle-info
+---
+
 # General information
 
 ## What is Fika?
 
-Fika is an unofficial cooperative multiplayer mod for [SPT](https://sp-tarkov.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape From Tarkov experience by default.&#x20;
+Fika is an unofficial cooperative multiplayer mod for [SPT](https://sp-tarkov.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape From Tarkov experience by default.
 
 In summary:
 

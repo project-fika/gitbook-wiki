@@ -1,3 +1,7 @@
+---
+icon: gears
+---
+
 # Fika configuration
 
 This section describes how to configure Fika. Fika has two type of configuration: client configuration and server configuration.

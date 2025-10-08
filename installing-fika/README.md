@@ -1,3 +1,7 @@
+---
+icon: desktop-arrow-down
+---
+
 # Installing Fika
 
 ## Before installing Fika
@@ -32,7 +36,7 @@ The biggest gain in Fika (and in SPT in general) will be getting a stronger CPU 
 
 {% stepper %}
 {% step %}
-### Install [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/)
+#### Install [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/)
 
 A fresh installation of SPT is **required** before installing Fika.
 
@@ -40,35 +44,35 @@ A fresh installation of SPT is **required** before installing Fika.
 {% endstep %}
 
 {% step %}
-### Download [Fika-Installer](https://github.com/project-fika/Fika-Installer/releases/latest)
+#### Download [Fika-Installer](https://github.com/project-fika/Fika-Installer/releases/latest)
 {% endstep %}
 
 {% step %}
-### Copy `Fika-Installer.exe` inside your SPT folder
+#### Copy `Fika-Installer.exe` inside your SPT folder
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Start `Fika-Installer.exe`
+#### Start `Fika-Installer.exe`
 
 If you get an admin rights prompt, this is normal. Fika-Installer requires admin rights to set up the firewall rules.
 {% endstep %}
 
 {% step %}
-### Choose `Install Fika` (option 1)
+#### Choose `Install Fika` (option 1)
 
 <figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Close `Fika-Installer` when installation is completed
+#### Close `Fika-Installer` when installation is completed
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Start `SPT.Server.exe`
+#### Start `SPT.Server.exe`
 
 You should see: `Mod: server version: <Fika version> by: Fika loaded` in the console window.
 
@@ -76,7 +80,7 @@ You should see: `Mod: server version: <Fika version> by: Fika loaded` in the con
 {% endstep %}
 
 {% step %}
-### Start `SPT.Launcher.exe`
+#### Start `SPT.Launcher.exe`
 
 Create and/or login to your account, then start the game.
 
@@ -84,7 +88,7 @@ Create and/or login to your account, then start the game.
 {% endstep %}
 
 {% step %}
-### Validate that Fika successfully loaded
+#### Validate that Fika successfully loaded
 
 You should get a Fika disclaimer upon entering the menu. Read the disclaimer and wait until the timer runs out.
 
@@ -94,7 +98,7 @@ You should get a Fika disclaimer upon entering the menu. Read the disclaimer and
 {% endstep %}
 
 {% step %}
-### Exit the game and continue with the next steps
+#### Exit the game and continue with the next steps
 {% endstep %}
 {% endstepper %}
 

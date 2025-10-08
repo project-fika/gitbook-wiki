@@ -1,3 +1,7 @@
+---
+icon: play
+---
+
 # Playing Fika
 
 ## Getting started

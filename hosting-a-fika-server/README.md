@@ -1,3 +1,7 @@
+---
+icon: server
+---
+
 # Hosting a Fika server
 
 ## Getting started

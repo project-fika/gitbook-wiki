@@ -1,3 +1,7 @@
+---
+icon: right-to-bracket
+---
+
 # Joining a Fika server
 
 ## Getting started

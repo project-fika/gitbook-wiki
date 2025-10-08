@@ -1,3 +1,7 @@
+---
+icon: magnifying-glass
+---
+
 # Advanced features
 
 {% hint style="warning" %}
