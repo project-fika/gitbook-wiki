@@ -16,6 +16,7 @@
   * [Server](fika-configuration/server.md)
 * [Advanced features](advanced-features/README.md)
   * [Headless client](advanced-features/headless-client.md)
+  * [Fika API](advanced-features/fika-api.md)
 * [Creating Fika-Compatible Mods](Modding-Fika.md)
 * [FAQ and Guides](faqandguides/README.md)
   * [Set up required/optional mods](faqandguides/set-up-required-optional-mods.md)
