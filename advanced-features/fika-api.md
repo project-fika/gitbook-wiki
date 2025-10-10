@@ -146,6 +146,7 @@ Input example:
     "fir": true, // is item found in raid
     "expirationDays": 7, // how long until the message expires
     "profileIds": [] // the MongoIDs to send to
+}
 ```
 
 ### fika/api/sendmessage
