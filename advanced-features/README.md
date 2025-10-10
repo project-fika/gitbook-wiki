@@ -1,4 +1,5 @@
 ---
+description: Advanced features of Fika.
 icon: magnifying-glass
 ---
 
@@ -8,6 +9,4 @@ icon: magnifying-glass
 This section is for advanced users only. We will not provide support unless you know what you're doing.
 {% endhint %}
 
-This section contains advanced features for Fika.
-
-Choose one of the sub page on the left menu.
+<a href="headless-client.md" class="button primary" data-icon="right-long">Set up a headless client</a> <a href="fika-api.md" class="button primary" data-icon="right-long">Using the Fika API</a>

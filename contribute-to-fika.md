@@ -1,6 +1,20 @@
 ---
-description: This section describes all the different ways you can contribute to Fika.
+description: Different ways you can contribute to Fika.
 icon: code
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 # Contribute to Fika

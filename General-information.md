@@ -1,32 +1,43 @@
 ---
+description: Learn about the features, specifications and limitations of Fika.
 icon: circle-info
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 # General information
 
 ## What is Fika?
 
-Fika is an unofficial cooperative multiplayer mod for [SPT](https://sp-tarkov.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape From Tarkov experience by default.
+Fika is a cooperative multiplayer mod for [SPT](https://sp-tarkov.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape From Tarkov experience by default.
 
 In summary:
 
 * SPT is the back-end server that allows you to start the game without using BSG servers — it provides the player profile, inventory, flea market, and many other Escape From Tarkov features.
 * Fika is the mod component that adds cooperative multiplayer capabilities which allow players to host or join a raid to play together.
 
-{% hint style="warning" %}
-Fika is NOT an official mod for SPT. Do **NOT** contact SPT for any questions related to Fika. Instead, please join our [Discord](https://discord.gg/project-fika) server where you can find support for both SPT and Fika.
-{% endhint %}
-
 ## Specifications
 
 * Fika is a combination of a [BepInEx plugin](https://github.com/project-fika/Fika-Plugin) and a [SPT server mod](https://github.com/project-fika/Fika-Server).
-* Fika uses SPT (with the Fika-Server plugin) as the back-end server for profile and lobby management.
+* Fika uses SPT as the back-end server to connect players together.
 * Fika uses the Client <-> Server UDP networking model for game play. While Fika is still in development, the general consensus is that network performance is better than Escape From Tarkov live (provided the host has proper networking capabilities).
 
 ## Main features
 
 * Host your own server or join a local/external server.
-* Create your own raid (or play solo).
+* Create your own raid for other players to join (or play solo).
 * Join someone else's raid.
 * Play together against bots, share items, progress quests together in the same raid.
 * Preserve character, quest, inventory, and hideout progression.

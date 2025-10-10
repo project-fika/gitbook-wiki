@@ -1,4 +1,5 @@
 ---
+description: Step-by-step process for installing Fika.
 icon: desktop-arrow-down
 ---
 
@@ -6,7 +7,7 @@ icon: desktop-arrow-down
 
 ## Before installing Fika
 
-**Always** keep in mind that Fika is an unofficial [SPT](https://sp-tarkov.com/#download) mod. You **must** have a working SPT installation before attempting to install Fika. There is absolutely no point in trying to install Fika before you ensure that SPT is working first.
+**Always** keep in mind that Fika is a [SPT](https://sp-tarkov.com/#download) mod. You **must** have a working SPT installation before attempting to install Fika.
 
 This means that you must be able to start a game in SPT without any issues, and you should not be running any mods before installing Fika. Please ensure this is the case before continuing with the next steps.
 
@@ -38,9 +39,7 @@ The biggest gain in Fika (and in SPT in general) will be getting a stronger CPU 
 {% step %}
 #### Install [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/)
 
-A fresh installation of SPT is **required** before installing Fika.
-
-**Do not install mods yet!**
+A fresh installation of SPT is **required** before installing Fika. **Do not install mods yet!**
 {% endstep %}
 
 {% step %}

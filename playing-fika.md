@@ -1,4 +1,5 @@
 ---
+description: How to host or join a raid using your own Fika server or someone else's.
 icon: play
 ---
 

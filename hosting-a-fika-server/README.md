@@ -1,4 +1,5 @@
 ---
+description: Getting started with hosting a Fika server.
 icon: server
 ---
 

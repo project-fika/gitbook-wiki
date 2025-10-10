@@ -1,3 +1,7 @@
+---
+description: A default server configuration file with a description for each setting.
+---
+
 # Server
 
 The server configuration can be found in the `user\mods\fika-server\assets\configs` folder. Open up `fika.jsonc` with a text editor. You need to launch the server at least once for this file to be generated.

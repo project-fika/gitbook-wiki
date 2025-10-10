@@ -1,3 +1,7 @@
+---
+description: Step-by-step process for joining a Fika server.
+---
+
 # Standard connection
 
 {% hint style="info" %}

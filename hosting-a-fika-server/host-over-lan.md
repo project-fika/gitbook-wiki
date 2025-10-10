@@ -1,3 +1,7 @@
+---
+description: Step-by-step process for hosting a Fika server in your local network.
+---
+
 # Host over LAN
 
 Hosting over LAN allows you to play with someone in the same house/network without internet access and without any real port forwarding other than allowing the application in your local firewall.

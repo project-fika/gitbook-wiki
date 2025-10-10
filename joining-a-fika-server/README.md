@@ -1,4 +1,5 @@
 ---
+description: Getting started with joining a Fika server.
 icon: right-to-bracket
 ---
 

@@ -9,21 +9,17 @@ icon: house-window
 
 ## Introduction
 
-Project Fika is an unofficial SPT mod designed to enable co-op multiplayer game play with your friends in Escape from Tarkov. You can progress through quests, share items, fight AI bots (PMCs, SCAVs, and Bosses) together and much more.
-
-The backend infrastructure (characters, inventory, quests, trading, etc.) is handled by the Escape From Tarkov backend server emulator [Single Player Tarkov (SPT)](https://sp-tarkov.com).
+Project Fika is a SPT mod designed to enable co-op multiplayer game play with your friends in Escape from Tarkov. You can progress through quests, share items, fight AI bots (PMCs, SCAVs, and Bosses) together and much more.
 
 We strongly recommend to read the [General information](General-information.md) page to learn more about Fika.
 
 {% hint style="warning" %}
-**Project Fika is NOT an official SPT mod. Do not contact the SPT team for support inquiries if you're using Fika - even if your issue is not related to Fika. Join our** [**Discord**](https://discord.gg/project-fika) **for assistance.**
+Do **NOT** contact SPT for any questions related to Fika. Instead, please join our [Discord](https://discord.gg/project-fika) server where you can find support for both SPT and Fika.
 {% endhint %}
 
 ## Quick links
 
-* [Getting started with Fika](installing-fika/)
-* [Contribute to Fika](contribute-to-fika.md)
-* [Fika Discord](https://discord.gg/project-fika)
+<a href="installing-fika/" class="button primary" data-icon="desktop-arrow-down">Getting started with Fika</a> <a href="contribute-to-fika.md" class="button primary" data-icon="code">Contribute to Fika</a> <a href="https://discord.gg/project-fika" class="button primary" data-icon="discord">Join our Discord</a>
 
 ## License
 

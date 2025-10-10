@@ -1,5 +1,7 @@
 ---
-description: Not updated for 3.11
+description: >-
+  An exhaustive list of all the different Fika configurations when playing
+  in-game. Not updated for 4.0.
 ---
 
 # Client
