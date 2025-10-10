@@ -36,7 +36,7 @@ Fika is NOT an official mod for SPT. Do **NOT** contact SPT for any questions re
 
 * Item Sending
   * Right-click an item in your stash to send it to another account
-  * Can be customized in the [server](https://github.com/project-fika/Fika-Documentation/wiki/6.-Fika-configuration) config
+  * Can be customized in the [server](fika-configuration/server.md) config
 * Free cam (default to `F9` key)
   * In free cam you can teleport to the cam position by pressing `T`
   * You can jump to another player by `Left/Right` clicking
