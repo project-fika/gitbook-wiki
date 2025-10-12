@@ -1,6 +1,20 @@
 ---
 description: Step-by-step process for installing Fika.
 icon: desktop-arrow-down
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 # Installing Fika
@@ -47,9 +61,11 @@ A fresh installation of SPT is **required** before installing Fika. **Do not ins
 {% endstep %}
 
 {% step %}
-#### Copy `Fika-Installer.exe` inside your SPT folder
+#### Copy `Fika-Installer.exe` to the root of your SPT install folder
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+Do not copy inside `SPT` folder!
+
+<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2F5yu7c0P4PT4gSQwcgOw5_2Fimage.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -59,41 +75,49 @@ If you get an admin rights prompt, this is normal. Fika-Installer requires admin
 {% endstep %}
 
 {% step %}
-#### Choose `Install Fika` (option 1)
+#### Choose `Install Fika`
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 #### Close `Fika-Installer` when installation is completed
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FD9VHauheMEVLMpsMRod5_2Fimage.avif" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-#### Start `SPT.Server.exe`
+#### Start `SPT.Server`
 
-You should see: `Mod: server version: <Fika version> by: Fika loaded` in the console window.
+<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FLRc3xTCQ6XWf6cP3JDMG_2Fimage.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/sptserver_loaded_ss.png" alt=""><figcaption></figcaption></figure>
+You should see `Mod: server version: x.x.x (targets SPT: 4.x.x) by: Fika loaded`.
+
+<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-#### Start `SPT.Launcher.exe`
+#### Start `SPT.Launcher`
 
-Create and/or login to your account, then start the game.
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/sptlauncher_ss.png" alt=""><figcaption></figcaption></figure>
+
+{% endstep %}
+
+{% step %}
+### Create or login to your account then start the game
+
+<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 #### Validate that Fika successfully loaded
 
-You should get a Fika disclaimer upon entering the menu. Read the disclaimer and wait until the timer runs out.
+`FIKA x.x.x | SPT x.x.x` should appear at the bottom left corner of the main menu. You should also see the `Online players` widget on the right side of the main menu.
 
-<figure><img src="../.gitbook/assets/tos_fika_ss.png" alt="" width="290"><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/fika_mainmenu_version_ss.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

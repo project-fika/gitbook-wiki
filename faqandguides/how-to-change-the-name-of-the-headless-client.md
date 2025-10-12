@@ -23,6 +23,6 @@ layout:
 * The format is "ID": "Alias".
 * ID is the profile id of the headless profile, which you can find in `user/profiles/` and Alias is the name you want to appear.
 
-<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (24) (1).png" alt=""><figcaption></figcaption></figure>
 
 * If you have multiple headless profiles, use the name of the headless client launch script (`Start_headless_xxx.ps1`) to identify the profile id you're looking for.

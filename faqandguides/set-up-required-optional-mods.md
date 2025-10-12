@@ -38,7 +38,7 @@ $CSVOutput = $ModGuids -join ', '
 Write-Host $CSVOutput
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Copy and paste the output into `fika.jsonc` -> `"mods": { "required": [ <HERE> ]` if you want everyone who joins the server to be required to have the same plugins that you have loaded. You can move some of the GUIDs down to the `"optional": [ ]` section if you don't want to enforce certain plugins but still have them allowed. Anyone who has a plugin loaded that is not in either of these lists or missing a plugin in the required list will get an error message with a large `EXIT` button:
 

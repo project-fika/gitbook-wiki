@@ -146,5 +146,5 @@ Look at the red error text in the headless client console, try to find a match o
 * <mark style="color:red;">**`The type initializer for SPT.Custom.Patches.EasyAssetsPatch...`**</mark>
   * Either reinstall following [the directions here](../advanced-features/headless-client.md), or copy these two DLL files from your working and already-launched SPT install to your headless client.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 

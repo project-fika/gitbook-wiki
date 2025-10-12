@@ -72,103 +72,93 @@ If your SPT server is currently located on a different machine, please copy it t
 {% endstep %}
 
 {% step %}
-### Copy `Fika-Installer.exe` inside the `SPT folder`
+### Copy `Fika-Installer.exe` to the root of your SPT install folder
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+Do not copy inside `SPT` folder!
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Run `Fika-Installer.exe`
 
-If you get an admin rights prompt, this is normal. Fika-Installer requires admin rights to set up the firewall rules.
+If you get an admin rights prompt, this is normal. `Fika-Installer` requires admin rights to set up the firewall rules.
 {% endstep %}
 
 {% step %}
 ### Choose `Install Fika`
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Go back to the main menu when installation is completed
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Choose `Advanced options`
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Choose `Install Fika Headless`
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Choose `Create a new headless profile`
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Close `Fika-Installer` when installation is completed
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Start `SPT.Server.exe`
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-Wait for "Server is running, happy playing" message in the console.
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Start the headless client script
+### Wait for `Server has started, happy playing` message in console
 
-Right-click `Start_headless_xxx.ps1` and click `Run with Powershell`.
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+{% step %}
+### Start the `Fika Headless Manager`
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+The `Fika Headless Manager` will start your headless client.
 
-{% hint style="warning" %}
-**WARNING**
-
-If the PowerShell window briefly appears and then disappears then your **ExecutionPolicy** might be set to **Restricted**.
-
-To update your execution policy, open a Powershell window as Administrator and write:
-
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-Once done, press **ENTER** and close the window. You can read more about Execution Policies [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
-{% endhint %}
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Wait for the headless client to load
 
-Two console windows will appear after running the script: the Fika Headless Watcher and the headless client console. **Do not close them**. Wait for the headless client to load. Activity will stop in the console when loading is completed.
+Two console windows will appear after running the script: the `Fika Headless Manager` and the headless client console. **Do not close them**. Wait for the headless client to load. Activity will stop in the console when loading is completed.
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Start Fika
 
-The headless client is now ready to host a raid. Start Fika (SPT.Launcher) on your computer.&#x20;
+The headless client is now ready to host a raid. Start Fika (`SPT.Launcher`) on your computer.&#x20;
 
 **Do NOT start SPT.Launcher.exe on the headless client server!**
 
-<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -176,11 +166,11 @@ The headless client is now ready to host a raid. Start Fika (SPT.Launcher) on yo
 
 Navigate the in-game menu like you would normally do to reach the `Raids` menu and click `Host Raid`.
 
-<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
-Check the `Use Dedicated Host box` and press `Start`. This will request the headless client to start a raid in the selected location. Wait for the headless client to load the raid.
+Check the `Use Dedicated Host` box and press `Start`. This will request the headless client to start a raid in the selected location. Wait for the headless client to load the raid.
 
-<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -188,7 +178,7 @@ Check the `Use Dedicated Host box` and press `Start`. This will request the head
 
 Your friend(s) can join the headless client's raid when you see this screen. When everybody has joined, press `Start Raid`.
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -212,5 +202,5 @@ The headless client is very sensitive to modding. Do **NOT** install the same mo
 ### Troubleshooting
 
 * If the `Use dedicated host` checkbox is greyed out, it means that the headless client is unavailable. It could be caused by unsupported mods installed in the headless client, networking issues, or other factors. Note that the headless client can only host one raid at a time.
-* If your headless client is failing to load, launch it in Graphics mode by pressing `G` during the startup of the launch script if possible. If launching in Graphics mode is not possible, look in the `<timestamp> errors.log` in the SPT log folder for hints. Often this is caused by having a malfunctioning or invalid plugin, and sometimes also from missing a plugin that is required by one of the mods on the server.
+* If your headless client is failing to load, launch it in Graphics mode by pressing `G` during the startup of `Fika Headless Manager` if possible. If launching in Graphics mode is not possible, look in the `<timestamp> errors.log` in the SPT log folder for hints. Often this is caused by having a malfunctioning or invalid plugin, and sometimes also from missing a plugin that is required by one of the mods on the server.
 * See other common issues in [FAQ and Guides](../faqandguides/)
