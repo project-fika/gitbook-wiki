@@ -33,7 +33,7 @@ We recommend reading the [General information](../General-information.md) sectio
 
 ## Prerequisites
 
-* You must have an up-to-date and working installation of [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/) **with no mods installed**.
+* You must have an up-to-date and working installation of [SPT](https://forge.sp-tarkov.com/installer) **with no mods installed**.
   * You will be able to install SPT mods later, but it is important to get Fika working without mods first.
 * Bleeding edge versions of SPT are _**NOT**_ supported by Fika.
 * Locate your SPT installation folder. This will be referred to as `SPT folder` in the steps below.
@@ -51,7 +51,7 @@ The biggest gain in Fika (and in SPT in general) will be getting a stronger CPU 
 
 {% stepper %}
 {% step %}
-#### Install [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/)
+#### Install [SPT](https://forge.sp-tarkov.com/installer)
 
 A fresh installation of SPT is **required** before installing Fika. **Do not install mods yet!**
 {% endstep %}
