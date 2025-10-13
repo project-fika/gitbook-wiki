@@ -18,7 +18,7 @@ layout:
 
 # Guidance on which mods should be used on the headless client
 
-## Note: The headless client is a _client_ — clients only load things in `BepInEx/`. Any mod that is in `user/mods/` is loaded only by the backend server, SPT.Server.exe.
+## Note: The headless client is a _client_ — clients only load things in `BepInEx/`. Any mod that is in `SPT/user/mods/` is loaded only by the backend server, SPT.Server.exe.
 
 To expand a bit on what I mean about the difference between a plugin I assume the headless client **needs** vs a plugin I assume the headless client does not need:
 

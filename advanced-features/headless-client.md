@@ -168,7 +168,7 @@ Navigate the in-game menu like you would normally do to reach the `Raids` menu a
 
 <figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
-Check the `Use Dedicated Host` box and press `Start`. This will request the headless client to start a raid in the selected location. Wait for the headless client to load the raid.
+Check the `Use Headless Host` box and press `Start`. This will request the headless client to start a raid in the selected location. Wait for the headless client to load the raid.
 
 <figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -201,6 +201,6 @@ The headless client is very sensitive to modding. Do **NOT** install the same mo
 
 ### Troubleshooting
 
-* If the `Use dedicated host` checkbox is greyed out, it means that the headless client is unavailable. It could be caused by unsupported mods installed in the headless client, networking issues, or other factors. Note that the headless client can only host one raid at a time.
+* If the `Use Headless Host` checkbox is greyed out, it means that the headless client is unavailable. It could be caused by unsupported mods installed in the headless client, networking issues, or other factors. Note that the headless client can only host one raid at a time. Check `BepInEx/LogOutput.log` for errors, especially warnings about incompatible mods.
 * If your headless client is failing to load, launch it in Graphics mode by pressing `G` during the startup of `Fika Headless Manager` if possible. If launching in Graphics mode is not possible, look in the `<timestamp> errors.log` in the SPT log folder for hints. Often this is caused by having a malfunctioning or invalid plugin, and sometimes also from missing a plugin that is required by one of the mods on the server.
 * See other common issues in [FAQ and Guides](../faqandguides/)

@@ -15,7 +15,7 @@ icon: comments-question-check
 Please do not watch video guides, they are often out of date.
 {% endhint %}
 
-There is no longer any need to edit `http.json` (or anything else) in `SPT_Data\` — anything entered in `http.json` is overwritten by the `ip` and `backendIp` values in `user/mods/fika-server/assets/configs/fika.jsonc`.
+The only place where IPs need to be edited is in `fika.jsonc`
 
 * Server mod configuration documentation can be found [here](../fika-configuration/server.md).
   * You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
@@ -92,16 +92,6 @@ Review the fika-server mod [configuration options](../fika-configuration/server.
 
 ***
 
-### ❓I cannot use transits
-
-Transits are disabled with Fika for SPT 3.11.x unless you are using a [headless client](../advanced-features/headless-client.md) as a raid host.
-
-* Simply because transits are fragile & host migration is complex, transits are currently disabled under most circumstances. If you are just trying to complete quests that require transiting from one map to another, you can utilize a mod like [Skipper](https://hub.sp-tarkov.com/files/file/1861-skipper/) to mark those quests complete. Play both raids, complete the task to the best of your ability, then skip it. Or just ignore these quests.\
-  \
-  You can also solve this with the mod [No Transit Tasks](https://hub.sp-tarkov.com/files/file/2616-no-transit-tasks/).
-
-***
-
 ### ❓How do I uninstall Fika?
 
 Start `Fika-Installer` and choose `Uninstall Fika`.
@@ -111,40 +101,3 @@ Alternatively, you can do it manually using the following steps:
 * Navigate to `BepInEx/plugins/` and delete `Fika.Core.dll`
 * Navigate to `user/mods/` and delete the `fika-server/` folder
 * Open SPT.Launcher.exe, click Settings in the top-right, and (if applicable) change URL back to `https://127.0.0.1:6969`\
-
-
-***
-
-***
-
-## Headless Client Common Issues
-
-### ❓The headless client launch script just opens and closes
-
-Run the following command in an elevated Powershell window:&#x20;
-
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-```
-
-You can find more information about [Powershell Execution Policy here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
-
-***
-
-### ❓I get an error popup about `A patch in SPTCustomPlugin FAILED` when starting the headless client
-
-Look at the red error text in the headless client console, try to find a match of the two common errors below:
-
-* <mark style="color:red;">**`The type initializer for SPT.Custom.Patches.CustomAiPatch...`**</mark>\
-  Your headless client is not able to connect to the backend server. Make sure `SPT.Server.exe` is running and loaded and able to be connected to. Open the launch .ps1 script in a text editor and check the `BackendUrl` at the top of the launch .ps1 script is correct. Also make sure you are not running `_TEMPLATE.ps1`; the launch script should be named `Start_headless_someuid.ps1`.
-  * SPT.Server.exe and headless client on the same machine:
-    * If you're using a VPN, `BackendUrl` should be `https://your.vpn.ip.addr:6969`.
-    * If you're port forwarding, `BackendUrl` should be `https://127.0.0.1:6969`.
-  * SPT.Server.exe and headless client are on different machines:
-    * Within the same network, `BackendUrl` should be `https://your.LAN.IPv4.addr:6969`,
-    * Different network, `BackendUrl` should either be `https://your.vpn.ip.addr:6969` (VPN) or `https://some.pub.lic.ip:6969` (port forwarding).
-* <mark style="color:red;">**`The type initializer for SPT.Custom.Patches.EasyAssetsPatch...`**</mark>
-  * Either reinstall following [the directions here](../advanced-features/headless-client.md), or copy these two DLL files from your working and already-launched SPT install to your headless client.
-
-<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
-
