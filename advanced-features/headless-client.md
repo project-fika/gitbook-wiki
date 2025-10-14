@@ -98,6 +98,20 @@ If you get an admin rights prompt, this is normal. `Fika-Installer` requires adm
 {% endstep %}
 
 {% step %}
+### OPTIONAL: Set URL in fika.jsonc
+
+If you are using a VPN or have a need for the headless client to connect to an URL other than localhost, you will need to:
+
+1. Navigate to `[root folder]\SPT\user\mods\fika-server\assets\configs\`
+   1. If `fika.jsonc` does not exist, run SPT.Server.exe from your headless install once and then close it.
+2. Open `fika.jsonc` in a text editor.
+3. Scroll down to the `scripts -> forceIp` setting and change it to the URL that you set up while following the hosting instructions.
+4. Save the file and close the text editor.
+
+<div align="left"><figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
 ### Choose `Advanced options`
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>

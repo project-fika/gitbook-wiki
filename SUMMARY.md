@@ -19,6 +19,7 @@
   * [Fika API](advanced-features/fika-api.md)
 * [Creating Fika-Compatible Mods](Modding-Fika.md)
 * [FAQ and Guides](faqandguides/README.md)
+  * [Headless Client FAQ and Common Issues](faqandguides/headless-client-faq-and-common-issues.md)
   * [Set up required/optional mods](faqandguides/set-up-required-optional-mods.md)
   * [Guidance on which mods should be used on the headless client](faqandguides/guidance-on-which-mods-should-be-used-on-the-headless-client.md)
   * [Configure mods for the headless client](faqandguides/configure-mods-for-the-headless-client.md)
