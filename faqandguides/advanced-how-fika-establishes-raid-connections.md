@@ -8,7 +8,7 @@ description: >-
 # ADVANCED: How Fika Establishes Raid Connections
 
 {% hint style="warning" %}
-This article is intended for Advanced Users who have a non-standard network setup. Whereas it may be interesting for others, if you have a simple network you may be better off just following the [hosting instructions](../hosting-a-fika-server/)  and not worrying about the inner-workings of Fika. If port forwarding isn't working, use a [VPN like Radmin](../hosting-a-fika-server/host-using-a-vpn.md).
+This article is intended for Advanced Users who have a non-standard network setup. Whereas it may be interesting for others, if you have a simple network you may be better off just following the [hosting instructions](../hosting-a-fika-server/) and not worrying about the inner-workings of Fika. If port forwarding isn't working, use a [VPN like Radmin](../hosting-a-fika-server/host-using-a-vpn.md).
 {% endhint %}
 
 ### Definition of Terms
@@ -18,7 +18,7 @@ This article is intended for Advanced Users who have a non-standard network setu
 * **fika-server mod**
   * This is a modification of the backend server that allows for hosted raids to populate in a list and be joinable by clients. It forwards information about connection methods from the raid host to joining clients.
 * **Fika client plugin**
-  * The client plugin is a BepInEx plugin in the form of a .dll file that lives in `BepInEx\plugins\` and hosts the networking functionality for the raid. It is what listens for connections for the raid host or establishes a connection for a joining client. When you are changing settings in the F12 configuration menu, you are changing settings for the cilent plugin.
+  * The client plugin is a BepInEx plugin in the form of a .dll file that lives in `BepInEx\plugins\Fika\` and hosts the networking functionality for the raid. It is what listens for connections for the raid host or establishes a connection for a joining client. When you are changing settings in the F12 configuration menu, you are changing settings for the cilent plugin.
 * **Plugin configuration**
   * This is the list of settings that can be changed in the BepInEx Configuration Manager, often accessed by pressing F12 inside your gaming client. These values can also be modified by opening `BepInEx/config/com.fika.core.cfg` in a text editor and editing the values directly.
 

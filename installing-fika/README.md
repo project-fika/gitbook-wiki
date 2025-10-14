@@ -105,7 +105,7 @@ You should see `Mod: server version: x.x.x (targets SPT: 4.x.x) by: Fika loaded`
 {% endstep %}
 
 {% step %}
-### Create or login to your account then start the game
+#### Create or login to your account then start the game
 
 <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
@@ -124,6 +124,8 @@ You should see `Mod: server version: x.x.x (targets SPT: 4.x.x) by: Fika loaded`
 #### Exit the game and continue with the next steps
 {% endstep %}
 {% endstepper %}
+
+***
 
 ## Setting up Fika
 

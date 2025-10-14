@@ -9,7 +9,7 @@ icon: comments-question-check
 
 ## General Common Issues
 
-### ❓I changed `http.json` but my server still says `0.0.0.0`
+### :question:I changed `http.json` but my server still says `0.0.0.0`
 
 {% hint style="warning" %}
 Please do not watch video guides, they are often out of date.
@@ -24,7 +24,7 @@ Please follow the instructions for hosting <a href="../hosting-a-fika-server/" c
 
 ***
 
-### ❓I do not see my friend(s) on the Online Players list on the main menu / I cannot see my friend's raid in the raid list
+### :question:I do not see my friend(s) on the Online Players list on the main menu / I cannot see my friend's raid in the raid list
 
 {% hint style="warning" %}
 <mark style="color:$warning;">**Only one person in the group launches SPT.Server.exe.**</mark>
@@ -36,7 +36,7 @@ Please follow the instructions for hosting <a href="../hosting-a-fika-server/" c
 
 ***
 
-### ❓My friend is getting an error about open ports when trying to join my raid
+### :question:There is an error about opening ports when joining a raid
 
 {% hint style="info" %}
 **Make sure everyone is following** [**the instructions for hosting/joining a raid**](../playing-fika.md) **correctly.**
@@ -49,26 +49,28 @@ Please follow the instructions for hosting <a href="../hosting-a-fika-server/" c
     \
     If you do not see the correct IP available in the `Force Bind IP` selection box, make sure you have the VPN client installed and are connected and then re-read the paragraph above very carefully.\
     \
-    Also verify that the settings Use UPnP and Use NAT Punching are both unchecked/disabled.
+    If you have enabled Advanced options visibility, both UPnP and NAT Punching should be **disabled.** If you do not see those options, ignore this since they are disabled by default.
 
 #### If you are _not_ using a headless client and your group is port forwarding
 
-* Whoever clicks the `HOST RAID` button needs to ensure that they have port forwarded 25565/udp in their router to the PC where they are playing SPT. The raid is hosted by the person who presses `HOST RAID`, not by the `SPT.Server` host.
+* Whoever clicks the `HOST RAID` button needs to ensure that they have port-forwarded 25565/udp in their router to the PC where they are playing SPT. The raid is hosted by the game client of the person who clicks `HOST RAID`, not by the `SPT.Server` backend server.
 * Make sure all settings in F12 -> Fika.Core -> Network are **default**:
   * `Force IP` should be blank
   * `Force Bind IP` should be Disabled or `0.0.0.0`
   * Port should match the port for which a port forward rule was created (25565 is default)
-  * Both UPnP and NAT Punching should be **disabled**
+  * If you have enabled Advanced options visibility, both UPnP and NAT Punching should be **disabled.** If you do not see those options, ignore this since they are disabled by default.
 
 #### If you are using headless client
 
 * If you are using the headless client to host raids and you are getting this error, you need to make sure the headless client is set up to accept incoming connections the same way any normal client would be.&#x20;
   * **If you are port forwarding**, your port forward rule for 25565/udp needs to go to the PC that is running the headless client. All settings in `BepInEx/config/com.fika.core.cfg -> Network` section should be **default**.
-  * **If you are using a VPN**, you need to open up your `<headless install>/BepInEx/config/com.fika.core.cfg` in a text editor and make sure the VPN IP of the headless client machine is set for both `Force IP` and `Force Bind IP`. The VPN client must also be installed and configured on the headless client PC as well.
+  *   **If you are using a VPN**, you need to open up your `<headless install>/BepInEx/config/com.fika.core.cfg` in a text editor and make sure the VPN IP of the headless client machine is set for both `Force IP` and `Force Bind IP`. The VPN client must also be installed and configured on the headless client PC as well.
+
+      <figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-### ❓F8 is not successfully extracting me from a raid
+### :question:F8 is not successfully extracting me from a raid
 
 This has two common causes: either a mod is causing errors or something is intercepting the F8 key press.
 
@@ -86,18 +88,24 @@ Open Player.log in a text editor and search for `F8 pressed` and see if there ar
 
 ***
 
-### ❓ I cannot see SPT chat bots like Commando / I cannot create the type of profile I want / I cannot enable quest sharing in F12
+### :question: I cannot enable quest sharing in F12 -> Fika.Core settings
 
-Review the fika-server mod [configuration options](../fika-configuration/server.md).
+Review the fika-server mod [configuration options](../fika-configuration/server.md). These changes must be done by the server host.
 
 ***
 
-### ❓How do I uninstall Fika?
+### :question:Can I make the launcher not show everyone's profile?
+
+Review the fika-server mod [configuration options](../fika-configuration/server.md). These changes must be done by the server host.
+
+***
+
+### :question:How do I uninstall Fika?
 
 Start `Fika-Installer` and choose `Uninstall Fika`.
 
 Alternatively, you can do it manually using the following steps:
 
-* Navigate to `BepInEx/plugins/` and delete `Fika.Core.dll`
-* Navigate to `user/mods/` and delete the `fika-server/` folder
+* Navigate to `BepInEx/plugins/Fika/` and delete `Fika.Core.dll`
+* Navigate to `SPT/user/mods/` and delete the `fika-server/` folder
 * Open SPT.Launcher.exe, click Settings in the top-right, and (if applicable) change URL back to `https://127.0.0.1:6969`\

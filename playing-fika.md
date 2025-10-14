@@ -56,4 +56,4 @@ If you or your friend is getting an error about verifying ports are open, [see t
 
 * You cannot join mid-raid as a PMC or SCAV. You have to join the raid before the host starts the raid.
 * The raid host is providing all the AI and spawn logic. If the raid host leaves or crashes, the raid dies.
-* If a player crashes, they can rejoin the raid (except the raid host).
+* If a player crashes or disconnects, they can attempt to rejoin the raid (except the raid host) by navigating back to the join raid screen and clicking `Join` again.
