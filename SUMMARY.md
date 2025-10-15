@@ -16,6 +16,7 @@
   * [Server](fika-configuration/server.md)
 * [Advanced features](advanced-features/README.md)
   * [Headless client](advanced-features/headless-client.md)
+  * [NAT Punching](advanced-features/nat-punching.md)
   * [Fika API](advanced-features/fika-api.md)
 * [Creating Fika-Compatible Mods](Modding-Fika.md)
 * [FAQ and Guides](faqandguides/README.md)
