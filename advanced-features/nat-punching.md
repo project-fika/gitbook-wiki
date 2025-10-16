@@ -45,11 +45,11 @@ This guide covers the installation process for Windows only. Linux is not covere
 
 {% stepper %}
 {% step %}
-### Set up a public Windows server
+### Set up a public Windows-based server
 
-A publicly reachable server is required for NAT punching. We recommend renting a cheap Windows VPS to run `SPT Server`. Check out [Lowendbox](https://lowendbox.com/).
+A publicly accessible server is required for NAT punching. It is recommended to rent an affordable Windows-based VPS to host the `SPT Server`; providers listed on [**LowEndBox**](https://lowendbox.com/) are a good starting point for low-cost options.
 
-If you are unsure that NAT Punching will work, you can set up a temporary VPS using [Kamatera](https://www.kamatera.com/). They offer hourly billing which is super cheap if you only need to test for a few hours.
+If you are uncertain whether NAT punching will work with your network configuration, you can provision a temporary VPS using [**Kamatera**](https://www.kamatera.com/), which offers hourly billing — making it a cost-effective solution for testing.
 {% endstep %}
 
 {% step %}
@@ -71,13 +71,13 @@ Obtain the latest `Fika-Server` standalone release [here](https://github.com/pro
 {% endstep %}
 
 {% step %}
-### Extract the Fika-Server archive in the root of your `SPT` folder
+### Extract the Fika-Server archive in the root of your `SPT` installation folder
 
 <figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Start `SPT.Server.exe` to generate the Fika configuration file
+### Start `SPT.Server.exe` to generate the Fika Server configuration file
 
 `SPT.Server.exe` is located inside the `SPT` sub folder of your `SPT` installation folder.
 
@@ -95,7 +95,7 @@ Close `SPT` server when you see `Server has started, happy playing`.
 {% step %}
 ### Enable NAT Punching in Fika Server
 
-This setting controls if the Nat Punch Server should run on your SPT server.
+This setting controls if the `Nat Punch Server` should run on your SPT server.
 
 * Navigate to `SPT\user\mods\fika-server\assets\configs`.
 * Open `fika.jsonc` with your preferred text editor software (`Notepad++` is recommended).
@@ -119,8 +119,8 @@ Validate that the `Nat Punch Server` successfully loaded.
 
 Make sure that the following ports are port forwarded and opened in your server firewall:
 
-* TCP 6969 (SPT Server)
-* UDP 6790 (Nat Punch Server)
+* 6969 TCP (SPT Server)
+* 6790 UDP (Nat Punch Server)
 {% endstep %}
 
 {% step %}
@@ -132,13 +132,13 @@ We assume you already have a working Fika installation or you know how to set up
 {% step %}
 ### Configure your server IP in `SPT Launcher`
 
-`SPT Launcher` needs to connect to the `SPT` server on your VPS/public server.
+`SPT Launcher` needs to connect to the `SPT` server on your VPS/public server. Other players will also need to do the following steps.
 
 * Click the `Settings` button at the top right corner.
 
 <figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
-* Check `Developer Mode` then enter your server IP address in the URL box. Do not remove `https://`, do not add a slash at the end.&#x20;
+* Check the `Developer Mode` box then enter your server IP address in the URL box. Do not remove `https://`, do not add a slash at the end.&#x20;
 * Press the arrow key at the top right corner to save your settings.
 
 <figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
@@ -167,10 +167,30 @@ This setting indicates that any player connecting to your raid must use NAT punc
 {% step %}
 ### Host a raid and wait for other players to connect
 
-The `SPT Server` console will display the NAT Punching process for every players that joins your raid.
+Navigate the menus and host a raid. You should see that your server was added to the Nat Punch server list in the `SPT Server` console.&#x20;
+
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+
+The `Nat Punch Server` will introduce the external IP address of your computer to players joining your raid.
+
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Start the raid when all players are connected
+
+Start the raid when all players are connected and ready to go.
 {% endstep %}
 {% endstepper %}
+
+## Headless client
+
+To enable NAT punching for the `headless client`:
+
+* Make sure you followed all the steps above.
+* Navigate to `BepInEx\config` of your `headless client`.
+* Open `com.fika.core.cfg` with your preferred text editor.
+* Search for the parameter `Use NAT Punching` and set to `true`.
+* Save and close the text editor.
+
+<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
