@@ -20,13 +20,21 @@ layout:
 
 ## What is NAT punching?
 
-NAT punching is a networking technique that enables two devices behind separate routers to establish a direct peer-to-peer connection. Each device first communicates with a public server to discover its external network address and then exchanges packets to create valid routing entries on both routers.
+NAT punching is a networking technique that enables two devices behind separate routers to establish a direct peer-to-peer connection. Each device first communicates with a public server to discover its external network address and then exchanges packets (in other words, punching) to create valid routing entries on both routers.
 
 It is particularly useful if you are unable to port forward due to ISP restrictions. However, NAT Punching does not work on certain type of routers. For example, symmetrical NAT routers may not be able to achieve NAT Punching.
 
+## How does it work?
+
+A public server listens for incoming connections from clients and records their external IP addresses and ports. It then introduces each client by sharing the other’s external IP address. For example, Client 1 receives Client 2’s external IP address, and vice versa.
+
+This is when NAT punching occurs: upon receiving Client 2’s IP address, Client 1 begins sending multiple packets (the “punching”) to Client 2. At the same time, Client 2 sends packets to Client 1, creating a routing entry in both clients’ routers.
+
+At this point, both routers allow communication through this specific route, which can then be leveraged to host a Fika server.
+
 ## Requirements
 
-* The SPT server must be hosted on an externally accessible machine, such as a VPS. For NAT punching to work, a public server must be aware of both clients’ external IP addresses.
+* The SPT server must be hosted on an externally accessible machine, such as a VPS.
 * The raid host and players connecting using NAT punching must have a compatible router (Full-cone NAT). You can Google your router model to identify its NAT type.
 
 ## Notes
@@ -40,12 +48,14 @@ This guide covers the installation process for Windows only. Linux is not covere
 ### Set up a public Windows server
 
 A publicly reachable server is required for NAT punching. We recommend renting a cheap Windows VPS to run `SPT Server`. Check out [Lowendbox](https://lowendbox.com/).
+
+If you are unsure that NAT Punching will work, you can set up a temporary VPS using [Kamatera](https://www.kamatera.com/). They offer hourly billing which is super cheap if you only need to test for a few hours.
 {% endstep %}
 
 {% step %}
 ### Download the latest `SPT` standalone release
 
-Obtain the latest standalone `SPT` release [here](https://github.com/sp-tarkov/build/releases/).
+Obtain the latest standalone `SPT` release [here](https://github.com/sp-tarkov/build/releases/). The download link will be in the release notes.
 {% endstep %}
 
 {% step %}
@@ -83,7 +93,9 @@ Close `SPT` server when you see `Server has started, happy playing`.
 {% endstep %}
 
 {% step %}
-### Enable NAT Punching in Fika
+### Enable NAT Punching in Fika Server
+
+This setting controls if the Nat Punch Server should run on your SPT server.
 
 * Navigate to `SPT\user\mods\fika-server\assets\configs`.
 * Open `fika.jsonc` with your preferred text editor software (`Notepad++` is recommended).
@@ -120,13 +132,14 @@ We assume you already have a working Fika installation or you know how to set up
 {% step %}
 ### Configure your server IP in `SPT Launcher`
 
-`SPT Launcher` needs to connect to the `SPT` server on your VPS/public server. Press the `Settings` button at the top right corner.
+`SPT Launcher` needs to connect to the `SPT` server on your VPS/public server.
+
+* Click the `Settings` button at the top right corner.
 
 <figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
-Check `Developer Mode` then enter your server IP address in the URL box. Do not remove `https://`, do not add a slash at the end.&#x20;
-
-Press the arrow key at the top right corner to save your settings.
+* Check `Developer Mode` then enter your server IP address in the URL box. Do not remove `https://`, do not add a slash at the end.&#x20;
+* Press the arrow key at the top right corner to save your settings.
 
 <figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -134,11 +147,13 @@ Press the arrow key at the top right corner to save your settings.
 {% step %}
 ### Start the game
 
+Press `Start Game` to launch the game.
+
 <figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
-### Enable NAT Punching (raid host only)
+### Enable NAT Punching in Fika (raid host only)
 
 This setting indicates that any player connecting to your raid must use NAT punching. It is a client-side setting, meaning it only applies to **you**, the raid host. Other players do **not** need to enable this setting unless they intend to host a raid without port forwarding.
 
