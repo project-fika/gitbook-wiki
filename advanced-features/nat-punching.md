@@ -20,22 +20,22 @@ layout:
 
 ## What is NAT punching?
 
-NAT punching is a networking technique that enables two devices behind separate routers to establish a direct peer-to-peer connection. Each device first communicates with a public server to discover its external network address and then exchanges packets (in other words, punching) to create valid routing entries on both routers.
+NAT punching is a [NAT traversal technique](https://en.wikipedia.org/wiki/NAT_traversal) that allows two devices located behind separate routers to establish a direct peer-to-peer connection. It is particularly useful in cases where port forwarding is not possible due to ISP or network restrictions.
 
-It is particularly useful if you are unable to port forward due to ISP restrictions. However, NAT Punching does not work on certain type of routers. For example, symmetrical NAT routers may not be able to achieve NAT Punching.
+However, NAT punching is not supported on all routers. For instance, **symmetric NAT** routers often prevent successful NAT punching due to the way they handle external port mappings.
 
 ## How does it work?
 
-A public server listens for incoming connections from clients and records their external IP addresses and ports. It then introduces each client by sharing the other’s external IP address. For example, Client 1 receives Client 2’s external IP address, and vice versa.
+A public server listens for incoming connections from clients and records their external IP addresses and ports. It then introduces each client by sharing the other’s external IP address. For example, `Client 1` receives `Client 2`’s external IP address, and vice versa.
 
-This is when NAT punching occurs: upon receiving Client 2’s IP address, Client 1 begins sending multiple packets (the “punching”) to Client 2. At the same time, Client 2 sends packets to Client 1, creating a routing entry in both clients’ routers.
+This is when NAT punching occurs: upon receiving `Client 2`’s IP address, `Client 1` begins sending multiple packets (the “punching”) to `Client 2`. At the same time, `Client 2` sends packets to `Client 1`, creating a routing entry in both clients’ routers.
 
-At this point, both routers allow communication through this specific route, which can then be leveraged to host a Fika server.
+At this point, both routers allow communication through this specific route, which can then be leveraged to host a `Fika` raid.
 
 ## Requirements
 
 * The SPT server must be hosted on an externally accessible machine, such as a VPS.
-* The raid host and players connecting using NAT punching must have a compatible router (Full-cone NAT). You can Google your router model to identify its NAT type.
+* Both the raid host and any players connecting via NAT punching must use a router that supports Full-Cone NAT, as this type is required for proper connectivity. You can check your router’s NAT type by searching online for your specific router model.
 
 ## Notes
 
