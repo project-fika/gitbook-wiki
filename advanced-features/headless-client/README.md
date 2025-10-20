@@ -51,20 +51,18 @@ This is the intended use case for the Fika Headless Client feature and provides 
 
 Both SPT.Server and a Headless Client will run on a separate PC independent of your gaming PC. This means you can utilize your gaming PC in any way you wish, including restarting it, without affecting any other players.
 
-<h4 align="center">Click <a href="headless-client.md" class="button primary" data-icon="network-wired">Remote Headless Client Instructions</a> to continue</h4>
+<h4 align="center"><a href="headless-client.md" class="button primary" data-icon="network-wired">Remote Headless Client Instructions</a></h4>
 {% endtab %}
 
 {% tab title="Local Headless / Headless on Same PC" %}
 {% hint style="danger" %}
-#### This is not the intended use case for the Fika Headless Client feature!
-
-Please read the warnings at the top of the next page. Support may be limited.
+#### This is not the intended use case for the Fika Headless Client feature! Please read the warnings at the top of the next page. Support is limited.
 {% endhint %}
 
 If your PC can handle running two EFT clients at the same time, you _may_ see a reduction in stuttering or an increase in performance by running a headless client on the same PC where you are playing SPT. Any performance increase is entirely dependent on your hardware and not guaranteed.
 
 #### <mark style="color:$warning;">Some users see performance degradation. Continue at your own risk.</mark>
 
-<h4 align="center">Click <a href="local-headless-client.md" class="button primary" data-icon="computer">Local Headless Client Instructions</a> to continue</h4>
+<h4 align="center"><a href="local-headless-client.md" class="button primary" data-icon="computer">Local Headless Client Instructions</a></h4>
 {% endtab %}
 {% endtabs %}
