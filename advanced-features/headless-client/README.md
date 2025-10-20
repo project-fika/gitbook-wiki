@@ -41,7 +41,7 @@ If you run into problems during the headless client setup process, consider star
 
 More information, guides, and common fixes can be found in the [Headless Client FAQ and Common Issues](../../faqandguides/headless-client-faq-and-common-issues/) section.
 
-### Choose Headless Client Implementation
+### Choose Headless Client Implementation:
 
 {% tabs %}
 {% tab title="Headless Client on a Separate PC" %}
