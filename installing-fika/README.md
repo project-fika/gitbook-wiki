@@ -51,6 +51,14 @@ The biggest gain in Fika (and in SPT in general) will be getting a stronger CPU 
 
 {% stepper %}
 {% step %}
+### Install Escape From Tarkov using BSG Launcher
+
+Escape From Tarkov must be installed on the computer before installing SPT and Fika. This is required to ensure that you own the game.&#x20;
+
+**Fika will NOT work if you skip this step!**
+{% endstep %}
+
+{% step %}
 #### Install [SPT](https://forge.sp-tarkov.com/installer)
 
 A fresh installation of SPT is **required** before installing Fika. **Do not install mods yet!**

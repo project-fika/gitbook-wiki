@@ -1,13 +1,16 @@
 ---
-description: >-
-  Below you will find common questions and solutions. More in-depth guides can
-  be found under the table of contents links on the left.
 icon: comments-question-check
 ---
 
 # FAQ and Guides
 
-## General Common Issues
+{% hint style="info" %}
+## Other Guides and Answers
+
+There are other FAQ and Guides which can be found in the Table of Contents by clicking the <i class="fa-bars">:bars:</i> in the top-left.
+
+If you have a question not covered here, please join us in our [Discord](https://discord.gg/project-fika) server and ask in the #questions channel.
+{% endhint %}
 
 ### :question:I changed `http.json` but my server still says `0.0.0.0`
 
@@ -15,12 +18,11 @@ icon: comments-question-check
 Please do not watch video guides, they are often out of date.
 {% endhint %}
 
-The only place where IPs need to be edited is in `fika.jsonc`
+The only place where IPs need to be edited is in [`fika.jsonc`](../fika-configuration/server.md)
 
-* Server mod configuration documentation can be found [here](../fika-configuration/server.md).
-  * You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
+* You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
 
-Please follow the instructions for hosting <a href="../hosting-a-fika-server/" class="button primary" data-icon="arrow-right-long">Hosting a Fika server</a>
+Please follow the instructions for <a href="../hosting-a-fika-server/" class="button primary" data-icon="arrow-right-long">Hosting a Fika server</a>
 
 ***
 

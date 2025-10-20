@@ -15,7 +15,7 @@ Custom firewalls such as **BitDefender** may block your connection while playing
 * Ensure that you can communicate with the host by pinging their VPN IP. You might need to join their channel/room first. The host will need to provide you with the channel/room information.
 * Launch `SPT.Launcher.exe`.
 
-<figure><img src="../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Click the `Settings` button.
 
@@ -23,15 +23,15 @@ Custom firewalls such as **BitDefender** may block your connection while playing
 
 * Click `Developer Mode`.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Enter the server's VPN address in the URL section. **DO NOT** leave out `https://`, do not forget to append the port `:6969` and do not add a slash at the end. The URL box should look like this: `https://20.21.22.23:6969`.
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Press the arrow on the right corner.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * You should now be able to create your profile and log in to the server.
 

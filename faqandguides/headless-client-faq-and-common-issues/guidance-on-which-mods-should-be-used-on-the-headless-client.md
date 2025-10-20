@@ -11,7 +11,7 @@ layout:
   outline:
     visible: false
   pagination:
-    visible: false
+    visible: true
   metadata:
     visible: true
 ---
@@ -22,14 +22,14 @@ layout:
 
 To expand a bit on what I mean about the difference between a plugin I assume the headless client **needs** vs a plugin I assume the headless client does not need:
 
-* **Does it only have an effect while in stash or hideout? If yes, then it's probably&#x20;**_**not**_**&#x20;necessary for the headless client.**
+* <mark style="color:$warning;">Does it only have an effect while in stash or hideout? If yes, then it's probably</mark> <mark style="color:$warning;"></mark>_<mark style="color:$warning;">not</mark>_ <mark style="color:$warning;"></mark><mark style="color:$warning;">necessary for the headless client.</mark>
   * This would be something like QuickSell. It is not necessary to have on the headless client because it only affects in-stash behavior.
   * Plugins in this category may be fine to leave installed on the headless client and they may cause issues. They are unlikely to _solve_ any issues.
-* **Does it only change how information or graphics are displayed, without changing that information? If yes, then it's probably&#x20;**_**not**_**&#x20;necessary for the headless client.**
+* <mark style="color:$warning;">Does it only change how information or graphics are displayed, without changing that information? If yes, then it's probably</mark> <mark style="color:$warning;"></mark>_<mark style="color:$warning;">not</mark>_ <mark style="color:$warning;"></mark><mark style="color:$warning;">necessary for the headless client.</mark>
   * This would include things like MoreCheckmarks, AmandsGraphics, DynamicMaps, ItemSellPrice, et al. These plugins take existing information that is available already in the game client and display it in a different way. They do not add or change any behavior.
   * Plugins in this category also may be fine to leave installed on the headless client, and they also may cause issues. They are unlikely to _solve_ any issues.
   * Remember that the headless client is navigating menus automatically to start a raid and finish a raid. Anything that changes menus or patches menus may cause problems.
-* **Does it change in-raid behavior in some way? If yes, it's probably necessary.**
+* <mark style="color:$warning;">Does it change in-raid behavior in some way? If yes, it's probably necessary.</mark>
   * This would be something like SAIN, which affects AI behavior, or bot spawn mods, or UIFixes which changes _how inventory behaves_, or anything else that you think _**might**_ have an effect on in-raid behavior.
   * Plugins in this category are sometimes difficult to spot. Something like UIFixes may not be obvious that it _changes_ inventory behavior, and it may not be apparent to users that the raid host is authoritative on inventory actions.
   * Some plugins that seem to fall in to this category are simply displaying other ways to trigger vanilla behavior and thus do not need to be on the headless client, but often do not hurt to have installed anyway. Things like ItemContextMenuExtended, for instance, make it so that you can right-click a flashlight to toggle it on/off, but they do not _change_ that behavior, only make it accessible in a new way, and thus are not _required_ to be on the headless client.
@@ -44,8 +44,8 @@ Here is an illustration of the modding setup of headless client vs Fika instance
 
 **Headless client**
 
-<figure><img src="../.gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Fika instance**
 
-<figure><img src="../.gitbook/assets/image (23) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23) (1).png" alt=""><figcaption></figcaption></figure>
