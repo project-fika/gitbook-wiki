@@ -25,5 +25,5 @@ Before continuing, make sure:
 
 You must configure SPT Launcher to connect to an external SPT server. Choose one of the connection methods below. Please confirm the hosting method with the host first.
 
-* [Standard connection](direct-connection.md) (port forwarding, LAN)
-* [VPN connection](vpn.md)
+* [Standard connection](join-using-direct-connection.md) (port forwarding, LAN)
+* [VPN connection](join-using-a-vpn.md)

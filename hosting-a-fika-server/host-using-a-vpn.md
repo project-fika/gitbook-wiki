@@ -42,7 +42,7 @@ You may also experience issues if you are using another VPN service, even if it 
 
 ## Testing connectivity
 
-* Ask your friend(s) to follow the steps [here](../joining-a-fika-server/vpn.md).
+* Ask your friend(s) to follow the steps [here](../joining-a-fika-server/join-using-a-vpn.md).
 * Right-click their name in Radmin and click `Ping`.
 
 <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
