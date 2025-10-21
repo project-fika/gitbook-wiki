@@ -107,7 +107,7 @@ If you are using a VPN like Radmin or ZeroTier, you will need to:
 3. Scroll down to the `scripts -> forceIp` setting and change it to the URL that you set up while following [the hosting instructions](../../hosting-a-fika-server/).
 4. Save the file and close the text editor.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
@@ -115,7 +115,7 @@ If you are using a VPN like Radmin or ZeroTier, you will need to:
 
 Create a new empty folder somewhere on your PC where you want the headless client install to be. Copy and paste `Fika-Installer.exe` from your original SPT install into this new empty folder.
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
@@ -123,7 +123,7 @@ Create a new empty folder somewhere on your PC where you want the headless clien
 
 Run `Fika-Installer.exe` and choose `Advanced Options` and then `Install Fika Headless`
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -131,7 +131,7 @@ Run `Fika-Installer.exe` and choose `Advanced Options` and then `Install Fika He
 
 Press `ENTER` and  then select your existing SPT+Fika install folder.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -139,7 +139,7 @@ Press `ENTER` and  then select your existing SPT+Fika install folder.
 
 Select  `Create a new headless profile`
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -152,7 +152,7 @@ Choose either `HardCopy` or `Symlink` based on your preference.
 
 #### If you have no preference, choose `Symlink` to save on storage space.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -162,7 +162,7 @@ Choose either `HardCopy` or `Symlink` based on your preference.
 
 Once done, you may now close `Fika-Installer`.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -170,13 +170,13 @@ Once done, you may now close `Fika-Installer`.
 
 Open a new File Explorer window and navigate to your existing SPT+Fika folder and launch `SPT.Server`
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Wait for `Server has started, happy playing` message in console
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -184,17 +184,17 @@ Open a new File Explorer window and navigate to your existing SPT+Fika folder an
 
 From the same existing SPT+Fika install folder, run `SPT.Launcher`.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 Create a character if necessary and click the `Start Game` button.
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Verify your game client loads and Fika is installed
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -202,7 +202,7 @@ Create a character if necessary and click the `Start Game` button.
 
 From your headless client install folder, run `FikaHeadlessManager.exe`. The `Fika Headless Manager` will start your headless client.
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -210,7 +210,7 @@ From your headless client install folder, run `FikaHeadlessManager.exe`. The `Fi
 
 Two console windows will appear after running the script: the `Fika Headless Manager` and the headless client console. **Do not close them**. Wait for the headless client to load. Activity will stop in the console when loading is completed.
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -218,11 +218,11 @@ Two console windows will appear after running the script: the `Fika Headless Man
 
 Navigate the in-game menu like you would normally do to reach the `Raids` menu and click `Host Raid`.
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 
 Check the `Use Headless Host` box and press `Start`. This will request the headless client to start a raid in the selected location. Wait for the headless client to load the raid.
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

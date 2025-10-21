@@ -45,6 +45,6 @@ If you have not generated `HeadlessConfig.json` or the headless profile yet, rev
     2. You can find the profile ID by opening `HeadlessConfig.json` in a text editor.
     3. If you are adding multiple profiles, each line needs to end in a comma `,` except the last line.
 
-    <div align="left" data-full-width="false"><figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+    <div align="left" data-full-width="false"><figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure></div>
 4. Save changes to `fika.jsonc` and close the text editor.
 5. Restart SPT.Server.

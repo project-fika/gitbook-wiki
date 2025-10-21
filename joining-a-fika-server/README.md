@@ -23,7 +23,7 @@ Before continuing, make sure:
 
 ### Setting up SPT Launcher
 
-In order to join a Fika server, you must configure SPT Launcher to connect to an external SPT server. Depending on the hosting method, you must choose one of the connection methods below. Please confirm the hosting method with the host first.
+You must configure SPT Launcher to connect to an external SPT server. Choose one of the connection methods below. Please confirm the hosting method with the host first.
 
 * [Standard connection](standard-connection.md) (port forwarding, LAN)
 * [VPN connection](vpn.md)

@@ -7,9 +7,7 @@ description: Step-by-step process for hosting a Fika server using port forwardin
 Port forwarding is a networking process that allows external devices to access one or multiple ports of a machine within your home network. Port forwarding can be configured through your router's settings interface, which is usually accessible by entering the gateway IP address into a web browser.
 
 {% hint style="warning" %}
-Not all Internet Service Providers (ISP) allows port forwarding. If you find yourself unable to port forward, you can use a public VPN service such as ZeroTier, Radmin, Playit.gg, etc.).&#x20;
-
-Free VPNs are known to cause performance or connectivity problems, so use at your own risk. Click [here](host-using-a-vpn.md) to learn how to host using a VPN.
+Not all Internet Service Providers (ISP) allows port forwarding. If you find yourself unable to port forward, you can use a public VPN service such as Radmin, ZeroTier, etc.). Click [here](host-using-a-vpn.md) to learn how to host using a VPN.
 {% endhint %}
 
 ## Router configuration
@@ -55,7 +53,7 @@ Server is running, do not close while playing SPT, Happy playing!!
 If you see errors (red text) then your configuration is invalid or you are unable to host using the configured IP address/port.
 {% endhint %}
 
-* Make sure `SPT.Server.exe` is running.
+* Make sure `SPT.Server` is running.
 * Obtain your public IP address [here](https://api.ipify.org/).
 * Go to an [online port checker](https://portchecker.co).
 * Enter your public IP address and port 6969.
