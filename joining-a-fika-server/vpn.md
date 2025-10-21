@@ -10,7 +10,7 @@ description: Step-by-step process for joining a Fika server using a VPN client.
 * Run the installer and proceed with the installation steps.
 * Reboot your computer. This is important to ensure that the virtual network adapter is correctly installed. **Do not skip this step!**
 * Open Radmin VPN client from the taskbar or from the start menu.
-* Click `Join a new network`.
+* Click `Join network`.
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 

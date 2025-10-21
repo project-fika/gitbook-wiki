@@ -22,7 +22,7 @@ You may also experience issues if you are using another VPN service, even if it 
 * Run the installer and proceed with the installation steps.
 * Reboot your computer. This is important to ensure that the virtual network adapter is correctly installed. **Do not skip this step!**
 * Open Radmin VPN client (from the taskbar or from the start menu).
-* Click `Create a new network`.
+* Click `Create network`.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
