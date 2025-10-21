@@ -22,7 +22,7 @@ You may also experience issues if you are using another VPN service, even if it 
 * Open Radmin VPN client from the taskbar or from the start menu.
 * Click `Join network`.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 * Enter the network name and password used by the host.
 
