@@ -8,7 +8,7 @@
   * [Host using a VPN](hosting-a-fika-server/host-using-a-vpn.md)
   * [Host over LAN](hosting-a-fika-server/host-over-lan.md)
 * [Joining a Fika server](joining-a-fika-server/README.md)
-  * [Join using direct connection](joining-a-fika-server/standard-connection.md)
+  * [Join using direct connection](joining-a-fika-server/direct-connection.md)
   * [Join using a VPN](joining-a-fika-server/vpn.md)
 * [Playing Fika](playing-fika.md)
 * [Fika configuration](fika-configuration/README.md)
