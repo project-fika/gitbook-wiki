@@ -4,6 +4,16 @@ description: Step-by-step process for joining a Fika server using a VPN client.
 
 # Join using a VPN
 
+This guide will use Radmin as the VPN client. It is able to establish a direct connection if your network allows it, providing the best performance possible.
+
+{% hint style="warning" %}
+Free VPNs services are known to cause performance or connectivity problems, so use at your own risk. The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.
+
+Custom firewalls such as **BitDefender** may also block your connection while playing. Make sure that you allow the connection or temporarily disable it while playing!
+
+You may also experience issues if you are using another VPN service, even if it is disabled. If you have problems, consider uninstalling any other virtual network adapters.
+{% endhint %}
+
 ## Install the Radmin VPN client
 
 * Navigate to the [Radmin website](https://www.radmin-vpn.com/) and download the Radmin VPN client.
