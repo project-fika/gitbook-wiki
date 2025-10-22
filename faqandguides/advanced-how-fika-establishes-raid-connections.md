@@ -3,6 +3,20 @@ description: >-
   This page will describe how Fika facilitates clients connecting to the raid
   host. This may help troubleshooting issues if you have a non-standard network
   setup (proxy, tunnels, ddns, docker, etc).
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 # ADVANCED: How Fika Establishes Raid Connections

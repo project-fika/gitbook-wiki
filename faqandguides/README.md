@@ -102,6 +102,12 @@ Review the fika-server mod [configuration options](../fika-configuration/server.
 
 ***
 
+### :question:Can I enable SPT chatbots like Commando?
+
+Review the fika-server mod [configuration options](../fika-configuration/server.md). These changes must be done by the server host.
+
+***
+
 ### :question:How do I uninstall Fika?
 
 Start `Fika-Installer` and choose `Uninstall Fika`.

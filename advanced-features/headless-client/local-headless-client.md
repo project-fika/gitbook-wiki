@@ -28,7 +28,7 @@ Please make sure you have read everything on the general [Headless Client page](
 {% hint style="danger" %}
 ## SUPPORT IS LIMITED
 
-Please note that support **is limited** if you choose to run the headless client on the same PC where you are playing SPT. This is not the officially supported configuration and may lead to:
+Please note that **support is limited** if you choose to run the headless client on the same PC where you are playing SPT. This is not the officially supported configuration and may lead to:
 
 * Performance degradation
 * Increased incidence of crashes
@@ -129,7 +129,7 @@ Run `Fika-Installer.exe` and choose `Advanced Options` and then `Install Fika He
 {% step %}
 ### Select existing SPT+Fika install folder
 
-Press `ENTER` and  then select your existing SPT+Fika install folder.
+Press `ENTER` and then select your existing SPT+Fika install folder.
 
 <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -137,7 +137,7 @@ Press `ENTER` and  then select your existing SPT+Fika install folder.
 {% step %}
 ### Create the headless profile
 
-Select  `Create a new headless profile`
+Select `Create a new headless profile`
 
 <figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}

@@ -11,7 +11,7 @@ layout:
   outline:
     visible: false
   pagination:
-    visible: true
+    visible: false
   metadata:
     visible: true
 ---
@@ -30,3 +30,5 @@ layout:
 ## Donuts
 
 * Donuts settings are stored in the `BepInEx/plugins/dvize.Donuts/Config` folder. Same as SAIN above, I suggest configuring Donuts settings using the GUI from your main game and then copying over the entire `BepInEx/plugins/dvize.Donuts/` folder to the headless client.
+
+***
