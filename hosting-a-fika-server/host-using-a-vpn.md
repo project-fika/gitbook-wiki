@@ -93,7 +93,7 @@ If you see `TCP/relay`, then the communication is relayed through Radmin's serve
 
 <figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2F89xf4fwAOWUZlYNbpj1u_2Fimage (1).png" alt=""><figcaption></figcaption></figure>
 
-* Click the "Settings" button.
+* Click the `Settings` button.
 
 <figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FqwHM3gxlwjEsrugHTtc0_2Fimage.avif" alt=""><figcaption></figcaption></figure>
 
