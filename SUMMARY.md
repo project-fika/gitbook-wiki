@@ -16,7 +16,7 @@
   * [Server](fika-configuration/server.md)
 * [Advanced features](advanced-features/README.md)
   * [Headless Client](advanced-features/headless-client/README.md)
-    * [Remote Headless Client](advanced-features/headless-client/headless-client.md)
+    * [Remote Headless Client](advanced-features/headless-client/remote-headless-client.md)
     * [Local Headless Client](advanced-features/headless-client/local-headless-client.md)
   * [NAT Punching](advanced-features/nat-punching.md)
   * [Fika API](advanced-features/fika-api.md)

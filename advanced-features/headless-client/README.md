@@ -51,7 +51,7 @@ This is the intended use case for the Headless Client feature and provides the l
 
 Both SPT.Server and a Headless Client will run on a separate PC independent of your gaming PC. This means you can utilize your gaming PC in any way you wish, including restarting it, without affecting any other players.
 
-<h4 align="center"><a href="headless-client.md" class="button primary" data-icon="network-wired">Remote Headless Client Instructions</a></h4>
+<h4 align="center"><a href="remote-headless-client.md" class="button primary" data-icon="network-wired">Remote Headless Client Instructions</a></h4>
 {% endtab %}
 
 {% tab title="Local Headless / Headless on Same PC" %}
