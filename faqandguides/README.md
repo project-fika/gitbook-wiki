@@ -94,17 +94,29 @@ Open Player.log in a text editor and search for `F8 pressed` and see if there ar
 
 Review the fika-server mod [configuration options](../fika-configuration/server.md). These changes must be done by the server host.
 
+Open `fika.jsonc` in a text editor and find the option named `sharedQuestProgression` and change it from `false` to `true`, then save your changes and restart the server.
+
+<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+
 ***
 
 ### :question:Can I make the launcher not show everyone's profile?
 
 Review the fika-server mod [configuration options](../fika-configuration/server.md). These changes must be done by the server host.
 
+Open `fika.jsonc` in a text editor and find the option named `launcherListAllProfiles` and change it from `true` to `false`, then save your changes and restart the server.
+
+<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+
 ***
 
 ### :question:Can I enable SPT chatbots like Commando?
 
 Review the fika-server mod [configuration options](../fika-configuration/server.md). These changes must be done by the server host.
+
+Open `fika.jsonc` in a text editor and find the option named `disableSPTChatBots` and change it from `true` to `false`, then save your changes and restart the server.
+
+<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
