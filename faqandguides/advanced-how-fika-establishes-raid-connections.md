@@ -74,6 +74,18 @@ The connecting client will then attempt to connect to `IP_1:Port` and `IP_2:Port
 Note: a **direct connection** between game clients is being established, not a connection that is routed through the backend server. If the path of the direct connection is obstructed or unavailable it will fail, even if both clients are able to connect to the backend server.
 {% endhint %}
 
+### Further Troubleshooting
+
+If you or a friend are still getting errors when attempting to join a raid, you should open the Player.log of the person getting the error and look for which IPs are being sent to them. Player.log can be found at the location below, and the picture below that shows an example of the log lines for which you are looking.
+
+```
+C:\Users\YOURUSERNAME\AppData\LocalLow\Battlestate Games\EscapeFromTarkov\
+```
+
+<figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+
+The two IPs listed will be `IP_1` and `IP_2` from the [Fika Network Workflow](advanced-how-fika-establishes-raid-connections.md#fika-network-workflow) section.
+
 ## Why This Matters
 
 This is very different from the way most 'dedicated server' game hosting scenarios play out. If you've ever hosted another game server — like Minecraft or Valheim or ARK or Palworld or 7D2D — you may be surprised to learn that Fika hosting is completely different, and thus nearly all of the knowledge you've acquired from hosting for your group of friends in the past is less than useful.
