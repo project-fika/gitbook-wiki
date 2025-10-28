@@ -91,9 +91,7 @@ If you get an admin rights prompt, this is normal. `Fika-Installer` requires adm
 {% endstep %}
 
 {% step %}
-### OPTIONAL: Set URL in [fika.jsonc](../../fika-configuration/server.md) for headless client
-
-If you are using a VPN like Radmin or ZeroTier, you will need to:
+### Set URL in [fika.jsonc](../../fika-configuration/server.md) for headless client
 
 1. Navigate to `[SPT root folder]\SPT\user\mods\fika-server\assets\configs\`
    1. If `fika.jsonc` does not exist, run `SPT.Server.exe` from your headless install once and then close it.
