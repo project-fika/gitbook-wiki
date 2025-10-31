@@ -17,25 +17,18 @@ layout:
 
 # Headless Client FAQ and Common Issues
 
-### :question:My headless client cannot connect to my server
+### :question:FikaHeadlessManager displays an error on start
 
-This often is indicated by an error popup that includes the text `A patch in SPTCustomPlugin FAILED. The type initializer for 'SPT.Custom.Patches.CustomAiPatch'...`. If you scroll up in the headless client console, you'll see that the last white text before the red error is `/singleplayer/bosstypes` and the red text will include "<mark style="color:red;">No connection could be made because the target machine actively refused it</mark>."
-
-<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="danger" %}
-#### Ensure SPT.Server is running and able to accept connections
-
-Test connectivity using SPT.Launcher: make sure you can launch the game and reach your stash and access traders.
-
-If your SPT.Launcher is not able to connect to your server, figure out why and address that issue first. If the server is currently running but SPT.Launcher cannot connect, revisit the [Hosting a Fika server](../../hosting-a-fika-server/) instructions.
-
-**NOTE**: the headless client **does not replace SPT.Server**. The backend server is required to be running at all times.
-{% endhint %}
-
-If you have already generated `HeadlessConfig.json` and it is in the root directory of your headless install, open it in a text editor and change the URL to match how you connect to your server. This may include a VPN IP or the public IP of the server. Save the changes to the file and restart `FikaHeadlessManager.exe`
-
-If you have not generated `HeadlessConfig.json` or the headless profile yet, revisit the [steps for installing the Headless client](../../advanced-features/headless-client/remote-headless-client.md) and pay close attention to the [step about editing `fika.jsonc`](../../advanced-features/headless-client/remote-headless-client.md#optional-set-url-in-fika.jsonc)
+* **Error**: <mark style="color:red;">**Could not reach SPT.Server at \<URL> Please ensure SPT.Server is running and accessible.**</mark>
+  * FikaHeadlessManager is unable to verify the server is running.\
+    \
+    Check that SPT.Server is running and accessible using your SPT.Launcher; verify that you can connect and launch your game like normal.\
+    \
+    In the root folder of your headless install, find `HeadlessConfig.json` and open it in a text editor. Verify that the URL is correct and is pointing to where the headless client can access SPT.Server.
+* **Error:&#x20;**<mark style="color:red;">**Could not access \<URL> Ensure Fika Server mod is installed. Please review the installation process in the documentation.**</mark>
+  * FikaHeadlessManager is unable to verify that Fika is fully installed on the server to which it is connecting.\
+    \
+    Ensure you have followed all the steps for [Installing Fika](../../installing-fika/) in the folder where you are running SPT.Server.
 
 ***
 
@@ -80,3 +73,25 @@ If performance dips below 30 FPS even with no other mods, your PC is likely not 
 <figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 ***
+
+### :question:I get an error about "A patch in SPT.CustomPlugin FAILED"
+
+The error `A patch in SPTCustomPlugin FAILED. The type initializer for 'SPT.Custom.Patches.CustomAiPatch'...` should mostly be avoided with latest versions of FikaHeadlessManager. Make sure you have the latest version by re-running Fika-Installer in your headless client install folder and choosing `Advanced` -> `Update Fika Headless`.
+
+If you are still getting this error even with the latest FikaHeadlessManager, likely something is blocking your headless client `EscapeFromTarkov.exe` specifically from connecting to the server, such as a VPN or firewall.
+
+<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+#### Ensure SPT.Server is running and able to accept connections
+
+Test connectivity using SPT.Launcher: make sure you can launch the game and reach your stash and access traders.
+
+If your SPT.Launcher is not able to connect to your server, figure out why and address that issue first. If the server is currently running but SPT.Launcher cannot connect, revisit the [Hosting a Fika server](../../hosting-a-fika-server/) instructions.
+
+**NOTE**: the headless client **does not replace SPT.Server**. The backend server is required to be running at all times.
+{% endhint %}
+
+If you have already generated `HeadlessConfig.json` and it is in the root directory of your headless install, open it in a text editor and change the URL to match how you connect to your server. This may include a VPN IP or the public IP of the server. Save the changes to the file and restart `FikaHeadlessManager.exe`
+
+If you have not generated `HeadlessConfig.json` or the headless profile yet, revisit the [steps for installing the Headless client](../../advanced-features/headless-client/remote-headless-client.md) and pay close attention to the [step about editing `fika.jsonc`](../../advanced-features/headless-client/remote-headless-client.md#optional-set-url-in-fika.jsonc)
