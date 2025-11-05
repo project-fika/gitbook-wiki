@@ -60,6 +60,74 @@ Checks whether the server is running. Primarily use by the WebApp.
 
 Returns all online players.
 
+<details>
+
+<summary>Schema</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "GetOnlinePlayersResponse.schema.json",
+  "title": "GetOnlinePlayersResponse",
+  "type": "object",
+  "properties": {
+    "players": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/OnlinePlayer"
+      }
+    }
+  },
+  "required": ["players"],
+
+  "$defs": {
+    "OnlinePlayer": {
+      "type": "object",
+      "properties": {
+        "profileId": {
+          "type": "string"
+        },
+        "nickname": {
+          "type": "string"
+        },
+        "level": {
+          "type": "integer"
+        },
+        "location": {
+          "$ref": "#/$defs/EFikaLocation"
+        }
+      },
+      "required": ["profileId", "nickname", "level", "location"]
+    },
+
+    "EFikaLocation": {
+      "type": "integer",
+      "description": "Enumeration representing player location.",
+      "enum": [
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+      ],
+      "enumNames": [
+        "None",
+        "Hideout",
+        "Factory",
+        "Customs",
+        "Woods",
+        "Shoreline",
+        "Interchange",
+        "Reserve",
+        "Streets",
+        "Lighthouse",
+        "GroundZero",
+        "Laboratory",
+        "Labyrinth"
+      ]
+    }
+  }
+}
+```
+
+</details>
+
 ### fika/api/rawprofile
 
 Returns a raw profile in JSON format.
