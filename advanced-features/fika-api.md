@@ -44,17 +44,256 @@ Example response:
 ```
 {% endcode %}
 
+<details>
+
+<summary>Schema</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GetItemsResponse",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/ItemData"
+      }
+    }
+  },
+  "required": ["items"],
+
+  "$defs": {
+    "ItemData": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "stackable": {
+          "type": "integer",
+          "description": "Number of items that can stack together (StackAmount)."
+        }
+      },
+      "required": ["name", "description", "stackable"]
+    }
+  }
+}
+
+```
+
+</details>
+
 ### fika/api/raids
 
 Returns all active raids.
+
+Example response:
+
+```json
+{
+  "64f92bdacb123456789abcde": {
+    "ips": ["192.168.1.10"],
+    "serverGuid": "2fbb7ba6-327e-4c58-8f87-75e43da5a5f5",
+    "port": 7070,
+    "hostUsername": "PlayerOne",
+    "timestamp": 1730840102,
+    "crc32": 123456789,
+    "gameVersion": "1.0.0",
+    "raidConfig": {},
+    "locationData": {},
+    "status": 1,
+    "timeout": 300,
+    "players": {
+      "64f92bdae8123456789aaaaa": {
+        "groupId": "group123",
+        "isDead": false,
+        "isSpectator": false
+      }
+    },
+    "side": 0,
+    "time": 0,
+    "raidCode": "ABCD1234",
+    "natPunch": true,
+    "isHeadless": false,
+    "raids": 5
+  }
+}
+```
+
+<details>
+
+<summary>Schema</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MatchesResponse",
+  "type": "object",
+  "description": "Dictionary<string, FikaMatch>",
+  "additionalProperties": {
+    "$ref": "#/$defs/FikaMatch"
+  },
+
+  "$defs": {
+    "FikaMatch": {
+      "type": "object",
+      "properties": {
+        "ips": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "serverGuid": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "port": {
+          "type": "integer"
+        },
+        "hostUsername": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "integer"
+        },
+        "crc32": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gameVersion": {
+          "type": "string"
+        },
+        "raidConfig": {
+          "description": "Ignored type placeholder.",
+          "type": "object"
+        },
+        "locationData": {
+          "description": "Ignored type placeholder.",
+          "type": "object"
+        },
+        "status": {
+          "$ref": "#/$defs/EFikaMatchStatus"
+        },
+        "timeout": {
+          "type": "integer"
+        },
+        "players": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/FikaPlayer"
+          }
+        },
+        "side": {
+          "$ref": "#/$defs/EFikaSide"
+        },
+        "time": {
+          "$ref": "#/$defs/EFikaTime"
+        },
+        "raidCode": {
+          "type": "string"
+        },
+        "natPunch": {
+          "type": "boolean"
+        },
+        "isHeadless": {
+          "type": "boolean"
+        },
+        "raids": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "raidConfig",
+        "locationData",
+        "status",
+        "side",
+        "time"
+      ]
+    },
+
+    "FikaPlayer": {
+      "type": "object",
+      "properties": {
+        "groupId": { "type": "string" },
+        "isDead": { "type": "boolean" },
+        "isSpectator": { "type": "boolean" }
+      },
+      "required": ["groupId", "isDead", "isSpectator"]
+    },
+
+    "EFikaMatchStatus": {
+      "type": "integer",
+      "enum": [0, 1, 2],
+      "description": "0=LOADING, 1=IN_GAME, 2=COMPLETE"
+    },
+
+    "EFikaSide": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "0=PMC, 1=Savage"
+    },
+
+    "EFikaTime": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "0=CURR, 1=PAST"
+    }
+  }
+}
+
+```
+
+</details>
 
 ### fika/api/headless
 
 Returns all active headless clients.
 
+<details>
+
+<summary>Schema</summary>
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GetHeadlessResponse",
+  "type": "object",
+  "properties": {
+    "headlessClients": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/OnlineHeadless" }
+    }
+  },
+  "required": ["headlessClients"],
+
+  "$defs": {
+    "OnlineHeadless": {
+      "type": "object",
+      "properties": {
+        "profileId": { "type": "string" },
+        "nickname": { "type": "string" },
+        "state": { "$ref": "#/$defs/EHeadlessState" },
+        "players": { "type": "integer" }
+      },
+      "required": ["profileId", "nickname", "state", "players"]
+    },
+    "EHeadlessState": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "0 = Ready, 1 = NotReady"
+    }
+  }
+}
+```
+
+</details>
+
 ### fika/api/heartbeat
 
-Checks whether the server is running. Primarily use by the WebApp.
+Checks whether the server is running. Primarily used by the WebApp.
 
 ### fika/api/players
 
