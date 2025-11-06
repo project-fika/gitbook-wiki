@@ -25,7 +25,7 @@ layout:
 
 ## SAIN
 
-* SAIN settings are stored in the `BepInEx/plugins/SAIN/Presets/` folder. I suggest using your main game to configure SAIN options however you want them to be on the headless client, then copy your entire `BepInEx/plugins/SAIN/` folder over to the dedicated client, overwriting all when prompted.
+* SAIN settings are stored in the `BepInEx/plugins/SAIN/Presets/` folder. I suggest using your main game to configure SAIN options however you want them to be on the headless client, then copy your entire `BepInEx/plugins/SAIN/` folder over to the headless client, overwriting all when prompted.
 
 ## Donuts
 
