@@ -185,6 +185,20 @@ public void SendReusableToAll<T>(T packet, DeliveryMethod deliveryMethod, NetPee
 
 ***
 
+## Inventory Replication
+
+Fika will automatically replicate all inventory actions, as long as you pass the operation through the `InventoryController.vmethod_1`. Every player has an inventory controller property (`EFT.Player.InventoryController`), _**use it**_! Even without Fika, do not try to cirumvent this method and always pass them through the controller.\
+\
+Each operation has a constructor you can find in the assembly. You can look at these to see how to properly create and execute and inventory operation. Do not call the result directly! Use it to create the operation (I've seen this mistake a lot in the past from mod developers), and run it on the controller.\
+\
+Some examples you can look for the subtypes of are: `IExecute`, `IRollback`, `IRaiseEvents`.
+
+{% hint style="danger" %}
+If you circumvent the intended way of executing inventory operations, you will inevitably cause desync!
+{% endhint %}
+
+***
+
 ## General Information About Data
 
 {% hint style="info" %}
