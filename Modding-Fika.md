@@ -187,7 +187,7 @@ public void SendReusableToAll<T>(T packet, DeliveryMethod deliveryMethod, NetPee
 
 ## Inventory Replication
 
-Fika will automatically replicate all inventory actions, as long as you pass the operation through the `InventoryController.vmethod_1`. Every player has an inventory controller property (`EFT.Player.InventoryController`), _**use it**_! Even without Fika, do not try to cirumvent this method and always pass them through the controller.\
+Fika will automatically replicate all inventory actions, as long as you pass the operation through the `InventoryController.vmethod_1`. Every player has an inventory controller property (`EFT.Player.InventoryController`), _**use it!**_ Even without Fika, do not try to cirumvent this method and always pass them through the controller.\
 \
 Each operation has a constructor you can find in the assembly. You can look at these to see how to properly create and execute and inventory operation. Do not call the result directly! Use it to create the operation (I've seen this mistake a lot in the past from mod developers), and run it on the controller.\
 \
@@ -204,7 +204,7 @@ If you circumvent the intended way of executing inventory operations, you will i
 {% hint style="info" %}
 Keep in mind that performance and bandwidth is not free! Do not send redundant data every `Update()` unless you have to.&#x20;
 
-Fika has a class that you can inherit called `ThrottledMono`, where you can set an `UpdateRate` which is how many times it should update per seconds. This can dramatically increase performance and reduce bandwidth used.
+Fika has a class that you can inherit called `ThrottledMono`, where you can set an `UpdateRate` which is how many times it should update per second. This can dramatically increase performance and reduce bandwidth used.
 {% endhint %}
 
 ### Calculating Packet Size (UDP with Headers)
