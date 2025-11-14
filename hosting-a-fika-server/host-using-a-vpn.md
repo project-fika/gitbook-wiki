@@ -89,6 +89,9 @@ If you see `TCP/relay`, then the communication is relayed through Radmin's serve
 <figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 * Save the file and close it.
+*   Start `SPT.Server` and verify that it reports `Started webserver at https://your_vpn_ip:6969` when it is done loading.
+
+    <figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 * Start `SPT.Launcher`
 
 <figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2F89xf4fwAOWUZlYNbpj1u_2Fimage (1).png" alt=""><figcaption></figcaption></figure>
@@ -98,7 +101,11 @@ If you see `TCP/relay`, then the communication is relayed through Radmin's serve
 <figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FqwHM3gxlwjEsrugHTtc0_2Fimage.avif" alt=""><figcaption></figcaption></figure>
 
 * Check the `Developer mode` box.
-* Enter your VPN address in the URL section. DO NOT leave out `https://` and do not add a slash at the end. The URL box should look like this: `https://20.21.22.23:6969`.
+* Enter your VPN address in the URL section. This should be the same URL reported by the server.
+
+{% hint style="warning" %}
+DO NOT leave out `https://` and do not add a slash or space at the end. The URL box should look like this: `https://20.21.22.23:6969`.
+{% endhint %}
 
 <figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FRJRDafOFXrz8sQBMXNfo_2Fimage.avif" alt=""><figcaption></figcaption></figure>
 

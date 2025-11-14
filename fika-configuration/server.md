@@ -29,7 +29,8 @@ Be sure to save changes and restart the server when you're done to ensure your c
         "sharedQuestProgression": false, // if quest progression should be shared, affects shared XP options as well
         "canEditRaidSettings": true, // of clients can modify the raid settings before starting a raid
         "enableTransits": true, // if transits are enabled
-        "anyoneCanStartRaid": false // if anyone can click "START RAID"
+        "anyoneCanStartRaid": false, // if anyone can click "START RAID"
+        "allowNamePlates": true // if player nameplates are allowed to be enabled by clients
     },
     "server": {
         "SPT": {
