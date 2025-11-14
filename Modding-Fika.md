@@ -399,3 +399,7 @@ This approach doesn’t just apply to movement — it’s equally useful for syn
 * [FikaGlobals](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Main/Utils/FikaGlobals.cs) has some helper methods that can be useful during development.
 * [CoopHandler](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Main/Components/CoopHandler.cs) has useful properties and methods, mainly to track players (especially human). It can be accessed on the `Singleton<IFikaNetworkManager>.Instance` or [CoopHandler.TryGetCoopHandler()](https://github.com/project-fika/Fika-Plugin/blob/18f02d5713b0e13cc02998b9e79489a55ac8249d/Fika.Core/Coop/Components/CoopHandler.cs#L62) depending on your code style preference.
 * [FikaSerializationExtensions](https://github.com/project-fika/Fika-Plugin/blob/main/Fika.Core/Networking/FikaSerializationExtensions.cs) have tons of good extension methods to handle data, e.g. packing a `float`. If precision is not important to the last decimal, it's recommended to pack your primitives.
+
+## Mod Examples
+
+You can find an example sync-mod from the creator of Fika for the mod **MergeConsumables** [here](https://github.com/Lacyway/MergeConsumables/tree/master/fika).
