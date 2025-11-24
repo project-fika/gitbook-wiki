@@ -15,6 +15,10 @@ Take a moment to verify that you and your friend(s) can see each other in the On
 
 ## Hosting a raid
 
+{% hint style="info" %}
+If you are hosting a raid but not the server host, you may need to do additional setup to accept incoming connections. See [this FAQ entry](faqandguides/#there-is-an-error-about-opening-ports-when-joining-a-raid) for more information.
+{% endhint %}
+
 * Start `SPT.Launcher.exe`
 * Login to your account
 * Start the game
