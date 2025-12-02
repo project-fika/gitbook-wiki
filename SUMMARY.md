@@ -19,6 +19,7 @@
     * [Remote Headless Client](advanced-features/headless-client/remote-headless-client.md)
     * [Local Headless Client](advanced-features/headless-client/local-headless-client.md)
   * [NAT Punching](advanced-features/nat-punching.md)
+  * [Web App](advanced-features/web-app.md)
   * [Fika API](advanced-features/fika-api.md)
 * [Creating Fika-Compatible Mods](Modding-Fika.md)
 * [FAQ and Guides](faqandguides/README.md)
