@@ -31,9 +31,9 @@ Features included are:
 
 ## Installation
 
-Use your preferable way of running the image. It's recommended to use the compose below as certain variables are required to run the app, unless you are certain of what you are doing.
+Use your preferable way of running the docker image. It's recommended to use the `compose.yml` below as certain variables are required to run the app, unless you are certain of what you are doing.
 
-After running, access the site at `http://localhost:8080/` unless you use a reverse proxy and login using the standard account:
+After running, access the site at `http://localhost:8080/` (unless you use a reverse proxy) and login using the standard account:
 
 * **User**: admin
 * **Password**: Admin123!
