@@ -31,6 +31,8 @@ Features included are:
 
 ## Installation
 
+The Docker image can be found at the Docker website [here](https://hub.docker.com/r/lacyway/fikawebapp).
+
 Use your preferable way of running the docker image. It's recommended to use the `compose.yml` below as certain variables are required to run the app, unless you are certain of what you are doing.
 
 After running, access the site at `http://localhost:8080/` (unless you use a reverse proxy) and login using the standard account:
@@ -160,6 +162,10 @@ Make sure to read all the lines carefully, and change the required variables whi
 2. `API_KEY`
 3. `BASE_URL`
 4. `your.address.net`
+
+{% hint style="info" %}
+If you won't be using Traefik, pay attention that you do not need the `ports:` anymore when using a reverse proxy.
+{% endhint %}
 
 ## Updating
 
