@@ -77,7 +77,7 @@ If you see `TCP/relay`, then the communication is relayed through Radmin's serve
 
 <figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FlZfa6hVfcUTBztlqMtZ7_2Fhttps___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzs.png" alt=""><figcaption></figcaption></figure>
 
-* Navigate to `user\mods\fika-server\assets\configs`.
+* Navigate to `<SPT install>\SPT\user\mods\fika-server\assets\configs`.
 * Open `fika.jsonc` with your preferred text editor (Notepad++ is recommended).
 
 <figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
