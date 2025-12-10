@@ -85,9 +85,15 @@ By offloading the AI calculations onto a separate game client via the Fika headl
 {% step %}
 ### OPTIONAL: [Create a Fresh SPT+Fika Install](../../installing-fika/)
 
+{% hint style="info" %}
+If you do not have **any** mods for **client or server** in your main SPT+Fika install, you can skip this step.
+{% endhint %}
+
 You can follow the steps below with your existing SPT+Fika install, but you may run into issues, especially if you already have mods installed. Creating a fresh SPT+Fika install makes it much easier to undo if you find that this will not work on your PC and it also leaves your existing install completely untouched.
 
 Follow the entire [Installing Fika](../../installing-fika/) section from start to finish, including creating a character and getting to your stash.
+
+Once you have confirmed that everything is working with a fresh install, you can migrate mods and profiles from your existing install to your new install.
 
 <mark style="color:$warning;">Skip this step at your own risk.</mark>
 {% endstep %}
