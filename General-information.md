@@ -55,6 +55,7 @@ If you're having issues even on a stable connection, the most common problem is 
   * Right-click an item in your stash to send it to another account
   * Can be customized in the [server](fika-configuration/server.md) config
 * Free cam (default to `F9` key)
+  * Can be enabled in the [server](fika-configuration/server.md) config
   * In free cam you can teleport to the cam position by pressing `T`
   * You can jump to another player by `Left/Right` clicking
   * You can snap to their head by holding `SPACE` when jumping
@@ -63,8 +64,6 @@ If you're having issues even on a stable connection, the most common problem is 
 * In-game chat system
 * In-raid VOIP
 * Online player list
-* Dynamic AI for hosts, which disables AI when no one is near
-* Custom AI limits per map
 * Culling system to increase performance
 * Custom notifications (teammate died, boss got killed by a player, etc.)
 * Pinging system to ping an area in the game for your teammates
