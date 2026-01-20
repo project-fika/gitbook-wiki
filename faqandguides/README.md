@@ -35,6 +35,8 @@ Please follow the instructions for <a href="../hosting-a-fika-server/" class="bu
 * Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](../hosting-a-fika-server/) instructions.
 * Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](../joining-a-fika-server/) instructions.
 * Make sure that everyone has Fika [installed](../installing-fika/). On the main menu, it should say FIKA in the bottom-left of the screen.
+* If you are sure you have done all the requisite steps and it is still not working restart the PCs of everyone that is involved.
+  * In rare cases a latent SPT.Server.exe may be running in the background for someone who has recently installed Fika and it may be intercepting connections. Restarting fixes this.
 
 ***
 
@@ -128,4 +130,4 @@ Alternatively, you can do it manually using the following steps:
 
 * Navigate to `BepInEx/plugins/Fika/` and delete `Fika.Core.dll`
 * Navigate to `SPT/user/mods/` and delete the `fika-server/` folder
-* Open SPT.Launcher.exe, click Settings in the top-right, and (if applicable) change URL back to `https://127.0.0.1:6969`\
+* Open SPT.Launcher.exe, click Settings in the top-right, and (if applicable) change URL back to `https://127.0.0.1:6969`<br>
