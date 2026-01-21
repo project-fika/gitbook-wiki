@@ -49,7 +49,7 @@ Fika offers a public NAT punch server to facilitate connection between players a
 * The public IP address of the raid host and players will be shared with the Fika NAT punch server. We do not collect and share your IP address with any third party.
 * Relies on the Fika NAT punch server to be available. Downtime can happen with any online service
 
-<a href="/broken/pages/etP6FBvdeGWc3BqexriI" class="button primary" data-icon="up-right-from-square">Use Fika NAT punch server</a>
+<a href="fika-nat-punch-server.md" class="button primary" data-icon="up-right-from-square">Use Fika NAT punch server</a>
 {% endtab %}
 
 {% tab title="Self-hosted NAT punch server" %}
