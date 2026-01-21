@@ -69,7 +69,7 @@ If your SPT server is currently located on a different machine, please copy it t
 
 Do not copy inside `SPT` folder!
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

@@ -11,7 +11,7 @@ This section is for advanced users only. We will not provide support unless you 
 
 <a href="headless-client/" class="button primary" data-icon="server">Set up a headless client</a>
 
-<a href="nat-punching.md" class="button primary" data-icon="network-wired">Host SPT Server with NAT Punching</a>
+<a href="nat-punching/" class="button primary" data-icon="network-wired">Host SPT Server with NAT Punching</a>
 
 <a href="web-app.md" class="button primary" data-icon="globe">Host the Web App</a>
 

@@ -24,13 +24,13 @@ You may also experience issues if you are using another VPN service, even if it 
 * Open Radmin VPN client (from the taskbar or from the start menu).
 * Click `Create network`.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * Enter a network name (can be anything - make sure to remember it. You need to share it with your friends).
 * Enter a password.
 * Click `Create`.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Take note of your `VPN IP`, which is displayed below your computer name in Radmin. It will be referred to as `your_vpn_ip` in the following steps.
 

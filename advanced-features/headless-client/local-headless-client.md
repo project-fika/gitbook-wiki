@@ -121,7 +121,7 @@ If you are using a VPN like Radmin or ZeroTier, you will need to:
 
 Create a new empty folder somewhere on your PC where you want the headless client install to be. Copy and paste `Fika-Installer.exe` from your original SPT install into this new empty folder.
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="center"><figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}

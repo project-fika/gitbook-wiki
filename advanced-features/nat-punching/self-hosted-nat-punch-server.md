@@ -16,26 +16,16 @@ layout:
     visible: true
 ---
 
-# NAT Punching
-
-## What is NAT punching?
-
-NAT punching is a [NAT traversal technique](https://en.wikipedia.org/wiki/NAT_traversal) that allows two devices located behind separate routers to establish a direct peer-to-peer connection. It is particularly useful in cases where port forwarding is not possible due to ISP or network restrictions.
-
-However, NAT punching is not supported on all routers. For instance, **symmetric NAT** routers often prevent successful NAT punching due to the way they handle external port mappings.
-
-## How does it work?
-
-A public server listens for incoming connections from clients and records their external IP addresses and ports. It then introduces each client by sharing the other’s external IP address. For example, `Client 1` receives `Client 2`’s external IP address, and vice versa.
-
-This is when NAT punching occurs: upon receiving `Client 2`’s IP address, `Client 1` begins sending multiple packets (the “punching”) to `Client 2`. At the same time, `Client 2` sends packets to `Client 1`, creating a routing entry in both clients’ routers.
-
-At this point, both routers allow communication through this specific route, which can then be leveraged to host a `Fika` raid.
+# Self-hosted NAT punch server
 
 ## Requirements
 
 * The SPT server must be hosted on an externally accessible machine, such as a VPS.
 * Both the raid host and any players connecting via NAT punching must use a router that supports Full-Cone NAT, as this type is required for proper connectivity. You can check your router’s NAT type by searching online for your specific router model.
+
+## Limitations
+
+The NAT punch server only facilitate connection when joining a raid. It does not allow to join the SPT server itself.
 
 ## Notes
 
@@ -61,7 +51,7 @@ Obtain the latest standalone `SPT` release [here](https://github.com/sp-tarkov/b
 {% step %}
 ### Extract the `SPT` archive in a new empty `SPT` folder
 
-<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -73,7 +63,7 @@ Obtain the latest `Fika-Server` standalone release [here](https://github.com/pro
 {% step %}
 ### Extract the Fika-Server archive in the root of your `SPT` installation folder
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -81,7 +71,7 @@ Obtain the latest `Fika-Server` standalone release [here](https://github.com/pro
 
 `SPT.Server.exe` is located inside the `SPT` sub folder of your `SPT` installation folder.
 
-<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -89,7 +79,7 @@ Obtain the latest `Fika-Server` standalone release [here](https://github.com/pro
 
 Close `SPT` server when you see `Server has started, happy playing`.
 
-<figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -101,7 +91,7 @@ This setting controls if the `Nat Punch Server` should run on your SPT server.
 * Open `fika.jsonc` with your preferred text editor software (`Notepad++` is recommended).
 * Find the `natPunchServer` section and set `enable` to `true`.
 
-<figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 * Save and exit the text editor.
 {% endstep %}
@@ -111,7 +101,7 @@ This setting controls if the `Nat Punch Server` should run on your SPT server.
 
 Validate that the `Nat Punch Server` successfully loaded.
 
-<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -126,7 +116,7 @@ Make sure that the following ports are port forwarded and opened in your server 
 {% step %}
 ### Start `SPT.Launcher` on your computer
 
-We assume you already have a working Fika installation or you know how to set up one. If you don't, click [here](../installing-fika/) for Fika installation steps.
+We assume you already have a working Fika installation or you know how to set up one. If you don't, click [here](../../installing-fika/) for Fika installation steps.
 {% endstep %}
 
 {% step %}
@@ -136,12 +126,12 @@ We assume you already have a working Fika installation or you know how to set up
 
 * Click the `Settings` button at the top right corner.
 
-<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 * Check the `Developer Mode` box then enter your server IP address in the URL box. Do not remove `https://`, do not add a slash at the end.&#x20;
 * Press the arrow key at the top right corner to save your settings.
 
-<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -149,7 +139,7 @@ We assume you already have a working Fika installation or you know how to set up
 
 Press `Start Game` to launch the game.
 
-<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -161,7 +151,7 @@ This setting indicates that any player connecting to your raid must use NAT punc
 * Check the `Advanced settings` box.
 * Check the `Nat Punching` box to enable NAT punching.
 
-<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -169,11 +159,11 @@ This setting indicates that any player connecting to your raid must use NAT punc
 
 Navigate the menus and host a raid. You should see that your server was added to the Nat Punch server list in the `SPT Server` console.&#x20;
 
-<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 The `Nat Punch Server` will introduce the external IP address of your computer to players joining your raid.
 
-<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -193,4 +183,4 @@ To enable NAT punching for the `headless client`:
 * Search for the parameter `Use NAT Punching` and set to `true`.
 * Save and close the text editor.
 
-<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
