@@ -16,7 +16,6 @@ By using this service, you agree that your public IP address will be shared with
 
 ## Requirements
 
-* The SPT server must be hosted on an externally accessible machine (your computer with Port Forwarding or a VPS)
 * Both the raid host and any players connecting via NAT punching must use a router that supports Full-Cone NAT, as this type is required for proper connectivity. You can check your router’s NAT type by searching online for your specific router model.
 
 ## Limitations
