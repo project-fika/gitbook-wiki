@@ -22,7 +22,7 @@ The only place where IPs need to be edited is in [`fika.jsonc`](../fika-configur
 
 * You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
 
-Please follow the instructions for <a href="../hosting-a-fika-server/" class="button primary" data-icon="arrow-right-long">Hosting a Fika server</a>
+Please follow the instructions for <a href="../hosting-a-fika-server/hosting-a-fika-server.md" class="button primary" data-icon="arrow-right-long">Hosting a Fika server</a>
 
 ***
 
@@ -32,9 +32,9 @@ Please follow the instructions for <a href="../hosting-a-fika-server/" class="bu
 <mark style="color:$warning;">**Only one person in the group launches SPT.Server.exe.**</mark>
 {% endhint %}
 
-* Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](../hosting-a-fika-server/) instructions.
-* Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](../joining-a-fika-server/) instructions.
-* Make sure that everyone has Fika [installed](../installing-fika/). On the main menu, it should say FIKA in the bottom-left of the screen.
+* Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](../hosting-a-fika-server/hosting-a-fika-server.md) instructions.
+* Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](/broken/pages/L4viiuXFthG8SPcIEiDd) instructions.
+* Make sure that everyone has Fika [installed](../installing-fika/installation.md). On the main menu, it should say FIKA in the bottom-left of the screen.
 * If you are sure you have done all the requisite steps and it is still not working restart the PCs of everyone that is involved.
   * In rare cases a latent SPT.Server.exe may be running in the background for someone who has recently installed Fika and it may be intercepting connections. Restarting fixes this.
 
@@ -43,7 +43,7 @@ Please follow the instructions for <a href="../hosting-a-fika-server/" class="bu
 ### :question:There is an error about opening ports when joining a raid
 
 {% hint style="info" %}
-**Make sure everyone is following** [**the instructions for hosting/joining a raid**](../playing-fika.md) **correctly.**
+**Make sure everyone is following** [**the instructions for hosting/joining a raid**](/broken/pages/wZplmbkipD3Ajg4scMtp) **correctly.**
 {% endhint %}
 
 #### If you are _not_ using a headless client and your group is using Radmin VPN (or any other VPN client)

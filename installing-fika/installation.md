@@ -1,69 +1,23 @@
 ---
-description: Step-by-step process for installing Fika.
-icon: desktop-arrow-down
 layout:
   width: default
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
-    visible: true
+    visible: false
   pagination:
     visible: false
   metadata:
-    visible: true
+    visible: false
 ---
 
-# Installing Fika
-
-## Before installing Fika
-
-**Always** keep in mind that Fika is a [SPT](https://sp-tarkov.com/#download) mod. You **must** have a working SPT installation before attempting to install Fika.
-
-This means that you must be able to start a game in SPT without any issues, and you should not be running any mods before installing Fika. Please ensure this is the case before continuing with the next steps.
-
-{% hint style="info" %}
-If you are unsure how to install SPT, please follow their instructions [here](https://forge.sp-tarkov.com/installer) and come back here once they are completed. Again, make sure that your SPT installation works before continuing.
-{% endhint %}
-
-We recommend reading the [General information](../General-information.md) section so you have a better understanding of how Fika works.
-
-## Prerequisites
-
-* You must have an up-to-date and working installation of [SPT](https://forge.sp-tarkov.com/installer) **with no mods installed**.
-  * You will be able to install SPT mods later, but it is important to get Fika working without mods first.
-* Bleeding edge versions of SPT are _**NOT**_ supported by Fika.
-* Locate your SPT installation folder. This will be referred to as `SPT folder` in the steps below.
-
-## Hardware Requirements
-
-* **CPU**: i7 8700k / Ryzen 5 3600X
-* **GPU**: GTX 2070 / RX 5700 XT
-* **Memory**: 32 GB RAM
-* **Storage**: SSD is mandatory, no support is given for installations on a HDD
-
-The biggest gain in Fika (and in SPT in general) will be getting a stronger CPU and RAM. The AMD X3D series will provide the best performance due to the cache speed.
-
-## Installation
+# Installation steps
 
 {% stepper %}
-{% step %}
-### Install Escape From Tarkov using BSG Launcher
-
-Escape From Tarkov must be installed on the computer before installing SPT and Fika. This is required to ensure that you own the game.&#x20;
-
-**Fika will NOT work if you skip this step!**
-{% endstep %}
-
-{% step %}
-### Install [SPT](https://forge.sp-tarkov.com/installer)
-
-A fresh installation of SPT is **required** before installing Fika. **Do not install mods yet!**
-{% endstep %}
-
 {% step %}
 ### Download [Fika-Installer](https://github.com/project-fika/Fika-Installer/releases/latest)
 {% endstep %}
@@ -128,17 +82,7 @@ You should see `Mod: server version: x.x.x (targets SPT: 4.x.x) by: Fika loaded`
 
 {% step %}
 ### Exit the game
-
-Exit the game and continue with the next steps.
 {% endstep %}
 {% endstepper %}
 
-***
-
-## Setting up Fika
-
-In order to host or join a Fika server, you must follow the necessary steps.
-
-[Click here](../hosting-a-fika-server/) if you're hosting a Fika server.
-
-[Click here](../joining-a-fika-server/) if you're joining a Fika server.
+<p align="center"><a href="hosting-or-joining.md" class="button primary" data-icon="circle-right">Continue</a></p>

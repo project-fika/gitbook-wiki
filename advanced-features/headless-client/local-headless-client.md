@@ -55,7 +55,7 @@ Please do not ask for support if you are experiencing performance-related issues
 
 * Windows virtual paging settings **must be default** with ample free space on your `C:\` drive.
   * If you have changed Windows virtual memory options, please return all settings to their default configuration. The `Automatically manage paging file size for all drives` checkbox should be checked.
-* The installation process below assumes that you have followed the [Installing Fika](../../installing-fika/) process exactly. Deviating from that process at all may lead to issues.
+* The installation process below assumes that you have followed the [Installing Fika](../../installing-fika/installation.md) process exactly. Deviating from that process at all may lead to issues.
 * If you have previously installed mods, especially client plugins, <mark style="color:$warning;">please remove them</mark> before proceeding. This process assumes that the only mod installed is Fika.
   * Proceeding with this guide while mods are installed is _possible_, but you are likely to run into issues. If you have any issues during this process at all, start over but this time remove all mods first.
 * Character progress and server settings will largely be unaffected.
@@ -83,7 +83,7 @@ By offloading the AI calculations onto a separate game client via the Fika headl
 
 {% stepper %}
 {% step %}
-### OPTIONAL: [Create a Fresh SPT+Fika Install](../../installing-fika/)
+### OPTIONAL: [Create a Fresh SPT+Fika Install](../../installing-fika/installation.md)
 
 {% hint style="info" %}
 If you do not have **any** mods for **client or server** in your main SPT+Fika install, you can skip this step.
@@ -91,7 +91,7 @@ If you do not have **any** mods for **client or server** in your main SPT+Fika i
 
 You can follow the steps below with your existing SPT+Fika install, but you may run into issues, especially if you already have mods installed. Creating a fresh SPT+Fika install makes it much easier to undo if you find that this will not work on your PC and it also leaves your existing install completely untouched.
 
-Follow the entire [Installing Fika](../../installing-fika/) section from start to finish, including creating a character and getting to your stash.
+Follow the entire [Installing Fika](../../installing-fika/installation.md) section from start to finish, including creating a character and getting to your stash.
 
 Once you have confirmed that everything is working with a fresh install, you can migrate mods and profiles from your existing install to your new install.
 
@@ -110,7 +110,7 @@ If you are using a VPN like Radmin or ZeroTier, you will need to:
 1. Navigate to `[Existing SPT Install]\SPT\user\mods\fika-server\assets\configs\`
    1. If `fika.jsonc` does not exist, run SPT.Server.exe from your existing SPT install once and then close it.
 2. Open `fika.jsonc` in a text editor.
-3. Scroll down to the `scripts -> forceIp` setting and change it to the URL that you set up while following [the hosting instructions](../../hosting-a-fika-server/).
+3. Scroll down to the `scripts -> forceIp` setting and change it to the URL that you set up while following [the hosting instructions](../../hosting-a-fika-server/hosting-a-fika-server.md).
 4. Save the file and close the text editor.
 
 <div align="left"><figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure></div>

@@ -28,7 +28,7 @@ layout:
 * **Error:&#x20;**<mark style="color:red;">**Could not access \<URL> Ensure Fika Server mod is installed. Please review the installation process in the documentation.**</mark>
   * FikaHeadlessManager is unable to verify that Fika is fully installed on the server to which it is connecting.\
     \
-    Ensure you have followed all the steps for [Installing Fika](../../installing-fika/) in the folder where you are running SPT.Server.
+    Ensure you have followed all the steps for [Installing Fika](../../installing-fika/installation.md) in the folder where you are running SPT.Server.
 
 ***
 
@@ -87,7 +87,7 @@ If you are still getting this error even with the latest FikaHeadlessManager, li
 
 Test connectivity using SPT.Launcher: make sure you can launch the game and reach your stash and access traders.
 
-If your SPT.Launcher is not able to connect to your server, figure out why and address that issue first. If the server is currently running but SPT.Launcher cannot connect, revisit the [Hosting a Fika server](../../hosting-a-fika-server/) instructions.
+If your SPT.Launcher is not able to connect to your server, figure out why and address that issue first. If the server is currently running but SPT.Launcher cannot connect, revisit the [Hosting a Fika server](../../hosting-a-fika-server/hosting-a-fika-server.md) instructions.
 
 **NOTE**: the headless client **does not replace SPT.Server**. The backend server is required to be running at all times.
 {% endhint %}

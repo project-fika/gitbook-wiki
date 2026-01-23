@@ -5,21 +5,27 @@ icon: house-window
 
 # Home
 
-<div data-full-width="false" data-with-frame="true"><figure><img src=".gitbook/assets/1080p_launchertest2.png" alt=""><figcaption></figcaption></figure></div>
+<div data-full-width="false" data-with-frame="true"><figure><img src=".gitbook/assets/1080p_launchertest2.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
-## Introduction
+## Welcome
 
-Project Fika is a SPT mod designed to enable co-op multiplayer game play with your friends in Escape from Tarkov. You can progress through quests, share items, fight AI bots (PMCs, SCAVs, and Bosses) together and much more.
-
-We strongly recommend to read the [General information](General-information.md) page to learn more about Fika.
+**Project Fika** is an <mark style="color:$warning;">SPT mod</mark> that enables co-op multiplayer gameplay with your friends in _Escape from Tarkov_. You can progress through quests, share items, and fight AI-controlled bots (PMCs, Scavs, and bosses) together, and much more.
 
 {% hint style="warning" %}
-Do **NOT** contact SPT for any questions related to Fika. Instead, please join our [Discord](https://discord.gg/project-fika) server where you can find support for both SPT and Fika.
+Do **NOT** contact SPT for any questions related to Fika. Please join our [Discord](https://discord.gg/project-fika) server where you can find support for both SPT and Fika.
 {% endhint %}
+
+## Looking to install Fika?
+
+<h2 align="center"><a href="/broken/pages/BdX6p5Z68SoS6Ij02PX2" class="button primary">GET STARTED</a></h2>
 
 ## Quick links
 
-<a href="installing-fika/" class="button primary" data-icon="desktop-arrow-down">Getting started with Fika</a> <a href="contribute-to-fika.md" class="button primary" data-icon="code">Contribute to Fika</a> <a href="https://discord.gg/project-fika" class="button primary" data-icon="discord">Join our Discord</a>
+<p align="center"><a href="General-information.md" class="button primary" data-icon="circle-info">How does Fika work?</a> <a href="faqandguides/" class="button primary" data-icon="comments-question-check">FAQ and Guides</a> <a href="fika-configuration/" class="button primary" data-icon="gears">Configure Fika</a> </p>
+
+<p align="center"><a href="advanced-features/headless-client/" class="button primary" data-icon="desktop-arrow-down">Set up headless client</a> <a href="advanced-features/nat-punching/" class="button primary" data-icon="webhook">Connect using NAT Punching</a> <a href="advanced-features/web-app.md" class="button primary" data-icon="webhook">Fika Web App</a></p>
+
+<p align="center"> <a href="contribute-to-fika.md" class="button primary" data-icon="code">Contribute to Fika</a> <a href="https://discord.gg/project-fika" class="button primary" data-icon="discord">Join our Discord</a></p>
 
 ## License
 

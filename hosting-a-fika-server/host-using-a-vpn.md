@@ -1,132 +1,171 @@
 ---
 description: Step-by-step process for hosting a Fika server using a VPN client.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+  metadata:
+    visible: false
 ---
 
 # Host using a VPN
 
-A Virtual Private Network (VPN) enables you to join the same network via a public centralized server. You can either use a free VPN service such as [Radmin](https://www.radmin-vpn.com/) or set up your own VPN. This method is recommended only as a last resort if you are unable to use port forwarding.
-
-This guide will use Radmin as the VPN client. It is able to establish a direct connection if your network allows it, providing the best performance possible.
-
 {% hint style="warning" %}
-Free VPNs services are known to cause performance or connectivity problems, so use at your own risk. The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.
+**WARNING**
+
+Free VPNs services are known to cause performance or connectivity problems, so <mark style="color:$warning;">use at your own risk</mark>.&#x20;
+
+The officially supported way of playing Fika is with port forwarding. We will not provide support for issues caused by VPN services.
 
 Custom firewalls such as **BitDefender** may also block your connection while playing. Make sure that you allow the connection or temporarily disable it while playing!
 
 You may also experience issues if you are using another VPN service, even if it is disabled. If you have problems, consider uninstalling any other virtual network adapters.
 {% endhint %}
 
-## Installing the Radmin VPN client
+{% stepper %}
+{% step %}
+### Download Radmin
 
-* Navigate to the [Radmin website](https://www.radmin-vpn.com/) and download the Radmin VPN client.
-* Run the installer and proceed with the installation steps.
-* Reboot your computer. This is important to ensure that the virtual network adapter is correctly installed. **Do not skip this step!**
-* Open Radmin VPN client (from the taskbar or from the start menu).
-* Click `Create network`.
+Navigate to the [Radmin website](https://www.radmin-vpn.com/) and download the Radmin VPN client.
+{% endstep %}
+
+{% step %}
+### Install Radmin
+
+Run the installer and proceed with the installation steps.
+{% endstep %}
+
+{% step %}
+### Reboot your computer
+
+This is important to ensure that the virtual network adapter is correctly installed. **Do not skip this step!**
+{% endstep %}
+
+{% step %}
+### Create a network in Radmin
+
+Open Radmin VPN client (from the taskbar or from the start menu) an Click `Create network`.
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-* Enter a network name (can be anything - make sure to remember it. You need to share it with your friends).
-* Enter a password.
-* Click `Create`.
+Enter a network name and a password. Make sure to note the network name and password, you will need to share it with your friends.
 
 <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-* Take note of your `VPN IP`, which is displayed below your computer name in Radmin. It will be referred to as `your_vpn_ip` in the following steps.
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
 
-* Go to `System` -> `Firewall Exceptions` and click  `Allow All Apps`.
+{% step %}
+### Add Radmin to Windows firewall exclusions
+
+Go to `System` -> `Firewall Exceptions` and click  `Allow All Apps`.
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
 
-## Testing connectivity
+{% step %}
+### Start `SPT.Server` to generate the config file
 
-* Ask your friend(s) to follow the steps [here](../joining-a-fika-server/join-using-a-vpn.md).
-* Right-click their name in Radmin and click `Ping`.
-
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
-
-* Close the command prompt when ping is successful.
-
-{% hint style="warning" %}
-If the ping fails then it means that the VPN connection is not working correctly. Everyone should try rebooting their PC and make sure that everyone joined the same network in Radmin.
-
-Custom firewalls such as `BitDefender` can block VPN communication - try turning it off.
-{% endhint %}
-
-## Ensuring direct connection
-
-It is important to ensure that you are communicating directly with your friend(s) through Radmin for optimal performance.
-
-* Right-click your friend's name in Radmin and click `Properties`.
-
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
-
-* Validate that the Channel type is `TCP/out`. This mean you have a direct connection to this peer.
-
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="warning" %}
-If you see `TCP/relay`, then the communication is relayed through Radmin's servers. The performance will be severely degraded. Try disabling any firewall and/or antivirus in your system and reconnect to the network in Radmin.
-{% endhint %}
-
-## Configure your `VPN IP` in Fika
-
-* Start `SPT.Server` at least once to generate the configuration files, then close it.
+Wait for `SPT Server` to be fully loaded.
 
 <figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FlZfa6hVfcUTBztlqMtZ7_2Fhttps___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzs.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
 
-* Navigate to `<SPT install>\SPT\user\mods\fika-server\assets\configs`.
-* Open `fika.jsonc` with your preferred text editor (Notepad++ is recommended).
+{% step %}
+### Close `SPT.Server`
+{% endstep %}
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+{% step %}
+### Open Fika config in editor
 
-* Find the `server` section.
-* Change `ip` to `your_vpn_ip`. Make sure to write it inside the quotes.
-* Change `backendIp` to `your_vpn_ip`. Make sure to write it inside the quotes.
+Navigate to `<SPT install>\SPT\user\mods\fika-server\assets\configs`.
+
+Open `fika.jsonc` with your preferred text editor (Notepad++ is recommended).
+
+
+{% endstep %}
+
+{% step %}
+### Edit IP and port in Fika config
+
+Find the `server` section.
+
+Change `ip` to `your_vpn_ip`. Make sure to write it inside the quotes.
+
+Change `backendIp` to `your_vpn_ip`. Make sure to write it inside the quotes.
+
+Save and close.
 
 <figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
 
-* Save the file and close it.
-*   Start `SPT.Server` and verify that it reports `Started webserver at https://your_vpn_ip:6969` when it is done loading.
+{% step %}
+### Start `SPT.Server`
 
-    <figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
-* Start `SPT.Launcher`
+Wait for `SPT Server` to be fully loaded.
+
+<figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### Start `SPT.Launcher`
 
 <figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2F89xf4fwAOWUZlYNbpj1u_2Fimage (1).png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
 
-* Click the `Settings` button.
+{% step %}
+### Edit the SPT Launcher settings
 
-<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FqwHM3gxlwjEsrugHTtc0_2Fimage.avif" alt=""><figcaption></figcaption></figure>
+Click the `Settings` button.
 
-* Check the `Developer mode` box.
-* Enter your VPN address in the URL section. This should be the same URL reported by the server.
+<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FqwHM3gxlwjEsrugHTtc0_2Fimage.avif" alt="" width="563"><figcaption></figcaption></figure>
+
+Check the `Developer mode` box.
+
+Enter your VPN address in the URL section. This should be the same URL reported by the server.
+
+<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FRJRDafOFXrz8sQBMXNfo_2Fimage.avif" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 DO NOT leave out `https://` and do not add a slash or space at the end. The URL box should look like this: `https://20.21.22.23:6969`.
 {% endhint %}
+{% endstep %}
 
-<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FRJRDafOFXrz8sQBMXNfo_2Fimage.avif" alt=""><figcaption></figcaption></figure>
+{% step %}
+### Login to your profile
+{% endstep %}
 
-* Press the arrow on the right corner.
-* You should now be able to create your profile and log in to the server.
-* Start the game.
+{% step %}
+### Start the game
 
-<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FVhkOgEbLlzyx9kazRxLl_2Fimage.avif" alt=""><figcaption></figcaption></figure>
+Press the arrow on the right corner. You should now be able to create your profile and log in to the server. Start the game.
 
-* Press `F12` when in-game to bring up the configuration manager.
-* Find the `Force IP` and `Force Bind IP` in the `Fika.Core` section of the configuration manager.
-* Set both Force IP and Force Bind IP to `your_vpn_ip`.
+<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FVhkOgEbLlzyx9kazRxLl_2Fimage.avif" alt="" width="563"><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### Configure Fika to use VPN IP
+
+Press `F12` when in-game to bring up the configuration manager.
+
+Find the `Force IP` and `Force Bind IP` in the `Fika.Core` section of the configuration manager.
+
+Set both `Force IP` and `Force Bind IP` to `your vpn ip`.
 
 <figure><img src="../.gitbook/assets/forceip.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+{% endstepper %}
 
 {% hint style="info" %}
 Note: Players willing to host a raid will also need to set the `Force IP` and `Force Bind IP` in their respective Fika configuration.
 {% endhint %}
 
-## Hosting a raid
-
-[Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
-
-[Click here](../fika-configuration/) to learn more about additional Fika configurations.
+<p align="center"><a href="../testing-connectivity/test-vpn-connectivity/" class="button primary" data-icon="circle-right">I followed all the steps</a></p>

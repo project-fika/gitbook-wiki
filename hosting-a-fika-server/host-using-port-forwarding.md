@@ -1,71 +1,107 @@
 ---
 description: Step-by-step process for hosting a Fika server using port forwarding.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+  metadata:
+    visible: false
 ---
 
 # Host using port forwarding
 
-Port forwarding is a networking process that allows external devices to access one or multiple ports of a machine within your home network. Port forwarding can be configured through your router's settings interface, which is usually accessible by entering the gateway IP address into a web browser.
-
 {% hint style="warning" %}
+**WARNING**
+
 Not all Internet Service Providers (ISP) allows port forwarding. If you find yourself unable to port forward, you can use a public VPN service such as Radmin, ZeroTier, etc.). Click [here](host-using-a-vpn.md) to learn how to host using a VPN.
 {% endhint %}
 
-## Router configuration
-
 {% hint style="info" %}
-We do not provide a step-by-step tutorial for port forwarding because the router settings interface varies between different models and manufacturers. Make sure to research how to achieve port forwarding for your specific router model.
-
-You may be able to find guides for your router on [PortForward.com](https://portforward.com/) or by searching Google.
+We do not provide a step-by-step tutorial for port forwarding because the router settings interface varies between different models and manufacturers. You may be able to find guides for your router on [PortForward.com](https://portforward.com/) or by searching Google.
 {% endhint %}
 
-* Go in your router's configuration interface (open browser and type the [gateway IP](https://www.whatismyip.com/finding-your-default-gateway-address/)).
-* Access the port forward menu.
-* Port forward the following ports to your computer:
-  * 6969 TCP (SPT backend server).
-  * 25565 UDP (Fika in-game networking).
+{% stepper %}
+{% step %}
+### Access your router configuration
 
-{% hint style="info" %}
-If you are playing on a PC separate from where your `SPT.server.exe` is running, you will need to forward UDP (default of 25565) to the gaming PC, instead of the machine `SPT.server.exe` is running on.
-{% endhint %}
+Your router configuration can be accessed by typing the [gateway IP](https://www.whatismyip.com/finding-your-default-gateway-address/) in your browser.
+{% endstep %}
 
-## Windows Firewall
+{% step %}
+### Access the port forward menu
 
-Installing Fika using Fika-Installer will automatically configure the Windows firewall.
+The port forward menu can have different names; usually "port forwarding" or "virtual server".
+{% endstep %}
 
-## Testing connectivity
+{% step %}
+### Add port forward rules
 
-* Launch `SPT.Server.exe`.
+Add the following port forward rules and make sure they are associated with your computer:
+
+* 6969 TCP (SPT backend server).
+* 25565 UDP (Fika in-game networking).
+{% endstep %}
+
+{% step %}
+### Start `SPT.Server`
 
 If everything is working properly, you should see something similar in the console output:
 
-```
-ModLoader: loading: 1 server mods...
-Mod: server version: 2.4.0 by: Fika loaded
+<pre><code>ModLoader: loading: 1 server mods...
+<strong>Mod: server version: 2.2.0 (targets SPT: >=4.0.11) by: Fika loaded
+</strong>Loading OnWebAppBuildMods...
+[Fika Server] Overriding SPT configuration
+Finished loading OnWebAppBuildMods...
+Loaded self-signed certificate (./user/certs/server.crt)
 Server: executing startup callbacks...
+┌─────────────────────────────────────────┐
+│ SPT 4.0.11                              │
+│ https://discord.sp-tarkov.com           │
+│                                         │
+│ This work is free of charge             │
+│ If you paid money, you were scammed     │
+│ Commercial use is prohibited            │
+└─────────────────────────────────────────┘
+Loading PreSptMods...
+Finished loading PreSptMods...
 Importing database...
 Database import finished
-Started webserver at https://0.0.0.0:6969
-Started websocket at wss://0.0.0.0:6969
-Server is running, do not close while playing SPT, Happy playing!!
-```
+Generating flea offers...
+<strong>Started webserver at https://0.0.0.0:6969
+</strong><strong>Started websocket at wss://0.0.0.0:6969
+</strong><strong>Server has started, happy playing
+</strong></code></pre>
 
 {% hint style="warning" %}
-If you see errors (red text) then your configuration is invalid or you are unable to host using the configured IP address/port.
+If you see errors (red text) then your configuration is invalid or you are unable to host using the configured IP address/port. Please double-check your settings.
 {% endhint %}
+{% endstep %}
 
-* Make sure `SPT.Server` is running.
-* Obtain your public IP address [here](https://api.ipify.org/).
-* Go to an [online port checker](https://portchecker.co).
-* Enter your public IP address and port 6969.
-* Test the port connectivity.
+{% step %}
+### Start `SPT.Launcher`
 
-If the port is closed, you may have an invalid configuration, Windows Firewall blocking the connection or your ISP does not allow port forwarding. Validate all your network settings or host using a [VPN client](host-using-a-vpn.md).
 
-If the port shows as Open, your server is available for connections from friends. You will need to send them your Public IPv4 formatted like `https://your.pub.lic.ip:6969` for them to enter into their Launcher -> Settings -> URL field to connect to your server.
+{% endstep %}
 
-## Hosting a raid
+{% step %}
+### Login to your profile
 
-Your Fika instance is now ready to host a raid.
 
-* [Click here](../playing-fika.md#hosting-a-raid) to learn how to host a raid.
-* [Click here](../fika-configuration/) to learn more about additional Fika configurations.
+{% endstep %}
+
+{% step %}
+### Start game
+
+
+{% endstep %}
+{% endstepper %}
+
+<p align="center"><a href="../testing-connectivity/test-port-forward-connectivity.md" class="button primary" data-icon="circle-right">I followed all the steps</a></p>

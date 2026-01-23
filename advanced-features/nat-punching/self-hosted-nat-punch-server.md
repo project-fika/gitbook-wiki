@@ -116,7 +116,7 @@ Make sure that the following ports are port forwarded and opened in your server 
 {% step %}
 ### Start `SPT.Launcher` on your computer
 
-We assume you already have a working Fika installation or you know how to set up one. If you don't, click [here](../../installing-fika/) for Fika installation steps.
+We assume you already have a working Fika installation or you know how to set up one. If you don't, click [here](../../installing-fika/installation.md) for Fika installation steps.
 {% endstep %}
 
 {% step %}

@@ -6,15 +6,15 @@ layout:
   title:
     visible: true
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
-    visible: true
+    visible: false
   pagination:
     visible: false
   metadata:
-    visible: true
+    visible: false
 ---
 
 # General information
