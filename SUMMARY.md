@@ -35,7 +35,7 @@
 
 ## Hosting a Fika server
 
-* [Choose your hosting method](hosting-a-fika-server/hosting-a-fika-server.md)
+* [Choose your hosting method](hosting-a-fika-server/choose-your-hosting-method.md)
 * [Host using port forwarding](hosting-a-fika-server/host-using-port-forwarding.md)
 * [Host using a VPN](hosting-a-fika-server/host-using-a-vpn.md)
 * [Host over LAN](hosting-a-fika-server/host-over-lan.md)
@@ -48,11 +48,11 @@
 
 ## Joining a Fika server
 
-* [Choose your connection method](joining-a-fika-server/test.md)
+* [Choose your connection method](joining-a-fika-server/choose-your-connection-method.md)
 * [Connect using direct connection](joining-a-fika-server/join-using-direct-connection.md)
-* [Connect using a VPN](joining-a-fika-server/join-using-a-vpn/README.md)
-  * [Ensuring direct connection](joining-a-fika-server/join-using-a-vpn/ensuring-direct-connection.md)
-* [Connect locally](joining-a-fika-server/join-using-direct-connection-1.md)
+* [Connect using a VPN](joining-a-fika-server/connect-using-a-vpn/README.md)
+  * [Ensuring direct connection](joining-a-fika-server/connect-using-a-vpn/ensuring-direct-connection.md)
+* [Connect locally](joining-a-fika-server/connect-locally.md)
 
 ## Playing Fika
 

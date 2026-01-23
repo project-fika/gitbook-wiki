@@ -1,5 +1,5 @@
 ---
-description: Step-by-step process for setting up a dedicated SPT server with NAT punching.
+description: Learn more about NAT Punching with Fika.
 layout:
   width: default
   title:
@@ -47,7 +47,7 @@ Fika offers a public NAT punch server to facilitate connection between players a
 **Cons**
 
 * The public IP address of the raid host and players will be shared with the Fika NAT punch server. We do not collect and share your IP address with any third party.
-* Relies on the Fika NAT punch server to be available. Downtime can happen with any online service
+* Relies on the Fika NAT punch server to be available. Availability is not guaranteed.
 
 <a href="fika-nat-punch-server.md" class="button primary" data-icon="up-right-from-square">Use Fika NAT punch server</a>
 {% endtab %}

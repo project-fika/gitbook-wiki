@@ -17,7 +17,7 @@ layout:
 
 # Test VPN connectivity
 
-Before testing VPN connectivity, make sure that your friend(s) have successfully installed Fika and completed the steps [here](../../joining-a-fika-server/join-using-a-vpn/).
+Before testing VPN connectivity, make sure that your friend(s) have successfully installed Fika and completed the steps [here](../../joining-a-fika-server/connect-using-a-vpn/).
 
 {% stepper %}
 {% step %}

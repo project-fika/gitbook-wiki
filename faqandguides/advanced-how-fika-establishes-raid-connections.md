@@ -22,7 +22,7 @@ layout:
 # ADVANCED: How Fika Establishes Raid Connections
 
 {% hint style="warning" %}
-This article is intended for Advanced Users who have a non-standard network setup. Whereas it may be interesting for others, if you have a simple network you may be better off just following the [hosting instructions](../hosting-a-fika-server/hosting-a-fika-server.md) and not worrying about the inner-workings of Fika. If port forwarding isn't working, use a [VPN like Radmin](../hosting-a-fika-server/host-using-a-vpn.md).
+This article is intended for Advanced Users who have a non-standard network setup. Whereas it may be interesting for others, if you have a simple network you may be better off just following the [hosting instructions](../hosting-a-fika-server/choose-your-hosting-method.md) and not worrying about the inner-workings of Fika. If port forwarding isn't working, use a [VPN like Radmin](../hosting-a-fika-server/host-using-a-vpn.md).
 {% endhint %}
 
 ### Definition of Terms

@@ -110,7 +110,7 @@ If you are using a VPN like Radmin or ZeroTier, you will need to:
 1. Navigate to `[Existing SPT Install]\SPT\user\mods\fika-server\assets\configs\`
    1. If `fika.jsonc` does not exist, run SPT.Server.exe from your existing SPT install once and then close it.
 2. Open `fika.jsonc` in a text editor.
-3. Scroll down to the `scripts -> forceIp` setting and change it to the URL that you set up while following [the hosting instructions](../../hosting-a-fika-server/hosting-a-fika-server.md).
+3. Scroll down to the `scripts -> forceIp` setting and change it to the URL that you set up while following [the hosting instructions](../../hosting-a-fika-server/choose-your-hosting-method.md).
 4. Save the file and close the text editor.
 
 <div align="left"><figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure></div>

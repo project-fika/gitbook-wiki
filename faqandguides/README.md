@@ -22,7 +22,7 @@ The only place where IPs need to be edited is in [`fika.jsonc`](../fika-configur
 
 * You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
 
-Please follow the instructions for <a href="../hosting-a-fika-server/hosting-a-fika-server.md" class="button primary" data-icon="arrow-right-long">Hosting a Fika server</a>
+Please follow the instructions for <a href="../hosting-a-fika-server/choose-your-hosting-method.md" class="button primary" data-icon="arrow-right-long">Hosting a Fika server</a>
 
 ***
 
@@ -32,7 +32,7 @@ Please follow the instructions for <a href="../hosting-a-fika-server/hosting-a-f
 <mark style="color:$warning;">**Only one person in the group launches SPT.Server.exe.**</mark>
 {% endhint %}
 
-* Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](../hosting-a-fika-server/hosting-a-fika-server.md) instructions.
+* Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](../hosting-a-fika-server/choose-your-hosting-method.md) instructions.
 * Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](/broken/pages/L4viiuXFthG8SPcIEiDd) instructions.
 * Make sure that everyone has Fika [installed](../installing-fika/installation.md). On the main menu, it should say FIKA in the bottom-left of the screen.
 * If you are sure you have done all the requisite steps and it is still not working restart the PCs of everyone that is involved.
