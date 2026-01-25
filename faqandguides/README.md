@@ -12,20 +12,6 @@ There are other FAQ and Guides which can be found in the Table of Contents by cl
 If you have a question not covered here, please join us in our [Discord](https://discord.gg/project-fika) server and ask in the #questions channel.
 {% endhint %}
 
-### :question:I changed `http.json` but my server still says `0.0.0.0`
-
-{% hint style="warning" %}
-Please do not watch video guides, they are often out of date.
-{% endhint %}
-
-The only place where IPs need to be edited is in [`fika.jsonc`](../fika-configuration/server.md)
-
-* You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
-
-Please follow the instructions for <a href="../hosting-a-fika-server/choose-your-hosting-method.md" class="button primary" data-icon="arrow-right-long">Hosting a Fika server</a>
-
-***
-
 ### :question:I do not see my friend(s) on the Online Players list on the main menu / I cannot see my friend's raid in the raid list
 
 {% hint style="warning" %}
@@ -119,6 +105,20 @@ Review the fika-server mod [configuration options](../fika-configuration/server.
 Open `fika.jsonc` in a text editor and find the option named `disableSPTChatBots` and change it from `true` to `false`, then save your changes and restart the server.
 
 <figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+### :question:I changed `http.json` but my server still says `0.0.0.0`
+
+{% hint style="warning" %}
+Please do not watch video guides, they are often out of date.
+{% endhint %}
+
+The only place where IPs need to be edited is in [`fika.jsonc`](../fika-configuration/server.md)
+
+* You must run `SPT.Server.exe` at least once with `fika-server` installed for `fika.jsonc` to generate.
+
+Please follow the instructions for <a href="../hosting-a-fika-server/choose-your-hosting-method.md" class="button primary" data-icon="arrow-right-long">Hosting a Fika server</a>
 
 ***
 
