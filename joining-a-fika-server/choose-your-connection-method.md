@@ -21,6 +21,6 @@ The connection method depends on how the Fika server was set up. Make sure to as
 
 <p align="center"><a href="join-using-direct-connection.md" class="button primary" data-icon="circle-right">The server host uses Port Forwarding</a></p>
 
-<p align="center"><a href="connect-using-a-vpn/" class="button primary" data-icon="circle-right">The server uses VPN</a></p>
+<p align="center"><a href="connect-using-a-vpn/" class="button primary" data-icon="circle-right">The server host uses VPN</a></p>
 
 <p align="center"><a href="connect-locally.md" class="button primary" data-icon="circle-right">The server host is local</a></p>
