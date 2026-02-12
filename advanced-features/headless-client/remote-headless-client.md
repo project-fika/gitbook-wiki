@@ -4,20 +4,6 @@ description: >-
   separate computer for maximum performance gains. This is the officially
   supported headless client configuration.
 hidden: true
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: false
-  pagination:
-    visible: false
-  metadata:
-    visible: true
 ---
 
 # Remote Headless Client
@@ -32,7 +18,8 @@ Please make sure you have read everything on the general [Headless Client page](
   * Most virtual private servers (VPS) will **not** work because they do not provide the performance needed for the headless client.
 * A modern CPU with at least 4 cores @ 4GHz+.
 * 32 GB RAM (16 GB RAM _may_ work but will provide reduced performance due to virtual paging).
-* 50 GB disk space with SSD/NVME drive. **HDD is NOT supported.**
+* Initially around 120 GB available disk space on an SSD/NVME drive. **HDD is NOT supported.**
+  * After the installation is complete and everything is tested working you will be able to delete a portion of the retail game install data to save some space.
 
 ## Notes
 

@@ -1,19 +1,5 @@
 ---
 description: Step-by-step process for hosting a Fika server using a VPN client.
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: false
-  pagination:
-    visible: false
-  metadata:
-    visible: false
 ---
 
 # Host using a VPN
@@ -96,11 +82,10 @@ Open `fika.jsonc` with your preferred text editor (Notepad++ is recommended).
 {% step %}
 ### Edit IP and port in Fika config
 
-Find the `server` section.
+Find the `server` section. As you make the next two edits, refer to the picture below.
 
-Change `ip` to `your_vpn_ip`. Make sure to write it inside the quotes.
-
-Change `backendIp` to `your_vpn_ip`. Make sure to write it inside the quotes.
+* Change the value of the `ip` field from the default `0.0.0.0` to `your_vpn_ip`. Make sure to write it inside the quotes.
+* Change the value of the `backendIp` field from the default  `0.0.0.0` to `your_vpn_ip`. Make sure to write it inside the quotes.
 
 Save and close.
 

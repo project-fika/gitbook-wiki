@@ -2,8 +2,8 @@
 
 * [Home](README.md)
 * [General information](General-information.md)
-*
-*
+* [Installing Fika](/broken/pages/BdX6p5Z68SoS6Ij02PX2)
+* [Playing Fika](/broken/pages/wIfv7TrYQa2rJMHLl2oK)
 * [Fika configuration](fika-configuration/README.md)
   * [Client](fika-configuration/client.md)
   * [Server](fika-configuration/server.md)
