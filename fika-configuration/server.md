@@ -30,7 +30,9 @@ Be sure to save changes and restart the server when you're done to ensure your c
         "canEditRaidSettings": true, // of clients can modify the raid settings before starting a raid
         "enableTransits": true, // if transits are enabled
         "anyoneCanStartRaid": false, // if anyone can click "START RAID"
-        "allowNamePlates": true // if player nameplates are allowed to be enabled by clients
+        "allowNamePlates": true, // if player nameplates are allowed to be enabled by clients
+        "randomLabyrinthSpawns": true, // if all players should have random spawns in Labyrinth
+        "pmcFoundInRaid": true // if all AI PMC gear should be found in raid
     },
     "server": {
         "SPT": {
@@ -60,8 +62,7 @@ Be sure to save changes and restart the server when you're done to ensure your c
     },
     "natPunchServer": {
         "enable": false, // if the nat punching module is enabled
-        "port": 6790, // the port to use
-        "natIntroduceAmount": 1
+        "port": 6790 // the port to use
     },
     "headless": {
         "profiles": {
