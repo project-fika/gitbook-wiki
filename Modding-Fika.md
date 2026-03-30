@@ -189,7 +189,7 @@ If you circumvent the intended way of executing inventory operations, you will i
 
 This guide explains the implementation and usage of the `Snapshotter<T>` system made for Fika. This module provides a zero-allocation, high-fidelity interpolation and extrapolation engine designed for high-tick-rate synchronization.\
 \
-It is highly recommended to use the `ThrottledMono` to send the data at a tickrate of 20, i.e. 20 times per second on average.
+It is highly recommended to use the `ThrottledMono` to send the data at a tickrate of 20, i.e. 20 times per second on average. Why would I use this and the snapshotter? To save bandwidth and CPU usage. See [#general-information-about-data](Modding-Fika.md#general-information-about-data "mention") and [#interpolation](Modding-Fika.md#interpolation "mention") for more information.
 
 #### Key Features
 
@@ -208,7 +208,7 @@ It is highly recommended to use the `ThrottledMono` to send the data at a tickra
         public double RemoteTime { get; set; }
         public double LocalTime { get; set; }
 
-        // your Custom Data
+        // your custom data
         public Vector3 Position;
         public Quaternion Rotation;
 
@@ -271,7 +271,7 @@ private void Update()
     }
 
     // 3. retrieve the snapshots. 
-    // in 'Extrapolating', 'from' is the newest packet, and 'to' is also 'from'.
+    // in 'Extrapolating', both 'to' and 'from' are the newest packet.
     // t will be the time (in seconds) elapsed since that packet.
     ref readonly var snapFrom = ref _snapshotter.GetSnapshot(from);
 
@@ -449,7 +449,7 @@ $$
 \text{lerpedValue} = \text{oldValue} + (\text{newValue} - \text{oldValue}) \cdot t
 $$
 
-You can then send the current time (`Time.unscaledTime`) and compare it with current time when received, and smooth out differences using the equations above.
+You can then send the current time (`NetworkTimeSync.NetworkTime`) and compare it with current time when received, and smooth out differences using the equations above.
 
 #### Now comparing the different methods of sending
 
