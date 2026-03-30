@@ -204,11 +204,11 @@ It is highly recommended to use the `ThrottledMono` to send the data at a tickra
 
     <pre class="language-csharp" data-title="PlayerSnapshot.cs" data-full-width="false"><code class="lang-csharp">public struct PlayerSnapshot : ISnapshot
     {
-        // ISnapshot Implementation
+        // ISnapshot implementation
         public double RemoteTime { get; set; }
         public double LocalTime { get; set; }
 
-        // Your Custom Data
+        // your Custom Data
         public Vector3 Position;
         public Quaternion Rotation;
 
@@ -251,32 +251,47 @@ public void OnPacketReceived(PlayerSnapshot newSnapshot)
 
 In your `Update` loop, sample the buffer to find the correct interpolation indices and the `t` (0.0 to 1.0) progress value.
 
+{% hint style="info" %}
+**Performance Tip**: Always use `ref readonly var` when retrieving snapshots. This prevents the **CPU** from copying the snapshot data (which can be 60+ bytes) and instead points directly to the data inside the buffer.
+{% endhint %}
+
 ```csharp
 private void Update()
 {
-    double currentTime = Time.realtimeSinceStartupAsDouble;
+    double currentTime = NetworkTimeSync.NetworkTime;
+    
+    // 1. ask the snapshotter where we are in the timeline
     var state = _snapshotter.GetInterpolationIndices(currentTime, out int from, out int to, out float t);
 
-    switch (state)
+    // 2. handle the "Stop" case first
+    if (state == EBufferState.Stale)
     {
-        case EBufferState.Interpolating:
-            ref readonly var start = ref _snapshotter.GetSnapshot(from);
-            ref readonly var end = ref _snapshotter.GetSnapshot(to);
-            
-            // apply smoothed movement
-            transform.position = Vector3.Lerp(start.Position, end.Position, t);
-            transform.rotation = Quaternion.Slerp(start.Rotation, end.Rotation, t);
-            break;
+        // network timeout or buffer empty. stop moving.
+        return;
+    }
 
-        case EBufferState.Extrapolating:
-            // handle packet loss by projecting from the last known state
-            ref readonly var last = ref _snapshotter.GetSnapshot(from);
-            // example: transform.position += velocity * t;
-            break;
-            
-        case EBufferState.Stale:
-            // connection lost or buffer empty
-            break;
+    // 3. retrieve the snapshots. 
+    // in 'Extrapolating', 'from' is the newest packet, and 'to' is also 'from'.
+    // t will be the time (in seconds) elapsed since that packet.
+    ref readonly var snapFrom = ref _snapshotter.GetSnapshot(from);
+
+    if (state == EBufferState.Interpolating)
+    {
+        ref readonly var snapTo = ref _snapshotter.GetSnapshot(to);
+        
+        // standard blending between two real points
+        transform.position = Vector3.LerpUnclamped(snapFrom.Position, snapTo.Position, t);
+        transform.rotation = Quaternion.SlerpUnclamped(snapFrom.Rotation, snapTo.Rotation, t);
+    }
+    else if (state == EBufferState.Extrapolating)
+    {
+        // 't' here is the delta time since the last packet.
+        // we use the last known velocity to guess the new position.
+        Vector3 velocity = snapFrom.Velocity; 
+        transform.position = snapFrom.Position + (velocity * t);
+        
+        // keep rotation static during extrapolation to prevent spinning
+        transform.rotation = snapFrom.Rotation;
     }
 }
 ```
