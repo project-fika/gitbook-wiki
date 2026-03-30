@@ -1,20 +1,6 @@
 ---
 description: Updated for 4.0
 icon: wrench
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
-  metadata:
-    visible: true
 ---
 
 # Creating Fika-Compatible Mods
@@ -198,6 +184,108 @@ If you circumvent the intended way of executing inventory operations, you will i
 {% endhint %}
 
 ***
+
+## Snapshotting
+
+This guide explains the implementation and usage of the `Snapshotter<T>` system made for Fika. This module provides a zero-allocation, high-fidelity interpolation and extrapolation engine designed for high-tick-rate synchronization.\
+\
+It is highly recommended to use the `ThrottledMono` to send the data at a tickrate of 20, i.e. 20 times per second on average.
+
+#### Key Features
+
+* Zero-Allocation: Utilizes generic value-type specialization and `ref` semantics to ensure no Garbage Collection (GC) overhead during the hot path.
+* Adaptive Jitter Buffer: Dynamically adjusts interpolation delay based on real-time network variance (Jitter) using an asymmetric EMA.
+* Clock Synchronization: Automatically aligns local client time with server time using a smoothed offset.
+* Validation: Built-in protection against out-of-order and duplicate UDP packets.
+
+### Implementation
+
+1.  Define Your Data<br>
+
+    <pre class="language-csharp" data-title="PlayerSnapshot.cs" data-full-width="false"><code class="lang-csharp">public struct PlayerSnapshot : ISnapshot
+    {
+        // ISnapshot Implementation
+        public double RemoteTime { get; set; }
+        public double LocalTime { get; set; }
+
+        // Your Custom Data
+        public Vector3 Position;
+        public Quaternion Rotation;
+
+        public PlayerSnapshot(Vector3 pos, Quaternion rot, double remote, double local)
+        {
+            Position = pos;
+            Rotation = rot;
+            RemoteTime = remote;
+            LocalTime = local;
+        }
+    }
+    </code></pre>
+
+
+2.  Initialize the Snapshotter<br>
+
+    ```csharp
+    // store this in your entity controller or state manager
+    private readonly Snapshotter<PlayerSnapshot> _snapshotter = new();
+    ```
+
+
+
+### Usage
+
+#### Adding Data
+
+When a packet arrives from the network, pass it directly to the snapshotter. The system will internally handle clock synchronization and jitter estimation.<br>
+
+```csharp
+public void OnPacketReceived(PlayerSnapshot newSnapshot)
+{
+    // snapshot.LocalTime should be the exact time the packet hit the client
+    // i highly recommend adding that through the constructor, and calling NetworkTimeSync.NetworkTime
+    _snapshotter.AddSnapshot(in newSnapshot);
+}
+```
+
+#### Sampling for Rendering
+
+In your `Update` loop, sample the buffer to find the correct interpolation indices and the `t` (0.0 to 1.0) progress value.
+
+```csharp
+private void Update()
+{
+    double currentTime = Time.realtimeSinceStartupAsDouble;
+    var state = _snapshotter.GetInterpolationIndices(currentTime, out int from, out int to, out float t);
+
+    switch (state)
+    {
+        case EBufferState.Interpolating:
+            ref readonly var start = ref _snapshotter.GetSnapshot(from);
+            ref readonly var end = ref _snapshotter.GetSnapshot(to);
+            
+            // apply smoothed movement
+            transform.position = Vector3.Lerp(start.Position, end.Position, t);
+            transform.rotation = Quaternion.Slerp(start.Rotation, end.Rotation, t);
+            break;
+
+        case EBufferState.Extrapolating:
+            // handle packet loss by projecting from the last known state
+            ref readonly var last = ref _snapshotter.GetSnapshot(from);
+            // example: transform.position += velocity * t;
+            break;
+            
+        case EBufferState.Stale:
+            // connection lost or buffer empty
+            break;
+    }
+}
+```
+
+#### Technical Performance
+
+The system is optimized at the IL (Intermediate Language) level. By using `where T : struct`, the JIT compiler devirtualizes interface calls and inlines property getters.
+
+<table data-full-width="false"><thead><tr><th>Metric</th><th>Result</th></tr></thead><tbody><tr><td>Memory Allocation</td><td>0 Bytes</td></tr><tr><td>Insertion Speed</td><td>~5.8ns</td></tr><tr><td>Sampling Speed</td><td>~4.2ns</td></tr><tr><td>Algorithm</td><td>O(log N) Binary Search</td></tr></tbody></table>
 
 ## General Information About Data
 
