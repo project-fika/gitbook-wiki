@@ -32,7 +32,10 @@ Be sure to save changes and restart the server when you're done to ensure your c
         "anyoneCanStartRaid": false, // if anyone can click "START RAID"
         "allowNamePlates": true, // if player nameplates are allowed to be enabled by clients
         "randomLabyrinthSpawns": true, // if all players should have random spawns in Labyrinth
-        "pmcFoundInRaid": true // if all AI PMC gear should be found in raid
+        "pmcFoundInRaid": true, // if all AI PMC gear should be found in raid
+        "allowSpectateBots": true, // if players should be allowed to spectate bots in free cam
+        "instantLoad": false, // if magazines should refill instantly in raid
+        "fastLoad": true // if enabled magazines refill 5 bullets each tick rather than 5 in raid (disabled if instantLoad is enabled)
     },
     "server": {
         "SPT": {
@@ -42,7 +45,7 @@ Be sure to save changes and restart the server when you're done to ensure your c
                 "backendIp": "0.0.0.0", // the ip that is sent to clients to be used for requests
                 "backendPort": 6969 // the port that is sent to clients to be used for requests
             },
-            "disableSPTChatBots": true // forces chat bots to be off
+            "disableSPTChatBots": false // forces chat bots to be off
         },
         "webhook": {
             "enabled": false,
@@ -76,7 +79,7 @@ Be sure to save changes and restart the server when you're done to ensure your c
             "forceIp": "https://127.0.0.1:6969" // the URL the headless connects to
         },
         "setLevelToAverageOfLobby": true, // use average level of all players when spawning bots on headless
-        "restartAfterAmountOfRaids": 0 // if the headless should restart after X raids, 0 to disable
+        "restartAfterAmountOfRaids": 1 // if the headless should restart after X raids, 0 to disable
     },
     "background": {
         "enable": true, // enables custom launcher background
