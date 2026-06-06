@@ -1,5 +1,23 @@
 ---
 description: A default server configuration file with a description for each setting.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Server
@@ -35,7 +53,16 @@ Be sure to save changes and restart the server when you're done to ensure your c
         "pmcFoundInRaid": true, // if all AI PMC gear should be found in raid
         "allowSpectateBots": true, // if players should be allowed to spectate bots in free cam
         "instantLoad": false, // if magazines should refill instantly in raid
-        "fastLoad": true // if enabled magazines refill 5 bullets each tick rather than 5 in raid (disabled if instantLoad is enabled)
+        "fastLoad": true // if enabled magazines refill 5 bullets each tick rather than 5 in raid (disabled if instantLoad is enabled),
+        "reviveConfig": {
+          "enabled": false, // if the revive system should be enabled
+          "headshotKills": false, // if headshots always kills
+          "grenadesKills": false, // if grenades always kills
+          "allowLooting": false, // if you can loot downed players
+          "maxRevives": 3, // max revives per player, 0 = infinite, otherwise max 10
+          "bleedoutTime": 30, // time to bleed out while downed, min 10 seconds, max 600
+          "reviveTime": 3 // time it takes to revive a player, min 3 seconds, max 30
+        }
     },
     "server": {
         "SPT": {
