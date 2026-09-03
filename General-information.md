@@ -47,7 +47,7 @@ If you're having issues even on a stable connection, the most common problem is 
 * Join someone else's raid.
 * Play together against bots, share items, progress quests together in the same raid.
 * Preserve character, quest, inventory, and hideout progression.
-* Use client/server mods from [SPT](https://forge.sp-tarkov.com/) (some mods are not compatible - see [Limitations](General-information.md#limitations)).
+* Use client/server mods from [SPT](https://sp-mod.com/) (some mods are not compatible - see [Limitations](General-information.md#limitations)).
 
 ## Other features
 
