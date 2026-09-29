@@ -13,6 +13,12 @@ layout:
     visible: false
   metadata:
     visible: false
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: false
 ---
 
 # Installation steps
@@ -65,11 +71,17 @@ You should see `Mod: server version: x.x.x (targets SPT: 4.x.x) by: Fika loaded`
 {% endstep %}
 
 {% step %}
-### Create or login to your account then start the game
+### Select the server "Local Server" and create a new profile
 
-<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2026-09-29 13-49-57.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2026-09-29 13-52-56.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### Select your profile and click "Start Game"
+
+<figure><img src="../.gitbook/assets/2026-09-29 13-54-06.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}

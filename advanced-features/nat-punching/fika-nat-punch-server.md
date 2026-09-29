@@ -2,6 +2,26 @@
 description: >-
   Step-by-step process for hosting a Fika server using Fika's public NAT punch
   server
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Fika NAT punch server

@@ -2,6 +2,26 @@
 description: >-
   An exhaustive list of all the different Fika configurations when playing
   in-game. Not fully updated for 4.X.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Client

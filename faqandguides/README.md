@@ -1,5 +1,25 @@
 ---
 icon: comments-question-check
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # FAQ and Guides
@@ -19,7 +39,7 @@ If you have a question not covered here, please join us in our [Discord](https:/
 {% endhint %}
 
 * Decide which person is the server host. That person alone runs `SPT.Server.exe` and follows the [Hosting a Fika server](../hosting-a-fika-server/choose-your-hosting-method.md) instructions.
-* Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](/broken/pages/hDVrWxnxHBJnBMcxodVy) instructions.
+* Everyone else **does not run `SPT.Server.exe`** and instead follows the [Joining a Fika server](https://app.gitbook.com/s/KIBpsnthxy8OSpsWzsDI/joining-a-fika-server) instructions.
 * Make sure that everyone has Fika [installed](../installing-fika/installation.md). On the main menu, it should say FIKA in the bottom-left of the screen.
 * If you are sure you have done all the requisite steps and it is still not working restart the PCs of everyone that is involved.
   * In rare cases a latent SPT.Server.exe may be running in the background for someone who has recently installed Fika and it may be intercepting connections. Restarting fixes this.

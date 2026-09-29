@@ -1,6 +1,26 @@
 ---
 description: Welcome to Project Fika Wiki!
 icon: house-window
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Home
@@ -17,7 +37,7 @@ Do **NOT** contact SPT for any questions related to Fika. Please join our [Disco
 
 ## Looking to install Fika?
 
-<h2 align="center"><a href="/broken/pages/BdX6p5Z68SoS6Ij02PX2" class="button primary">GET STARTED</a></h2>
+<h2 align="center"><a href="https://app.gitbook.com/s/KIBpsnthxy8OSpsWzsDI/installing-fika" class="button primary">GET STARTED</a></h2>
 
 ## Quick links
 

@@ -14,6 +14,12 @@ layout:
     visible: false
   metadata:
     visible: false
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Connect locally
@@ -30,25 +36,20 @@ layout:
 {% step %}
 ### Open `SPT Launcher`'s settings menu
 
-Click the `Settings` button.
+Click `Add New Server`
 
-<figure><img src="../.gitbook/assets/image (28).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2026-09-29 13-57-33.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Configure server IP
 
-Ask the server host to provide their <mark style="color:$warning;">local IP address</mark>.
+Ask the server host to provide their <mark style="color:$warning;">local IP address</mark>.\
+Give the server a name and enter the host's <mark style="color:$warning;">local IP address</mark> in the address section.&#x20;
 
-Check the `Developer Mode` box.
+<figure><img src="../.gitbook/assets/2026-09-29 13-59-06.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
-Enter the host's <mark style="color:$warning;">local IP address</mark> in the URL section. **DO NOT** leave out `https://`, do not forget to append the port `:6969` and do not add a slash at the end. The URL box should look like this: `https://20.21.22.23:6969`
-
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image (6) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -60,7 +61,7 @@ Enter the host's <mark style="color:$warning;">local IP address</mark> in the UR
 {% step %}
 ### Start the game
 
-<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FVhkOgEbLlzyx9kazRxLl_2Fimage (2).avif" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2026-09-29 13-54-06.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 

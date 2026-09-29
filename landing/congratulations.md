@@ -13,6 +13,12 @@ layout:
     visible: false
   metadata:
     visible: false
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: false
 ---
 
 # Congratulations
@@ -23,7 +29,7 @@ You may find useful resources about Fika below.
 
 
 
-<p align="center"><a href="/broken/pages/wIfv7TrYQa2rJMHLl2oK" class="button primary" data-icon="up-right-from-square">How do I host or join a raid?</a></p>
+<p align="center"><a href="https://app.gitbook.com/s/KIBpsnthxy8OSpsWzsDI/playing-fika" class="button primary" data-icon="up-right-from-square">How do I host or join a raid?</a></p>
 
 <p align="center"><a href="../General-information.md#main-features" class="button primary" data-icon="up-right-from-square">Review Fika features</a></p>
 

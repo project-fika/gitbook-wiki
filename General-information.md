@@ -15,13 +15,19 @@ layout:
     visible: false
   metadata:
     visible: false
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: false
 ---
 
 # General information
 
 ## What is Fika?
 
-Fika is a cooperative multiplayer mod for [SPT](https://sp-tarkov.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape From Tarkov experience by default.
+Fika is a cooperative multiplayer mod for [SPT](https://sp-mod.com/). Fika adds a lobby interface to join other players' raids and provide in-game networking capabilities, along with additional features that do not alter the standard Escape From Tarkov experience by default.
 
 In summary:
 
@@ -47,7 +53,7 @@ If you're having issues even on a stable connection, the most common problem is 
 * Join someone else's raid.
 * Play together against bots, share items, progress quests together in the same raid.
 * Preserve character, quest, inventory, and hideout progression.
-* Use client/server mods from [SPT](https://forge.sp-tarkov.com/) (some mods are not compatible - see [Limitations](General-information.md#limitations)).
+* Use client/server mods from [SPT](https://sp-mod.com/) (some mods are not compatible - see [Limitations](General-information.md#limitations)).
 
 ## Other features
 

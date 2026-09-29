@@ -1,6 +1,26 @@
 ---
 description: Updated for 4.0
 icon: wrench
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Creating Fika-Compatible Mods
@@ -229,8 +249,6 @@ It is highly recommended to use the `ThrottledMono` to send the data at a tickra
     // store this in your entity controller or state manager
     private readonly Snapshotter<PlayerSnapshot> _snapshotter = new();
     ```
-
-
 
 ### Usage
 

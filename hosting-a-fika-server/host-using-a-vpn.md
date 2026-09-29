@@ -1,5 +1,25 @@
 ---
 description: Step-by-step process for hosting a Fika server using a VPN client.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+  metadata:
+    visible: false
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: false
 ---
 
 # Host using a VPN
@@ -80,24 +100,11 @@ Open `fika.jsonc` with your preferred text editor (Notepad++ is recommended).
 {% endstep %}
 
 {% step %}
-### Edit IP and port in Fika config
-
-Find the `server` section. As you make the next two edits, refer to the picture below.
-
-* Change the value of the `ip` field from the default `0.0.0.0` to `your_vpn_ip`. Make sure to write it inside the quotes.
-* Change the value of the `backendIp` field from the default  `0.0.0.0` to `your_vpn_ip`. Make sure to write it inside the quotes.
-
-Save and close.
-
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
 ### Start `SPT.Server`
 
 Wait for `SPT Server` to be fully loaded.
 
-<figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<div align="left"><figure><img src="../.gitbook/assets/2026-09-29 13-56-42.png" alt=""><figcaption></figcaption></figure></div>
 {% endstep %}
 
 {% step %}
@@ -109,19 +116,13 @@ Wait for `SPT Server` to be fully loaded.
 {% step %}
 ### Edit the SPT Launcher settings
 
-Click the `Settings` button.
+Click `Add New Server`
 
-<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FqwHM3gxlwjEsrugHTtc0_2Fimage.avif" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2026-09-29 13-57-33.png" alt=""><figcaption></figcaption></figure>
 
-Check the `Developer mode` box.
+Pick a name for your server and then in the address write `127.0.0.1:6969`
 
-Enter your VPN address in the URL section. This should be the same URL reported by the server.
-
-<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FRJRDafOFXrz8sQBMXNfo_2Fimage.avif" alt="" width="563"><figcaption></figcaption></figure>
-
-{% hint style="warning" %}
-DO NOT leave out `https://` and do not add a slash or space at the end. The URL box should look like this: `https://20.21.22.23:6969`.
-{% endhint %}
+<figure><img src="../.gitbook/assets/2026-09-29 13-59-06.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -133,24 +134,8 @@ DO NOT leave out `https://` and do not add a slash or space at the end. The URL 
 
 Press the arrow on the right corner. You should now be able to create your profile and log in to the server. Start the game.
 
-<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FVhkOgEbLlzyx9kazRxLl_2Fimage.avif" alt="" width="563"><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-### Configure Fika to use VPN IP
-
-Press `F12` when in-game to bring up the configuration manager.
-
-Find the `Force IP` and `Force Bind IP` in the `Fika.Core` section of the configuration manager.
-
-Set both `Force IP` and `Force Bind IP` to `your vpn ip`.
-
-<figure><img src="../.gitbook/assets/forceip.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2026-09-29 13-54-06.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
-
-{% hint style="info" %}
-Note: Players willing to host a raid will also need to set the `Force IP` and `Force Bind IP` in their respective Fika configuration.
-{% endhint %}
 
 <p align="center"><a href="../testing-connectivity/test-vpn-connectivity/" class="button primary" data-icon="circle-right">I followed all the steps</a></p>
