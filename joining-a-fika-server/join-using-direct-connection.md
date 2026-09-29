@@ -34,14 +34,6 @@ layout:
 {% endstep %}
 
 {% step %}
-### Open `SPT Launcher`'s settings
-
-Click the `Settings` button.
-
-<figure><img src="../.gitbook/assets/image (28).png" alt="" width="563"><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
 ### Configure server IP in `SPT Launcher`
 
 Ask the server host to provide their <mark style="color:$warning;">external IP address</mark>.

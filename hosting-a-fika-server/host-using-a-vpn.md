@@ -78,28 +78,6 @@ Go to `System` -> `Firewall Exceptions` and click  `Allow All Apps`.
 {% endstep %}
 
 {% step %}
-### Start `SPT.Server` to generate the config file
-
-Wait for `SPT Server` to be fully loaded.
-
-<figure><img src="../.gitbook/assets/https___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzsDI_2Fuploads_2FlZfa6hVfcUTBztlqMtZ7_2Fhttps___files.gitbook.com_v0_b_gitbook-x-prod.appspot.com_o_spaces_2FKIBpsnthxy8OSpsWzs.png" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-### Close `SPT.Server`
-{% endstep %}
-
-{% step %}
-### Open Fika config in editor
-
-Navigate to `<SPT install>\SPT\user\mods\fika-server\assets\configs`.
-
-Open `fika.jsonc` with your preferred text editor (Notepad++ is recommended).
-
-
-{% endstep %}
-
-{% step %}
 ### Start `SPT.Server`
 
 Wait for `SPT Server` to be fully loaded.
