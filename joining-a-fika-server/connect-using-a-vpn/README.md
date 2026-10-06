@@ -100,17 +100,17 @@ Click `Add New Server`
 {% endstep %}
 
 {% step %}
-### Configure the VPN IP in `SPT Launcher`
+### Connect to the server host
 
-Give the server a name and enter the host's VPN address in the address section.
+Give the new server a name and enter the **host's VPN address and port** in the address section.
 
-<figure><img src="../../.gitbook/assets/2026-09-29 13-59-06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Create your profile
 
-
+Other profiles that already exist on the server will show up the first time you connect. Do not log in to someone else's profile, create your own profile.
 {% endstep %}
 
 {% step %}

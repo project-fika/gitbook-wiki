@@ -92,19 +92,7 @@ Wait for `SPT Server` to be fully loaded.
 {% endstep %}
 
 {% step %}
-### Edit the SPT Launcher settings
-
-Click `Add New Server`
-
-<figure><img src="../.gitbook/assets/2026-09-29 13-57-33.png" alt=""><figcaption></figcaption></figure>
-
-Pick a name for your server and then in the address write `127.0.0.1:6969`
-
-<figure><img src="../.gitbook/assets/2026-09-29 13-59-06.png" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-### Login to your profile
+### Login to or create your profile
 {% endstep %}
 
 {% step %}
