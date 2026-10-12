@@ -60,9 +60,9 @@ Escape From Tarkov must be installed on the machine/server where you are plannin
 {% endstep %}
 
 {% step %}
-### Install [SPT](https://hub.sp-tarkov.com/files/file/672-spt-installer/)
+### Install [SPT](https://sp-mod.com/installer)
 
-If your SPT server is currently located on a different machine, please copy it to the computer where you are planning to install the headless client. It must contain the full game. If you are unable to copy it due to the size, install SPT on the server using the [SPT Installer](https://hub.sp-tarkov.com/files/file/672-spt-installer/) instead.
+If your SPT server is currently located on a different machine, please copy it to the computer where you are planning to install the headless client. It must contain the full game. If you are unable to copy it due to the size, install SPT on the remote machine using the [SPT Installer](https://sp-mod.com/installer) instead.
 
 **Do NOT install SPT in your official Escape From Tarkov folder!**
 {% endstep %}
@@ -101,15 +101,19 @@ If you get an admin rights prompt, this is normal. `Fika-Installer` requires adm
 ### OPTIONAL: Set URL in [fika.jsonc](../../fika-configuration/server.md)
 
 {% hint style="info" %}
-This step is not necessary if you are port forwarding, assuming SPT.Server and this headless client are on the same PC.
+#### Most users _do not have to do this_.
+
+This step is not necessary if your SPT.Server is being hosted at `https://0.0.0.0:6969` and this headless client will be on the same PC as the backend server. The below instructions are **OPTIONAL** for users with a non-standard setup.
+
+If you are unsure, skip this step.
 {% endhint %}
 
-If you are using a VPN like Radmin or ZeroTier, you will need to:
+If your headless client is not able to connect to the backend server at `127.0.0.1:6969`, you may need to:
 
 1. Navigate to `[SPT root folder]\SPT\user\mods\fika-server\assets\configs\`
-   1. If `fika.jsonc` does not exist, run `SPT.Server.exe` from your headless install once and then close it.
+   1. If `fika.jsonc` does not exist, run `SPT.Server.exe` once and then close it.
 2. Open `fika.jsonc` in a text editor.
-3. Scroll down to the `scripts -> forceIp` setting and change it to the URL that you set up while following [the hosting instructions](../../hosting-a-fika-server/choose-your-hosting-method.md).
+3. Scroll down to the `scripts -> forceIp` setting and change it to an URL where the headless client will be able to connect to the backend server.
 4. Save the file and close the text editor.
 
 <div align="left"><figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure></div>
@@ -208,12 +212,12 @@ Your friend(s) can join the headless client's raid when you see this screen. Whe
 
 ## Modding
 
-The headless client is very sensitive to modding. Do **NOT** install the same mods you use in Fika. Because the headless client is heavily modified, most mods will likely cause crashes or make it unstable.
+The headless client is very sensitive to modding. Do **NOT** install all of the mods you use with your normal gaming client. Because the headless client is heavily modified, many mods may cause crashes or other unwanted behavior.
 
 **✅ YOU CAN INSTALL:**
 
 * AI mods (SAIN)
-* Spawn mods (MOAR, DONUTS)
+* Spawn mods (ABPS, MOAR, DONUTS)
 * Mods that specifically mention headless client support (That's Lit, UIFixes, etc.)
 * Any mod that reasonably changes in-raid behavior, like entering custom quest zones or having to do with inventory (VCQL, Pack'n'Strap, etc.)
 
@@ -227,6 +231,7 @@ The headless client is very sensitive to modding. Do **NOT** install the same mo
 
 ## Troubleshooting
 
+* If you have mods installed and you are running into issues you should first create fresh installs all around and get the headless client working and a test raid completed without any mods other than Fika. Once you have confirmed the headless client works unmodified, you may add mods 5-10 at a time and run test raids between batches of mods.
 * If you are crashing or getting errors when joining a headless hosted raid, make sure that Fika is up-to-date for everyone. Verify that you have the latest version of [Fika-Installer](https://github.com/project-fika/Fika-Installer/releases/latest) and use it both in your normal SPT+Fika folder as well as the headless folder to `Update Fika` and `Advanced` -> `Update Fika Headless`.
 * If the `Use Headless Host` checkbox is greyed out, it means that the headless client is unavailable. It could be caused by unsupported mods installed in the headless client, networking issues, or other factors. Note that the headless client can only host one raid at a time. Check `BepInEx/LogOutput.log` for errors, especially warnings about incompatible mods.
 * If your headless client is failing to load, launch it in Graphics mode by pressing `G` during the startup of `Fika Headless Manager` if possible. If launching in Graphics mode is not possible, look in the `<timestamp> errors.log` in the SPT log folder for hints. Often this is caused by having a malfunctioning or invalid plugin, and sometimes also from missing a plugin that is required by one of the mods on the server.

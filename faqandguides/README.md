@@ -108,16 +108,6 @@ Open `fika.jsonc` in a text editor and find the option named `sharedQuestProgres
 
 ***
 
-### :question:Can I make the launcher not show everyone's profile?
-
-Review the fika-server mod [configuration options](../fika-configuration/server.md). These changes must be done by the server host.
-
-Open `fika.jsonc` in a text editor and find the option named `launcherListAllProfiles` and change it from `true` to `false`, then save your changes and restart the server.
-
-<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
-
-***
-
 ### :question:Can I enable SPT chatbots like Commando?
 
 Review the fika-server mod [configuration options](../fika-configuration/server.md). These changes must be done by the server host.
@@ -148,6 +138,5 @@ Start `Fika-Installer` and choose `Uninstall Fika`.
 
 Alternatively, you can do it manually using the following steps:
 
-* Navigate to `BepInEx/plugins/Fika/` and delete `Fika.Core.dll`
-* Navigate to `SPT/user/mods/` and delete the `fika-server/` folder
-* Open SPT.Launcher.exe, click Settings in the top-right, and (if applicable) change URL back to `https://127.0.0.1:6969`<br>
+* Navigate to `BepInEx/plugins/` and delete the `Fika/` folder
+* Navigate to `SPT_Runtime/user/mods/` and delete the `fika-server/` folder
