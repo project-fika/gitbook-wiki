@@ -17,6 +17,12 @@ layout:
     visible: false
   metadata:
     visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # ADVANCED: How Fika Establishes Raid Connections
@@ -42,33 +48,31 @@ This article is intended for Advanced Users who have a non-standard network setu
 
 When the raid host starts setting up a raid for others to connect, it first looks in the `Force IP` field for the client plugin configuration for the client that is to be the host. If that field is populated, it stores that IP in memory, hereafter referred to as `IP_1`. If the `Force IP` field is blank, the plugin will attempt to resolve the Public/WAN IP by querying (at the time of writing) three IP resolution services and then it stores the Public IP as `IP_1`.
 
-The client plugin will also query local network adapter(s) and store a LAN IP (generally `192.168.x.x` or `10.0.x.x`) as `IP_2`. If the PC where this is happening has multiple local network adapters then you may experience connection issues if someone is trying to connect via the same network.
-
-{% hint style="info" %}
-For instance, if the PC has both an ethernet connection and a Wi-Fi connection, with both enabled and connected, the client plugin may record the wrong LAN IP. It is important that the PC has only one active LAN adapter for things to work correctly in all cases.
-{% endhint %}
+The client plugin will also query local network adapter(s) and store a list of IPs that correspond with the local network adapters (generally `192.168.x.x` or `10.0.x.x`) as `IP_2/IP_3/etc`. If a VPN such as Radmin is installed, the VPN IP will be stored in this list of local IPs.
 
 Then the client plugin will look at the `Port` field in the plugin configuration and record that to memory.
 
 Next, the client plugin will look at the `Force Bind IP` field. If that field has a value other than 'Disabled', it will start listening for connections on the adapter related to the IP selected.
 
 * For `0.0.0.0` it will listen to connections that come from anywhere. This is also the behavior if `Force Bind IP` is set to 'Disabled'.
-* For a specific IP, like `192.168.x.x` or `26.x.x.x`, it will listen for connections that only come from that network adapter. This is generally only used when a VPN network adapter is utilized, otherwise `0.0.0.0` is preferred.
+* For a specific IP, like `192.168.x.x` or `26.x.x.x`, it will listen for connections that only come from that network adapter. This should only be used if `0.0.0.0` or 'Disabled' do not work.
+
+{% hint style="danger" %}
+None of the settings in Fika.Core -> Network affect the client that is **joining** the raid. These settings only affect the raid host.
+{% endhint %}
 
 Once all of the values have been recorded to memory, the client plugin will attempt to establish a service that listens for incoming connections. Then the plugin will send a list of available IP:Port combinations to the fika-server mod so that the backend server can forward that information to any other client that may want to connect. The list will look like:
 
 * `IP_1:Port` - This is generally either the value in `Force IP` or your Public/WAN IP + Port from plugin configuration
-* `IP_2:Port` - This is your LAN IP + Port from plugin configuration
-
-{% hint style="danger" %}
-None of the settings in Fika.Core -> Network affect the client that is **joining** the raid. They only affect the raid host.
-{% endhint %}
+* `IP_2:Port` - This is generally your LAN IP + Port from plugin configuration
+* `IP_3:Port` - If applicable, a 2nd LAN IP or VPN IP
+* etc
 
 ### How a Client Connects to an Advertised Raid
 
 When a client navigates to the raid screen and clicks the `JOIN` button on a particular raid in the list of available raids, the backend server forwards the information discussed above to the joining client's Fika plugin, which includes a list of IP:Port combinations to which they will attempt to connect.
 
-The connecting client will then attempt to connect to `IP_1:Port` and `IP_2:Port` in series. If neither works, an error will be displayed suggesting to confirm that all ports are open and incoming connections are allowed by the raid host.
+The connecting client will then attempt to connect to `IP_1:Port`,  `IP_2:Port`, etc, in series. If none of the IP:Port combinations in the list successfully connect, an error will be displayed suggesting to confirm that all ports are open and incoming connections are allowed by the raid host.
 
 {% hint style="info" %}
 Note: a **direct connection** between game clients is being established, not a connection that is routed through the backend server. If the path of the direct connection is obstructed or unavailable it will fail, even if both clients are able to connect to the backend server.
@@ -84,7 +88,7 @@ C:\Users\YOURUSERNAME\AppData\LocalLow\Battlestate Games\EscapeFromTarkov\
 
 <figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
-The two IPs listed will be `IP_1` and `IP_2` from the [Fika Network Workflow](advanced-how-fika-establishes-raid-connections.md#fika-network-workflow) section.
+The IPs listed will be `IP_1`, `IP_2`, etc, from the [Fika Network Workflow](advanced-how-fika-establishes-raid-connections.md#fika-network-workflow) section.
 
 ## Why This Matters
 
